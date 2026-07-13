@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambiente Regulatório de Energia</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <div id="animated-menu" class="animated-menu">
+                <div class="navicon" id="toggle-menu"><div></div></div>
+                <div class="menu-content" id="menu-content">
+                    <!-- Botões gerados via JS -->
+                </div>
+            </div>
+
+            <a href="https://dados.pi.gov.br/observatorio/energias-renovaveis/" class="seplan-apps-bar__site-button">
+                <span class="button-text">Voltar</span>
+                <span class="button-icon">⭠</span>
+            </a>
+        </div>
+
+        <div class="topbar-center">
+            <span id="project-title">AMBIENTE REGULATÓRIO DE ENERGIA - PI</span>
+        </div>
+
+        <div class="topbar-right">
+            <img src="logo/logo-sumer-white.svg" alt="Logo SUMER" class="logo" onerror="this.style.display='none'">
+            <img src="logo/logo-seplan-white.svg" alt="Logo SEPLAN" class="logo" onerror="this.style.display='none'">
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="main-content">
+        
+        <!-- PÁGINA INTRODUTÓRIA (Aparece ao carregar) -->
+        <div class="intro-section" id="intro-section">
+            <div class="intro-hero">
+                <h2>Bem-vindo ao Ambiente Regulatório</h2>
+                <p>Este painel interativo reúne, organiza e simplifica a legislação, as normas e os mecanismos de regulação do setor energético. Nosso objetivo é promover a transparência e facilitar o acesso à informação.</p>
+                <p><strong>👈 Utilize o menu superior esquerdo para explorar os macrotemas, visualizar os fluxogramas institucionais e acessar as normativas oficiais.</strong></p>
+            </div>
+            
+            <!-- Cards que serão preenchidos pelo JS -->
+            <div class="intro-stats" id="intro-stats">
+                <div class="stat-card">
+                    <span class="stat-number">...</span>
+                    <span class="stat-label">Carregando Dados</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mapa Mental Interativo -->
+        <div class="mindmap-section" id="mindmap-section" style="display: none; width: 100%;">
+            <!-- Aqui é onde o mapa mental será desenhado dinamicamente -->
+            <div id="mindmap-container"></div>
+        </div>
+
+        <!-- Seção: Canais de Reclamação -->
+        <div class="reclamacao-section" id="reclamacao-section">
+            <div class="reclamacao-card">
+                <div class="reclamacao-header">Canais de Reclamação</div>
+                <div class="reclamacao-body">
+                    <a href="https://pi.equatorialenergia.com.br/ouvidoria/" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>EQTL - OUVIDORIA</strong>
+                            <p>Canal de atendimento da distribuidora Equatorial Piauí. Telefone: 0800-721-0164</p>
+                        </div>
+                    </a>
+                    <a href="https://consumidor.gov.br/" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>CONSUMIDOR.GOV</strong>
+                            <p>Serviço público e gratuito para solução alternativa de conflitos de consumo.</p>
+                        </div>
+                    </a>
+                    <a href="https://www.gov.br/aneel/pt-br/canais_atendimento/reclame-da-distribuidora" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>ANEEL</strong>
+                            <p>Agência Nacional de Energia Elétrica. Registre sua reclamação diretamente na agência federal.</p>
+                        </div>
+                    </a>
+                    <a href="https://agrespi.pi.gov.br/" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>AGRESPI</strong>
+                            <p>Agência Reguladora dos Serviços Públicos Delegados do Estado do Piauí.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Área da Tabela de Leis -->
+        <div class="table-section" id="table-section">
+            <div class="table-header" id="selected-theme-title">Legislação Relacionada</div>
+            <div class="table-container">
+                <table id="laws-table">
+                    <thead>
+                        <tr>
+                            <th width="12%">Nº da Norma</th>
+                            <th width="22%">Nome/Definição da iniativa</th>
+                            <th width="40%">Ementa/Descrição</th>
+                            <th width="16%">
+                                Competência
+                                <select id="filter-competencia" class="header-filter">
+                                    <option value="todas">Todas</option>
+                                    <option value="estadual">Estadual</option>
+                                    <option value="federal">Federal</option>
+                                </select>
+                            </th>
+                            <th width="10%">Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="laws-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Div para o balão flutuante (Tooltip dos hexágonos) -->
+    <div id="custom-tooltip"></div>
+
+    <!-- Biblioteca para desenhar as setas do mapa mental -->
+    <script src="https://cdn.jsdelivr.net/npm/leader-line-new@1.1.9/leader-line.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

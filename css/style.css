@@ -1,0 +1,445 @@
+/* ==========================================================================
+   1. GERAIS E ESTRUTURA BASE
+   ========================================================================== */
+body, html { 
+    margin: 0; padding: 0; height: 100%; width: 100%; 
+    font-family: 'Montserrat', "Segoe UI", sans-serif; 
+    background-color: #f0f4f8; 
+    color: #333;
+}
+
+/* ==========================================================================
+   2. BARRA SUPERIOR (TOPBAR) E LOGOS
+   ========================================================================== */
+.topbar {
+    background-color: #1351B4 !important; color: white; padding: 0 20px !important; 
+    position: fixed; top: 0; left: 0; width: 100%; height: 84px !important; 
+    z-index: 3000; display: flex; align-items: center; justify-content: space-between;
+    box-sizing: border-box; box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.topbar-left { flex: 1; display: flex; align-items: center; justify-content: flex-start; min-width: 0; position: relative;}
+.topbar-center { flex: 0 1 auto; text-align: center; padding: 0 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.topbar-right { 
+    flex: 1; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+    gap: 15px; 
+    padding-right: 7px; 
+    margin-right: 200px; 
+    min-width: 0;
+}
+
+#project-title { font-size: 18px !important; font-weight: bold; letter-spacing: 1px; }
+.logo { height: 60px !important; width: auto; object-fit: contain; border-radius: 4px; }
+
+.seplan-apps-bar__site-button {
+    display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; color: #2c3e50;
+    padding: 0 16px; border-radius: 4px; font-size: .90rem; font-weight: 600; height: 36px; transition: background-color .2s; 
+    margin-left: 65px; 
+    text-decoration: none;
+}
+.seplan-apps-bar__site-button:hover { background-color: #e0e0e0; color: #2c3e50; }
+.seplan-apps-bar__site-button .button-icon { margin-left: 5px; font-size: 1.2em; line-height: 1; }
+
+/* ==========================================================================
+   3. MENU ANIMADO (Esquerda)
+   ========================================================================== */
+.animated-menu {
+    position: absolute;
+    top: -10px;
+    left: 0px; 
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+    min-width: 52px;
+    min-height: 52px;
+    z-index: 4000;
+    -webkit-clip-path: circle(24px at 26px 26px);
+    clip-path: circle(24px at 26px 26px);
+    transition: -webkit-clip-path 0.5s ease-in-out, clip-path 0.5s ease-in-out;
+    color: #333;
+}
+.animated-menu.is-open {
+    -webkit-clip-path: circle(200% at 26px 26px);
+    clip-path: circle(200% at 26px 26px);
+}
+
+.navicon { 
+    position: absolute; top: 0; left: 0; width: 52px; height: 52px; 
+    cursor: pointer; display: flex; justify-content: center; align-items: center; z-index: 4001;
+}
+.navicon div, .navicon div:before, .navicon div:after { 
+    width: 20px; height: 2px; background: rgba(0,0,0,0.87); transition: all 0.3s ease-in-out; 
+}
+.navicon div { position: relative; }
+.navicon div:before { content: ""; position: absolute; top: -7px; display: block; }
+.navicon div:after { content: ""; position: absolute; top: 7px; display: block; }
+
+.animated-menu:not(.is-open) .navicon div,
+.animated-menu:not(.is-open) .navicon div:before,
+.animated-menu:not(.is-open) .navicon div:after {
+    background: rgba(0,0,0,0.87);
+}
+
+.animated-menu.is-open .navicon div { background: transparent !important; }
+.animated-menu.is-open .navicon div:before { top: 0; transform: rotate(45deg); }
+.animated-menu.is-open .navicon div:after { top: 0; transform: rotate(-45deg); }
+
+.menu-content { 
+    padding: 60px 20px 20px 20px; max-height: 70vh; overflow-y: auto; 
+    display: flex; flex-direction: column; gap: 8px; width: 320px;
+}
+
+.menu-btn { 
+    background: #f8f9fa; border: 1px solid #ced4da; padding: 12px 15px; 
+    border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 600; 
+    text-align: left; transition: 0.2s; color: #495057; display: flex; align-items: center;
+}
+.menu-btn:hover, .menu-btn.active { background: #1351B4; color: white; border-color: #1351B4;}
+
+/* ==========================================================================
+   4. CONTEÚDO PRINCIPAL (MAPA MENTAL E TABELA)
+   ========================================================================== */
+.main-content {
+    margin-top: 104px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.mindmap {
+    display: flex; flex-direction: column; align-items: center; gap: 35px; width: 100%;
+}
+.mindmap-core {
+    background: #1351B4; color: white; padding: 20px 40px; border-radius: 40px; 
+    font-weight: 700; font-size: 22px; box-shadow: 0 4px 20px rgba(19, 81, 180, 0.4); 
+    text-align: center; position: relative; animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(19, 81, 180, 0.3); }
+    to { box-shadow: 0 0 25px rgba(19, 81, 180, 0.6); }
+}
+
+.mindmap-branches {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 1200px;
+}
+.branch {
+    background: white; border: 2px solid #1351B4; color: #1351B4; padding: 12px 20px; 
+    border-radius: 25px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    font-size: 13px; text-align: center; max-width: 220px; display: flex; align-items: center; justify-content: center;
+}
+.branch:hover, .branch.active {
+    background: #1351B4; color: white; transform: translateY(-5px); box-shadow: 0 8px 15px rgba(19, 81, 180, 0.3);
+}
+
+.table-section {
+    width: 100%; max-width: 1400px; display: none;
+    animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Restaura o título para o visual original */
+.table-header { 
+    margin-bottom: 20px; font-size: 20px; font-weight: 700; color: #1351B4; 
+    border-bottom: 2px solid #ced4da; padding-bottom: 10px;
+    display: block; 
+}
+
+.table-container {
+    background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow-x: auto;
+}
+
+table { width: 100%; border-collapse: collapse; min-width: 900px; }
+th { background: #f8f9fa; color: #1351B4; padding: 15px; text-align: left; border-bottom: 2px solid #dee2e6; font-size: 14px; font-weight: 700;}
+td { padding: 15px; border-bottom: 1px solid #dee2e6; font-size: 13px; color: #555; vertical-align: top;}
+
+/* Garante que o efeito de passar o mouse na linha funcione */
+#laws-table tbody tr { transition: background-color 0.2s; }
+#laws-table tbody tr:hover td { background-color: #f1f5f9; }
+
+a.link-btn { color: #1351B4; text-decoration: none; font-weight: 600; display: inline-block; padding: 6px 12px; background: #eef2f7; border-radius: 4px; transition: 0.2s;}
+a.link-btn:hover { background: #1351B4; color: white; }
+.no-data { text-align: center; padding: 30px; color: #888; font-style: italic; }
+
+/* Estilo do filtro dentro do cabeçalho da tabela */
+.header-filter {
+    display: block;
+    margin-top: 8px;
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ced4da; 
+    font-family: inherit; 
+    font-size: 12px; 
+    color: #495057; 
+    outline: none; 
+    cursor: pointer;
+    background-color: #fff;
+    font-weight: normal; /* Tira o negrito para diferenciar do título da coluna */
+}
+.header-filter:hover { border-color: #a3c2e0; }
+.header-filter:focus { border-color: #1351B4; }
+table { width: 100%; border-collapse: collapse; min-width: 900px; }
+th { background: #f8f9fa; color: #1351B4; padding: 15px; text-align: left; border-bottom: 2px solid #dee2e6; font-size: 14px; font-weight: 700;}
+td { padding: 15px; border-bottom: 1px solid #dee2e6; font-size: 13px; color: #555; vertical-align: top;}
+tr:hover td { background: #f1f5f9; }
+a.link-btn { color: #1351B4; text-decoration: none; font-weight: 600; display: inline-block; padding: 6px 12px; background: #eef2f7; border-radius: 4px; transition: 0.2s;}
+a.link-btn:hover { background: #1351B4; color: white; }
+.no-data { text-align: center; padding: 30px; color: #888; font-style: italic; }
+
+/* ==========================================================================
+   5. CANAIS DE RECLAMAÇÃO (DIREITO DO CONSUMIDOR)
+   ========================================================================== */
+.reclamacao-section {
+    width: 100%; max-width: 800px; display: none;
+    animation: fadeIn 0.5s forwards; 
+}
+.reclamacao-card {
+    background: #fdfdfd; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden; border: 1px solid #eaeaea;
+}
+.reclamacao-header {
+    background: #185abc; color: white; padding: 18px; font-size: 22px;
+    font-weight: 400; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.reclamacao-body {
+    display: flex; flex-direction: column;
+}
+.reclamacao-item {
+    display: flex; align-items: flex-start; padding: 18px 25px; text-decoration: none;
+    color: #111; border-bottom: 1px solid #f0f0f0; transition: background 0.2s;
+}
+.reclamacao-item:last-child { border-bottom: none; }
+.reclamacao-item:hover { background: #f8f9fa; }
+
+.reclamacao-icon {
+    font-size: 26px; font-weight: 400; margin-right: 20px; line-height: 1; color: #111;
+    margin-top: -2px; font-family: monospace;
+}
+.reclamacao-text strong {
+    display: block; font-size: 18px; font-weight: 400; margin-bottom: 5px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 0.5px;
+}
+.reclamacao-text p {
+    margin: 0; font-size: 13px; color: #666; line-height: 1.4;
+    max-height: 0; opacity: 0; overflow: hidden; transition: all 0.3s ease;
+}
+/* Faz o texto descritivo aparecer ao passar o mouse */
+.reclamacao-item:hover .reclamacao-text p {
+    max-height: 60px; opacity: 1; margin-top: 5px;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (CELULAR)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .topbar { height: 64px !important; padding: 0 10px !important; }
+    .topbar-right { padding-right: 0 !important; margin-right: 0 !important; gap: 5px; }
+    .topbar-center { display: none !important; }
+    .logo { height: 40px !important; }
+}
+
+/* ==========================================================================
+   7. MAPA MENTAL DINÂMICO (DRAW.IO)
+   ========================================================================== */
+.mindmap-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#mindmap-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 800px;
+    background: transparent;
+    margin: 0 auto;
+    overflow: visible; /* Para as setas não serem cortadas */
+}
+
+/* Base de todos os nós */
+.drawio-node {
+    position: absolute;
+    box-sizing: border-box;
+    font-size: 13px;
+    z-index: 2;
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 1. O "Quadrado" (Topo azul, base branca com borda azul) */
+.drawio-square {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #1351B4;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.drawio-square:hover { transform: translateY(-5px); box-shadow: 0 8px 18px rgba(19, 81, 180, 0.25); }
+
+.square-top {
+    background-color: #1351B4;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.square-bottom {
+    background-color: white;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 2. O "Retângulo" Azul Claro (Caixas de informação secundária) */
+.drawio-rect {
+    background-color: #e9f2ff;
+    color: #1351B4;
+    border: 1px solid #a3c2e0;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* 3. Título Principal (Retângulo compridão) */
+.drawio-title {
+    background-color: #1351B4;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ==========================================================================
+   8. TOOLTIP DO HEXÁGONO
+   ========================================================================== */
+#custom-tooltip {
+    position: absolute;
+    background: rgba(19, 81, 180, 0.95);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    max-width: 280px;
+    font-size: 13px;
+    line-height: 1.5;
+    pointer-events: none;
+    z-index: 5000;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.2s ease;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ==========================================================================
+   9. PÁGINA INTRODUTÓRIA (HOME)
+   ========================================================================== */
+.intro-section { 
+    width: 100%; 
+    max-width: 900px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 30px; 
+    animation: fadeIn 0.8s ease forwards; 
+    margin-top: 20px;
+}
+
+.intro-hero { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+    text-align: center; 
+    border-top: 5px solid #1351B4; 
+}
+
+.intro-hero h2 { 
+    color: #1351B4; 
+    margin-top: 0; 
+    font-size: 26px; 
+    margin-bottom: 15px;
+}
+
+.intro-hero p { 
+    color: #555; 
+    font-size: 15px; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+}
+
+.intro-hero p:last-child {
+    margin-bottom: 0;
+    color: #333;
+}
+
+.intro-stats { 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.stat-card { 
+    background: white; 
+    padding: 25px 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    min-width: 180px; 
+    text-align: center; 
+    border: 1px solid #eef2f7; 
+    flex: 1;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number { 
+    font-size: 38px; 
+    font-weight: 700; 
+    color: #1351B4; 
+    display: block; 
+    margin-bottom: 5px; 
+    line-height: 1;
+}
+
+.stat-label { 
+    font-size: 12px; 
+    color: #666; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+}
