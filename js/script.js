@@ -65,7 +65,7 @@ function initUI() {
     });
 
     const homeBtn = document.createElement('div');
-    homeBtn.className = 'menu-btn';
+    homeBtn.className = 'menu-btn active';
     homeBtn.textContent = '↩ Página inicial';
     homeBtn.onclick = () => goToHome();
     menuContent.appendChild(homeBtn);
@@ -82,31 +82,50 @@ function initUI() {
 function showRepositoryView(selectedTheme = "") {
     const tableSection = document.getElementById('table-section');
     const titleElement = document.getElementById('selected-theme-title');
-    if (tableSection) tableSection.style.display = 'block';
-    if (titleElement) titleElement.textContent = 'Repositório De Normas Direcionadoras';
+    if (tableSection) {
+        tableSection.style.display = 'block';
+    }
+    if (titleElement) {
+        // Se um tema for selecionado, o título é o tema. Senão, é o título geral.
+        titleElement.textContent = selectedTheme ? `Legislação: ${selectedTheme}` : 'Repositório Completo de Normas';
+    }
     renderTable(selectedTheme || '');
 }
 
 function goToHome() {
-    currentSelectedTheme = '';
+    currentSelectedTheme = ''; 
+    
+    // Mostra o botão "Voltar"
+    document.querySelector('.seplan-apps-bar__site-button').style.visibility = 'visible';
+    
     document.getElementById('animated-menu').classList.remove('is-open');
+
+    // Mostra a introdução e a tabela completa
     document.getElementById('intro-section').style.display = 'flex';
+    showRepositoryView(''); // Exibe a tabela com todos os itens
+    // Garante que as outras seções específicas de temas estejam ocultas
     document.getElementById('reclamacao-section').style.display = 'none';
+    document.getElementById('mindmap-section').style.display = 'none';
 
-    const section = document.getElementById('mindmap-section');
-    const container = document.getElementById('mindmap-container');
-    if (section) section.style.display = 'none';
-    if (container) container.innerHTML = '';
-
+    // Limpa as linhas do mapa mental
     activeLeaderLines.forEach(line => line.remove());
     activeLeaderLines = [];
 
-    document.querySelectorAll('.menu-btn').forEach(el => el.classList.remove('active'));
-    showRepositoryView('');
+    // Atualiza o estado ativo dos botões do menu
+    document.querySelectorAll('.menu-btn').forEach(el => {
+        if (el.textContent.includes('Página inicial')) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
 }
 
 function selectTheme(selectedTheme) {
-    currentSelectedTheme = selectedTheme; // Salva o estado atual
+    currentSelectedTheme = selectedTheme; 
+    
+    // Deixa o botão invisível, mas mantendo o espaço dele no layout
+    document.querySelector('.seplan-apps-bar__site-button').style.visibility = 'hidden';
     
     // ESCONDE A INTRODUÇÃO
     document.getElementById('intro-section').style.display = 'none';
@@ -120,7 +139,7 @@ function selectTheme(selectedTheme) {
     const reclamacaoSection = document.getElementById('reclamacao-section');
     if (selectedTheme.toLowerCase().includes("direito do consumidor")) {
         reclamacaoSection.style.display = 'block';
-    } else {
+    } else { 
         reclamacaoSection.style.display = 'none';
     }
 
@@ -472,6 +491,7 @@ function loadCSV() {
             consolidadaData = parseCSV(csvText);
             // GERA OS INDICADORES DA HOME
             renderIntroStats();
+            // A tabela de repositório completo não é mais exibida no carregamento inicial
             showRepositoryView('');
         })
         .catch(err => {
