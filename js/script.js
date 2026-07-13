@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterComp = document.getElementById('filter-competencia');
     if (filterComp) {
         filterComp.addEventListener('change', () => {
-            if (currentSelectedTheme) {
-                renderTable(currentSelectedTheme);
-            }
+            renderTable(currentSelectedTheme || '');
         });
     }
 });
@@ -46,17 +44,31 @@ function removeAcentos(str) {
 function initUI() {
     const menuContent = document.getElementById('menu-content');
     const menuContainer = document.getElementById('animated-menu');
+    const openMenuBtn = document.getElementById('open-theme-menu-btn');
     
     document.getElementById('toggle-menu').addEventListener('click', (e) => {
         e.stopPropagation();
         menuContainer.classList.toggle('is-open');
     });
 
+    if (openMenuBtn) {
+        openMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuContainer.classList.add('is-open');
+        });
+    }
+
     document.addEventListener('click', (e) => {
         if(!menuContainer.contains(e.target)) {
             menuContainer.classList.remove('is-open');
         }
     });
+
+    const homeBtn = document.createElement('div');
+    homeBtn.className = 'menu-btn';
+    homeBtn.textContent = '↩ Página inicial';
+    homeBtn.onclick = () => goToHome();
+    menuContent.appendChild(homeBtn);
 
     THEMES.forEach(theme => {
         const btn = document.createElement('div');
@@ -67,6 +79,32 @@ function initUI() {
     });
 }
 
+function showRepositoryView(selectedTheme = "") {
+    const tableSection = document.getElementById('table-section');
+    const titleElement = document.getElementById('selected-theme-title');
+    if (tableSection) tableSection.style.display = 'block';
+    if (titleElement) titleElement.textContent = 'Repositório De Normas Direcionadoras';
+    renderTable(selectedTheme || '');
+}
+
+function goToHome() {
+    currentSelectedTheme = '';
+    document.getElementById('animated-menu').classList.remove('is-open');
+    document.getElementById('intro-section').style.display = 'flex';
+    document.getElementById('reclamacao-section').style.display = 'none';
+
+    const section = document.getElementById('mindmap-section');
+    const container = document.getElementById('mindmap-container');
+    if (section) section.style.display = 'none';
+    if (container) container.innerHTML = '';
+
+    activeLeaderLines.forEach(line => line.remove());
+    activeLeaderLines = [];
+
+    document.querySelectorAll('.menu-btn').forEach(el => el.classList.remove('active'));
+    showRepositoryView('');
+}
+
 function selectTheme(selectedTheme) {
     currentSelectedTheme = selectedTheme; // Salva o estado atual
     
@@ -74,9 +112,7 @@ function selectTheme(selectedTheme) {
     document.getElementById('intro-section').style.display = 'none';
     
     document.getElementById('animated-menu').classList.remove('is-open');
-    document.getElementById('table-section').style.display = 'block';
-    document.getElementById('selected-theme-title').textContent = "Legislação Relacionada: " + selectedTheme;
-
+    
     // Reseta o filtro para "Todas" ao clicar num tema novo no menu
     const filterComp = document.getElementById('filter-competencia');
     if (filterComp) filterComp.value = 'todas';
@@ -93,7 +129,7 @@ function selectTheme(selectedTheme) {
         else el.classList.remove('active');
     });
 
-    renderTable(selectedTheme);
+    showRepositoryView(selectedTheme);
     loadDiagram(selectedTheme);
 }
 
@@ -383,7 +419,7 @@ function initTooltip() {
     }
 
     document.addEventListener('mouseover', (e) => {
-        const target = e.target.closest('.drawio-square');
+        const target = e.target.closest('.drawio-square, .stat-card');
         if (!target || !target.hasAttribute('data-tooltip')) return;
 
         currentTarget = target;
@@ -394,7 +430,7 @@ function initTooltip() {
     });
 
     document.addEventListener('mousemove', (e) => {
-        const target = e.target.closest('.drawio-square');
+        const target = e.target.closest('.drawio-square, .stat-card');
         if (!target || !target.hasAttribute('data-tooltip')) return;
 
         if (currentTarget !== target) {
@@ -406,11 +442,11 @@ function initTooltip() {
     });
 
     document.addEventListener('mouseout', (e) => {
-        const target = e.target.closest('.drawio-square');
+        const target = e.target.closest('.drawio-square, .stat-card');
         const relatedTarget = e.relatedTarget;
-        const relatedInsideSquare = relatedTarget && relatedTarget.closest && relatedTarget.closest('.drawio-square');
+        const relatedInside = relatedTarget && relatedTarget.closest && relatedTarget.closest('.drawio-square, .stat-card');
 
-        if (!target || !relatedInsideSquare) {
+        if (!target || !relatedInside) {
             tooltip.style.opacity = '0';
             setTimeout(() => {
                 if (tooltip.style.opacity === '0') {
@@ -436,6 +472,7 @@ function loadCSV() {
             consolidadaData = parseCSV(csvText);
             // GERA OS INDICADORES DA HOME
             renderIntroStats();
+            showRepositoryView('');
         })
         .catch(err => {
             console.warn("Aviso: CSV não carregado.", err);
@@ -586,9 +623,11 @@ function renderIntroStats() {
     let totalNormas = 0;
     let totalEstaduais = 0;
     let totalFederais = 0;
-    let macrotemasEncontrados = new Set(); // Usamos Set para contar valores únicos
 
-    // Motor de busca inteligente: acha a coluna independente de acento, letra maiúscula ou espaço extra
+    // Em vez de contar o que o CSV diz, vamos verificar 
+    // quais dos 10 temas oficiais realmente possuem leis cadastradas
+    let temasComLeis = new Set(); 
+
     const getColVal = (row, possibleNames) => {
         for(let key of Object.keys(row)) {
             const keyClean = removeAcentos(key).toLowerCase().trim();
@@ -603,40 +642,36 @@ function renderIntroStats() {
         const valComp = getColVal(row, ['competência', 'competencia', 'esfera']);
         const valMacrotema = getColVal(row, ['macrotema']);
 
-        // Só contabiliza a linha se ela tiver pelo menos um número de norma ou lei válida
         if (valNorma !== "") {
             totalNormas++;
             
-            // Conta as esferas lendo o texto e ignorando acentos
             const compLower = removeAcentos(valComp).toLowerCase();
             if (compLower.includes("estadual")) totalEstaduais++;
             if (compLower.includes("federal")) totalFederais++;
             
-            // Adiciona o macrotema na lista de únicos
-            if (valMacrotema !== "") {
-                macrotemasEncontrados.add(valMacrotema);
+            // Só adiciona se o tema do CSV existir na nossa lista oficial (THEMES)
+            // Isso ignora erros de digitação ou temas extras
+            const temaNormalizado = THEMES.find(t => removeAcentos(t).toLowerCase() === removeAcentos(valMacrotema).toLowerCase());
+            if (temaNormalizado) {
+                temasComLeis.add(temaNormalizado);
             }
         }
     });
 
-    // Se por acaso o CSV não tiver a coluna macrotema formatada, ele usa a variável THEMES como plano B
-    const qtdMacrotemas = macrotemasEncontrados.size > 0 ? macrotemasEncontrados.size : THEMES.length;
-
-    // Atualiza o HTML com os números dinâmicos
     statsContainer.innerHTML = `
-        <div class="stat-card">
+        <div class="stat-card" data-tooltip="Total de leis, decretos, resoluções e regulamentos em vigor que estruturam, orientam e ditam as regras do setor de energia.">
             <span class="stat-number">${totalNormas}</span>
             <span class="stat-label">Normativas Mapeadas</span>
         </div>
-        <div class="stat-card">
-            <span class="stat-number">${qtdMacrotemas}</span>
+        <div class="stat-card" data-tooltip="Grandes áreas de atuação que agrupam a legislação por assunto, facilitando a consulta e a compreensão do arcabouço legal.">
+            <span class="stat-number">${THEMES.length}</span>
             <span class="stat-label">Macrotemas</span>
         </div>
-        <div class="stat-card">
+        <div class="stat-card" data-tooltip="Legislações e diretrizes estabelecidas pelo poder público estadual para planejar, regular e incentivar o desenvolvimento energético no âmbito local.">
             <span class="stat-number">${totalEstaduais}</span>
             <span class="stat-label">Normas Estaduais</span>
         </div>
-        <div class="stat-card">
+        <div class="stat-card" data-tooltip="Leis e resoluções de alcance nacional, editadas pela União e agências reguladoras (como a ANEEL), que formam as bases fundamentais do setor elétrico.">
             <span class="stat-number">${totalFederais}</span>
             <span class="stat-label">Normas Federais</span>
         </div>
