@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="B8D66lVCGWsVi5pCs5-q">
+    <mxGraphModel dx="1664" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Planejamento energético" vertex="1">
+          <mxGeometry height="60" width="660" x="84" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-85" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-84" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-83" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Base Regulatória" vertex="1">
+          <mxGeometry height="60" width="146" x="84" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-87" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-86" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-84" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="1. Diretriz Estratégica" vertex="1">
+          <mxGeometry height="60" width="156" x="336" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-89" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.666;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.452;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-88" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="696" y="171" />
+              <mxPoint x="696" y="171" />
+              <mxPoint x="696" y="191" />
+              <mxPoint x="150" y="191" />
+            </Array>
+            <mxPoint x="700.6400000000001" y="159.99999999999997" as="sourcePoint" />
+            <mxPoint x="150" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-86" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="2. Planejamento Executivo" vertex="1">
+          <mxGeometry height="60" width="144" x="600" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-91" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-90" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-88" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="3. Expansão da Transmissão" vertex="1">
+          <mxGeometry height="60" width="146" x="84" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-93" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-92" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-90" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="4. Operacionalização Sistêmica" vertex="1">
+          <mxGeometry height="60" width="156" x="336" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-92" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="5. Distribuição" vertex="1">
+          <mxGeometry height="60" width="144" x="600" y="210" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

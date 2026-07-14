@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="B8D66lVCGWsVi5pCs5-q">
+    <mxGraphModel dx="1768" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-4" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;BASE DA TRANSIÇÃO&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Res-CNPE nº 5/2024&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Lei nº 12.187/2009&lt;/span&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="85" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-9" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;GOVERNANÇA DA TRANSIÇÃO&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Resolução CNPE nº 06/21&lt;/span&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="612" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Transição energética e novas tecnologias" vertex="1">
+          <mxGeometry height="60" width="660" x="84" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-59" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.484;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.003;exitY=0.485;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-58">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="482" y="541.5" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-12" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Armazenamento de energia&lt;/span&gt;" vertex="1">
+          <mxGeometry height="149" width="149" x="341.5" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-46" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.011;entryY=0.502;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.005;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-14" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Hidrogênio de baixa emissão de carbono&lt;/span&gt;" vertex="1">
+          <mxGeometry height="126" width="126" x="85" y="481.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-58" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Combustíveis sustentáveis&lt;/span&gt;" vertex="1">
+          <mxGeometry height="127" width="127" x="615" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-107" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-58">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="414" y="360" />
+              <mxPoint x="762" y="360" />
+              <mxPoint x="762" y="544" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-109" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="414" y="360" />
+              <mxPoint x="65" y="360" />
+              <mxPoint x="65" y="544" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-106" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;ROTAS TECNOLÓGICAS DE DESCARBONIZAÇÃO&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="440" x="194" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-110" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Tecnologias voltadas à redução de emissões de &lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;emissões e substituição de combustíveis fósseis&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="590" x="119" y="390" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

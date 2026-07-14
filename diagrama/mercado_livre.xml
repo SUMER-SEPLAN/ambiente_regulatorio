@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="B8D66lVCGWsVi5pCs5-q">
+    <mxGraphModel dx="1885" dy="991" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-1" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.004;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="423" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-4" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Lei nº 9.074/1995&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Cria a figura do consumidor livre e especial.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="83" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-9" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Lei nº 10.848/2004&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Estrutura o modelo comercial do setor elétrico – ACL e ACR.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="349" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Mercado livre de energia" vertex="1">
+          <mxGeometry height="60" width="660" x="84" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-59" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.484;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.003;exitY=0.485;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-58">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="340" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-12" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Lei nº 14.120/2021&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Moderniza o setor elétrico e amplia sinais de abertura de mercado.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="149" width="149" x="339.5" y="268.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-46" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.011;entryY=0.502;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.005;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-14" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Decreto 5.177/2004&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Regulamenta a estrutura e funcionamento da CCEE.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="126" width="126" x="83" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-16" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.464;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.509;exitY=1.001;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-14" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="679" y="245" />
+              <mxPoint x="679" y="245" />
+              <mxPoint x="679" y="250" />
+              <mxPoint x="142" y="250" />
+            </Array>
+            <mxPoint x="679" y="245" as="sourcePoint" />
+            <mxPoint x="142" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-58" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Portaria MME nº 50/2022&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Amplia a abertura do mercado livre.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="127" width="127" x="613" y="278.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-64" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Vo16OP1xxp4yjsuZDWTS-63" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="145.25" as="sourcePoint" />
+            <mxPoint x="609" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-63" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Decreto 5.163/004&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Regula a comercialização de energia elétrica.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="613" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-76" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.524;exitY=1.001;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.513;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-77" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="430" />
+              <mxPoint x="180" y="430" />
+            </Array>
+            <mxPoint x="679.5480000000001" y="405.43699999999995" as="sourcePoint" />
+            <mxPoint x="180" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-79" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-78" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-77" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;REN ANEEL nº 1.011/2022&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Regulamenta a comercialização varejista.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="187" x="84" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-78" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Lei nº 15.269/2025&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Consolida a abertura total do mercado livre.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="237" x="361" y="460" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

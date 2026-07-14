@@ -259,10 +259,9 @@ a.link-btn:hover { background: #1351B4; color: white; }
     min-height: 800px;
     background: transparent;
     margin: 0 auto;
-    overflow: visible; /* Para as setas não serem cortadas */
+    overflow: visible; 
 }
 
-/* Base de todos os nós */
 .drawio-node {
     position: absolute;
     box-sizing: border-box;
@@ -271,7 +270,7 @@ a.link-btn:hover { background: #1351B4; color: white; }
     transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* 1. O "Quadrado" (Topo azul, base branca com borda azul) */
+/* 1. O "Quadrado" (Topo azul, base branca com nome entre parêntese) */
 .drawio-square {
     display: flex;
     flex-direction: column;
@@ -308,7 +307,28 @@ a.link-btn:hover { background: #1351B4; color: white; }
     justify-content: center;
 }
 
-/* 2. O "Retângulo" Azul Claro (Caixas de informação secundária) */
+/* 1.1 O Quadrado TOTALMENTE AZUL (Sem parênteses) */
+.drawio-square-full {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #1351B4;
+    background-color: #1351B4;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.drawio-square-full:hover { transform: translateY(-5px); box-shadow: 0 8px 18px rgba(19, 81, 180, 0.25); }
+
+
+/* 2. O "Retângulo" Azul Claro */
 .drawio-rect {
     background-color: #e9f2ff;
     color: #1351B4;
@@ -323,7 +343,7 @@ a.link-btn:hover { background: #1351B4; color: white; }
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* 3. Título Principal (Retângulo compridão) */
+/* 3. Título Principal */
 .drawio-title {
     background-color: #1351B4;
     color: white;

@@ -13,14 +13,21 @@ const THEMES = [
 
 const THEME_FILES = {
     "Setor elétrico: arquitetura institucional e marco regulatório": "setor_eletrico.xml",
-    // Você pode ir adicionando os outros conforme for criando no Draw.io:
-    // "Direito do Consumidor de Energia": "direito_consumidor.xml",
-    // "Politicas e Mecanismos de Inclusão Energética": "inclusao_energetica.xml"
+    "Direito do Consumidor de Energia": "direito_consumidor.xml",
+    "Politicas e Mecanismos de Inclusão Energética": "inclusao_energetica.xml",
+    "Tributação Estadual do Setor Elétrico": "tributacao_estadual.xml",
+    "Conexão e Acesso à Rede": "conexao_acesso.xml",
+    "Geração Distribuída": "geracao_distribuida.xml",
+    "Mercado Livre de Energia": "mercado_livre.xml",
+    "Planejamento Energético": "planejamento_energetico.xml",
+    "Transição Energética e Novas tecnologias": "transicao_energetica.xml",
+    "Licenciamento Ambiental": "licenciamento_ambiental.xml"
 };
 
 let consolidadaData = [];
 let activeLeaderLines = []; 
 let currentSelectedTheme = ""; // NOVO: Guarda o tema que está ativo na tela
+let diagramRequestCounter = 0; // Controla requisições concorrentes para evitar que diagramas antigos sobreponham os novos.
 
 document.addEventListener("DOMContentLoaded", () => {
     initUI();
@@ -159,14 +166,15 @@ function loadDiagram(themeName) {
     const container = document.getElementById('mindmap-container');
     const section = document.getElementById('mindmap-section');
     
-    // Limpa setas antigas e a div
-    activeLeaderLines.forEach(line => line.remove());
-    activeLeaderLines = [];
-    container.innerHTML = '';
+    // Incrementa o contador e obtém um ID único para esta requisição.
+    const currentRequest = ++diagramRequestCounter;
+    
+    // RESET DE DIMENSÕES: Evita que o espaço do diagrama anterior fique sobrando na tela
+    // A limpeza foi movida para o início da renderXML para garantir que o conteúdo antigo seja removido antes de desenhar o novo, evitando sobreposição.
+    container.style.width = '100%';
+    container.style.minHeight = '600px';
     section.style.display = 'none';
 
-    // NOVO: Busca o nome do arquivo mapeado. 
-    // Se você esquecer de mapear algum, ele tenta usar o nome do tema tirando os dois-pontos.
     let fileName = THEME_FILES[themeName];
     if (!fileName) {
         fileName = themeName.replace(/[:/]/g, '').trim() + '.xml';
@@ -180,18 +188,21 @@ function loadDiagram(themeName) {
             return response.text();
         })
         .then(xmlString => {
+            // Apenas renderiza o diagrama se esta for a requisição mais recente.
+            // Isso evita que uma resposta de rede lenta de um clique anterior
+            // sobreponha o diagrama que o usuário realmente quer ver.
+            if (currentRequest !== diagramRequestCounter) return;
+
             section.style.display = 'block';
             renderXML(xmlString);
         })
         .catch(err => {
             console.log("Aviso:", err.message);
-            // Se não houver diagrama, a seção simplesmente continua oculta
         });
 }
 
 function extractText(html) {
     let tempDiv = document.createElement('div');
-    // Troca quebras de linha HTML por texto real
     tempDiv.innerHTML = html.replace(/<br\s*\/?>/gi, '\n');
     let text = tempDiv.innerText || tempDiv.textContent;
     return text.trim();
@@ -200,14 +211,25 @@ function extractText(html) {
 function renderXML(xmlString) {
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(xmlString, "text/xml");
-    const celulas = xmlDoc.querySelectorAll("mxCell");
+
+    // Usa só a primeira página/diagrama do arquivo, caso ele tenha mais de uma
+    // (evita misturar nós de um tema com nós de outro no mesmo desenho).
+    const primeiraPagina = xmlDoc.querySelector("mxGraphModel") || xmlDoc;
+    const celulas = primeiraPagina.querySelectorAll("mxCell");
 
     const container = document.getElementById('mindmap-container');
+    
+    // Limpa o conteúdo anterior para evitar sobreposição, tratando a condição de corrida de cliques rápidos.
+    container.innerHTML = '';
+    activeLeaderLines.forEach(line => line.remove());
+    activeLeaderLines = [];
+
     const nodesData = {};
     const hexagonsData = {};
     const edges = [];
     let titleAssigned = false;
 
+    // PASSO 1: Mapear Elementos e Definir as Regras
     celulas.forEach(cell => {
         const id = cell.getAttribute("id");
         const isVertex = cell.getAttribute("vertex") === "1";
@@ -219,24 +241,26 @@ function renderXML(xmlString) {
         if (isVertex && geo) {
             const rawText = extractText(value);
 
-            let tipo = 'rect';
+            // REGRA DE DEFINIÇÃO VISUAL:
+            let tipo = 'square'; // Por padrão, tudo (quadrado ou retângulo não-arredondado) será tratado como quadrado principal
+
             if (style.includes('shape=hexagon')) {
                 tipo = 'hexagon';
-            } else if (!titleAssigned && style.includes('rounded=1') && rawText.trim()) {
-                tipo = 'title';
-                titleAssigned = true;
-            } else if (style.includes('aspect=fixed')) {
-                tipo = 'square';
+            } else if (style.includes('rounded=1')) {
+                // Se for arredondado, o primeiro com texto vira o Titulo. Os outros viram o retângulo azul claro.
+                if (!titleAssigned && rawText.trim() !== '') {
+                    tipo = 'title';
+                    titleAssigned = true;
+                } else {
+                    tipo = 'rect'; 
+                }
             }
 
             if (tipo === 'hexagon') {
                 hexagonsData[id] = rawText;
             } else {
                 nodesData[id] = {
-                    id,
-                    styleStr: style,
-                    text: rawText,
-                    tipo,
+                    id, styleStr: style, text: rawText, tipo,
                     x: parseFloat(geo.getAttribute("x") || 0),
                     y: parseFloat(geo.getAttribute("y") || 0),
                     w: parseFloat(geo.getAttribute("width") || 100),
@@ -245,34 +269,26 @@ function renderXML(xmlString) {
                 };
             }
         } else if (isEdge) {
-    const source = cell.getAttribute("source");
-    const target = cell.getAttribute("target");
-    const isDashed = style.includes('dashed=1');
+            const source = cell.getAttribute("source");
+            const target = cell.getAttribute("target");
+            const isDashed = style.includes('dashed=1');
 
-    const getStyleNum = (key) => {
-        const m = style.match(new RegExp(key + '=([0-9.]+)'));
-        return m ? parseFloat(m[1]) : null;
-    };
+            const getStyleNum = (key) => {
+                const m = style.match(new RegExp(key + '=([0-9.]+)'));
+                return m ? parseFloat(m[1]) : null;
+            };
 
-    const points = geo
-        ? Array.from(geo.querySelectorAll('Array[as="points"] > mxPoint')).map(p => ({
-              x: parseFloat(p.getAttribute('x')),
-              y: parseFloat(p.getAttribute('y'))
-          }))
-        : [];
+            const points = geo ? Array.from(geo.querySelectorAll('Array[as="points"] > mxPoint')).map(p => ({
+                x: parseFloat(p.getAttribute('x')), y: parseFloat(p.getAttribute('y'))
+            })) : [];
 
-    if (source && target) {
-        edges.push({
-            source, target, isDashed, points,
-            exitX: getStyleNum('exitX'),
-            exitY: getStyleNum('exitY'),
-            entryX: getStyleNum('entryX'),
-            entryY: getStyleNum('entryY')
-        });
-    }
-}});
+            if (source && target) {
+                edges.push({ source, target, isDashed, points, exitX: getStyleNum('exitX'), exitY: getStyleNum('exitY'), entryX: getStyleNum('entryX'), entryY: getStyleNum('entryY') });
+            }
+        }
+    });
 
-
+    // PASSO 2: Associar Tooltips
     edges.forEach(edge => {
         if (hexagonsData[edge.target]) {
             if (nodesData[edge.source]) nodesData[edge.source].tooltipText = hexagonsData[edge.target];
@@ -281,17 +297,25 @@ function renderXML(xmlString) {
         }
     });
 
-    const containerWidth = Math.max(900, Math.min(1400, Object.values(nodesData).reduce((maxW, node) => Math.max(maxW, node.x + node.w), 0) + 220));
-    const containerHeight = Math.max(800, Object.values(nodesData).reduce((maxH, node) => Math.max(maxH, node.y + node.h), 0) + 180);
+    // PASSO 3: MATEMÁTICA CORRETA DAS DIMENSÕES (Evita espaço em branco fantasma embaixo do mapa)
+    const minX = Math.min(...Object.values(nodesData).map(n => n.x));
+    const minY = Math.min(...Object.values(nodesData).map(n => n.y));
+    const maxX = Math.max(...Object.values(nodesData).map(n => n.x + n.w));
+    const maxY = Math.max(...Object.values(nodesData).map(n => n.y + n.h));
+
+    const drawWidth = maxX - minX;
+    const drawHeight = maxY - minY;
+
+    const containerWidth = Math.max(900, Math.min(1400, drawWidth + 160));
+    const containerHeight = Math.max(600, drawHeight + 180);
+
     container.style.width = `${containerWidth}px`;
     container.style.minHeight = `${containerHeight}px`;
-    container.style.margin = '0 auto';
 
-    const minX = Math.min(...Object.values(nodesData).map(node => node.x));
-    const minY = Math.min(...Object.values(nodesData).map(node => node.y));
-    const offsetX = (containerWidth - (Math.max(...Object.values(nodesData).map(node => node.x + node.w)) - minX + 160)) / 2 - minX;
+    const offsetX = (containerWidth - drawWidth) / 2 - minX;
     const offsetY = 90 - minY;
 
+    // PASSO 4: Criar as Caixas Visuais
     Object.values(nodesData).forEach(node => {
         const div = document.createElement("div");
         div.id = `node-${node.id}`;
@@ -302,126 +326,107 @@ function renderXML(xmlString) {
         div.style.height = `${node.h}px`;
 
         if (node.tipo === 'square') {
-            div.classList.add('drawio-square');
-            const parts = node.text.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
-            const topText = parts[0] || '';
-            const bottomText = parts.slice(1)
-                .map(line => line.replace(/^-\s*/, '• '))
-                .join('<br>');
+            const parenIndex = node.text.indexOf('(');
+            const listIndex = node.text.indexOf('\n-');
 
-            div.innerHTML = `
-                <div class="square-top">${topText}</div>
-                <div class="square-bottom">${bottomText || '&nbsp;'}</div>
-            `;
+            if (parenIndex !== -1) {
+                // Caso 1: O texto tem parênteses. Divide em topo/base.
+                div.classList.add('drawio-square');
+                const topText = node.text.substring(0, parenIndex).trim();
+                let bottomText = node.text.substring(parenIndex).trim();
+                
+                bottomText = bottomText.replace(/\n-/g, '<br>• ').replace(/\n/g, '<br>');
+
+                div.innerHTML = `<div class="square-top">${topText}</div><div class="square-bottom">${bottomText}</div>`;
+            } else if (listIndex !== -1) {
+                // Caso 2: O texto tem uma lista (ex: '- item'), mas sem parênteses. Divide em topo/base.
+                div.classList.add('drawio-square');
+                const topText = node.text.substring(0, listIndex).trim().replace(/\n/g, '<br>');
+                let bottomText = node.text.substring(listIndex);
+                
+                // Converte os marcadores da lista e remove a quebra de linha inicial.
+                bottomText = bottomText.replace(/\n-/g, '<br>• ').replace(/\n/g, '<br>');
+                if (bottomText.startsWith('<br>')) {
+                    bottomText = bottomText.substring(4).trim();
+                }
+                div.innerHTML = `<div class="square-top">${topText}</div><div class="square-bottom">${bottomText}</div>`;
+            } else {
+                // Caso 3: Sem parênteses e sem lista. Renderiza como um bloco único todo azul.
+                div.classList.add('drawio-square-full');
+                let fullText = node.text.replace(/\n-/g, '<br>• ').replace(/\n/g, '<br>');
+                div.innerHTML = fullText;
+            }
 
             if (node.tooltipText) {
                 div.setAttribute('data-tooltip', node.tooltipText);
             }
+
         } else if (node.tipo === 'title') {
             div.classList.add('drawio-title');
             div.innerHTML = node.text;
         } else {
+            // Retângulo azul claro
             div.classList.add('drawio-rect');
-            div.innerHTML = node.text.replace(/-/g, '•');
+            div.innerHTML = node.text.replace(/\n-/g, '<br>• ').replace(/\n/g, '<br>');
         }
 
         container.appendChild(div);
     });
 
+    // PASSO 5: Linhas (SVG)
     setTimeout(() => {
-    const svgNS = "http://www.w3.org/2000/svg";
-    const svg = document.createElementNS(svgNS, "svg");
-    svg.style.position = "absolute";
-    svg.style.top = "0";
-    svg.style.left = "0";
-    svg.style.width = "100%";
-    svg.style.height = "100%";
-    svg.style.zIndex = "1";
-    svg.style.pointerEvents = "none";
-    container.appendChild(svg);
-    activeLeaderLines.push(svg);
+        const svgNS = "http://www.w3.org/2000/svg";
+        const svg = document.createElementNS(svgNS, "svg");
+        svg.style.position = "absolute";
+        svg.style.top = "0";
+        svg.style.left = "0";
+        svg.style.width = "100%";
+        svg.style.height = "100%";
+        svg.style.zIndex = "1";
+        svg.style.pointerEvents = "none";
+        container.appendChild(svg);
+        activeLeaderLines.push(svg);
 
-    // Ponto fixo: usado quando o XML já define exitX/exitY ou entryX/entryY
-    const fixedPoint = (node, fx, fy) => ({
-        x: node.x + offsetX + node.w * fx,
-        y: node.y + offsetY + node.h * fy
-    });
+        const fixedPoint = (node, fx, fy) => ({ x: node.x + offsetX + node.w * fx, y: node.y + offsetY + node.h * fy });
+        const floatingPoint = (node, refX, refY) => {
+            const cx = node.x + node.w / 2;
+            const cy = node.y + node.h / 2;
+            const dx = refX - cx;
+            const dy = refY - cy;
+            let px, py;
+            if (Math.abs(dx) > Math.abs(dy)) { px = dx > 0 ? node.x + node.w : node.x; py = cy; } 
+            else { px = cx; py = dy > 0 ? node.y + node.h : node.y; }
+            return { x: px + offsetX, y: py + offsetY };
+        };
 
-    // Ponto flutuante: escolhe sozinho de qual lado do nó (topo, base,
-    // esquerda ou direita) a linha deve sair, olhando para onde fica o
-    // próximo ponto da rota. É o mesmo cálculo que o draw.io faz quando
-    // a ligação não tem lado fixo definido.
-    const floatingPoint = (node, refX, refY) => {
-        const cx = node.x + node.w / 2;
-        const cy = node.y + node.h / 2;
-        const dx = refX - cx;
-        const dy = refY - cy;
-        let px, py;
-        if (Math.abs(dx) > Math.abs(dy)) {
-            px = dx > 0 ? node.x + node.w : node.x;
-            py = cy;
-        } else {
-            px = cx;
-            py = dy > 0 ? node.y + node.h : node.y;
-        }
-        return { x: px + offsetX, y: py + offsetY };
-    };
+        edges.forEach(edge => {
+            if (hexagonsData[edge.source] || hexagonsData[edge.target]) return;
 
-    edges.forEach(edge => {
-        if (hexagonsData[edge.source] || hexagonsData[edge.target]) return;
+            const nSource = nodesData[edge.source];
+            const nTarget = nodesData[edge.target];
+            if (!nSource || !nTarget) return;
 
-        const nSource = nodesData[edge.source];
-        const nTarget = nodesData[edge.target];
-        if (!nSource || !nTarget) return;
+            const firstMid = edge.points[0] || { x: nTarget.x + nTarget.w / 2, y: nTarget.y + nTarget.h / 2 };
+            const lastMid = edge.points[edge.points.length - 1] || { x: nSource.x + nSource.w / 2, y: nSource.y + nSource.h / 2 };
 
-        const firstMid = edge.points[0] || { x: nTarget.x + nTarget.w / 2, y: nTarget.y + nTarget.h / 2 };
-        const lastMid = edge.points[edge.points.length - 1] || { x: nSource.x + nSource.w / 2, y: nSource.y + nSource.h / 2 };
+            const start = (edge.exitX !== null && edge.exitY !== null) ? fixedPoint(nSource, edge.exitX, edge.exitY) : floatingPoint(nSource, firstMid.x, firstMid.y);
+            const end = (edge.entryX !== null && edge.entryY !== null) ? fixedPoint(nTarget, edge.entryX, edge.entryY) : floatingPoint(nTarget, lastMid.x, lastMid.y);
+            const middle = edge.points.map(p => ({ x: p.x + offsetX, y: p.y + offsetY }));
+            
+            const pointsAttr = [start, ...middle, end].map(p => `${p.x},${p.y}`).join(' ');
 
-        const start = (edge.exitX !== null && edge.exitY !== null)
-            ? fixedPoint(nSource, edge.exitX, edge.exitY)
-            : floatingPoint(nSource, firstMid.x, firstMid.y);
-
-        const end = (edge.entryX !== null && edge.entryY !== null)
-            ? fixedPoint(nTarget, edge.entryX, edge.entryY)
-            : floatingPoint(nTarget, lastMid.x, lastMid.y);
-
-        const middle = edge.points.map(p => ({ x: p.x + offsetX, y: p.y + offsetY }));
-        const pointsAttr = [start, ...middle, end].map(p => `${p.x},${p.y}`).join(' ');
-
-        const polyline = document.createElementNS(svgNS, "polyline");
-        polyline.setAttribute("points", pointsAttr);
-        polyline.setAttribute("fill", "none");
-        polyline.setAttribute("stroke", "#6c8ebf");
-        polyline.setAttribute("stroke-width", "2");
-        if (edge.isDashed) {
-            polyline.setAttribute("stroke-dasharray", "6,4");
-            polyline.animate(
-                [
-                    { strokeDashoffset: '0' },
-                    { strokeDashoffset: '-20' }
-                ],
-                {
-                    duration: 1200,
-                    iterations: Infinity,
-                    easing: 'linear'
-                }
-            );
-        }
-        svg.appendChild(polyline);
-    });
-
-    ajustarAlturaContainer(nodesData);
-}, 200);
-}
-
-// Garante que o container não corte as caixas mais baixas
-function ajustarAlturaContainer(nodesData) {
-    let maxY = 0;
-    Object.values(nodesData).forEach(n => {
-        if ((n.y + n.h) > maxY) maxY = n.y + n.h;
-    });
-    const container = document.getElementById('mindmap-container');
-    container.style.minHeight = (maxY + 100) + 'px';
+            const polyline = document.createElementNS(svgNS, "polyline");
+            polyline.setAttribute("points", pointsAttr);
+            polyline.setAttribute("fill", "none");
+            polyline.setAttribute("stroke", "#6c8ebf");
+            polyline.setAttribute("stroke-width", "2");
+            if (edge.isDashed) {
+                polyline.setAttribute("stroke-dasharray", "6,4");
+                polyline.animate([{ strokeDashoffset: '0' }, { strokeDashoffset: '-20' }], { duration: 1200, iterations: Infinity, easing: 'linear' });
+            }
+            svg.appendChild(polyline);
+        });
+    }, 200);
 }
 
 
@@ -438,7 +443,8 @@ function initTooltip() {
     }
 
     document.addEventListener('mouseover', (e) => {
-        const target = e.target.closest('.drawio-square, .stat-card');
+        // Agora também captura os quadrados totalmente azuis (.drawio-square-full)
+        const target = e.target.closest('.drawio-square, .drawio-square-full, .stat-card');
         if (!target || !target.hasAttribute('data-tooltip')) return;
 
         currentTarget = target;
@@ -449,7 +455,7 @@ function initTooltip() {
     });
 
     document.addEventListener('mousemove', (e) => {
-        const target = e.target.closest('.drawio-square, .stat-card');
+        const target = e.target.closest('.drawio-square, .drawio-square-full, .stat-card');
         if (!target || !target.hasAttribute('data-tooltip')) return;
 
         if (currentTarget !== target) {
@@ -461,9 +467,9 @@ function initTooltip() {
     });
 
     document.addEventListener('mouseout', (e) => {
-        const target = e.target.closest('.drawio-square, .stat-card');
+        const target = e.target.closest('.drawio-square, .drawio-square-full, .stat-card');
         const relatedTarget = e.relatedTarget;
-        const relatedInside = relatedTarget && relatedTarget.closest && relatedTarget.closest('.drawio-square, .stat-card');
+        const relatedInside = relatedTarget && relatedTarget.closest && relatedTarget.closest('.drawio-square, .drawio-square-full, .stat-card');
 
         if (!target || !relatedInside) {
             tooltip.style.opacity = '0';

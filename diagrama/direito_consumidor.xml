@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="B8D66lVCGWsVi5pCs5-q">
+    <mxGraphModel dx="1230" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-1" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="424" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-4" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Da fatura e  do pagamento&lt;/span&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="84" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-7" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-9" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Do inadimplemento&lt;br&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="349" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Direito do consumidor de energia" vertex="1">
+          <mxGeometry height="60" width="660" x="84" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-49" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-48" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-12" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Da qualidade do serviço&lt;/span&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="300" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-46" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-14" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Do serviço de atendimento ao consumidor&lt;/span&gt;&lt;span&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="126" width="126" x="84" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-16" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.542;exitY=1.005;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.464;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-14" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="240" />
+              <mxPoint x="142" y="240" />
+            </Array>
+            <mxPoint x="660" y="210" as="sourcePoint" />
+            <mxPoint x="143" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-17" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Da suspensão do  fornecimento&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="140" x="604" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-51" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-50" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-48" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Do ressarcimento de danos eletricos&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="235" x="515" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-50" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;Direitos dos consumidores do grupo B&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="235" x="515" y="338" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
