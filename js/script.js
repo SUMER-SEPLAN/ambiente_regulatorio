@@ -297,7 +297,7 @@ function renderXML(xmlString) {
         }
     });
 
-    // PASSO 3: MATEMÁTICA CORRETA DAS DIMENSÕES (Evita espaço em branco fantasma embaixo do mapa)
+    // PASSO 3: MATEMÁTICA CORRETA DAS DIMENSÕES 
     const minX = Math.min(...Object.values(nodesData).map(n => n.x));
     const minY = Math.min(...Object.values(nodesData).map(n => n.y));
     const maxX = Math.max(...Object.values(nodesData).map(n => n.x + n.w));
@@ -306,11 +306,12 @@ function renderXML(xmlString) {
     const drawWidth = maxX - minX;
     const drawHeight = maxY - minY;
 
-    const containerWidth = Math.max(900, Math.min(1400, drawWidth + 160));
+    // Novo cálculo sem o limite de largura
+    const containerWidth = Math.max(900, drawWidth + 160);
     const containerHeight = Math.max(600, drawHeight + 180);
 
     container.style.width = `${containerWidth}px`;
-    container.style.minHeight = `${containerHeight}px`;
+    container.style.height = `${containerHeight}px`;
 
     const offsetX = (containerWidth - drawWidth) / 2 - minX;
     const offsetY = 90 - minY;
@@ -373,8 +374,8 @@ function renderXML(xmlString) {
         container.appendChild(div);
     });
 
-    // PASSO 5: Linhas (SVG)
-    setTimeout(() => {
+    // PASSO 5: Linhas (SVG Customizado)
+    window.drawioTimeout = setTimeout(() => {
         const svgNS = "http://www.w3.org/2000/svg";
         const svg = document.createElementNS(svgNS, "svg");
         svg.style.position = "absolute";
@@ -384,6 +385,7 @@ function renderXML(xmlString) {
         svg.style.height = "100%";
         svg.style.zIndex = "1";
         svg.style.pointerEvents = "none";
+        svg.style.overflow = "visible"; // <--- ADICIONE ESTA LINHA: ELA REVELA AS SETAS CORTADAS
         container.appendChild(svg);
         activeLeaderLines.push(svg);
 

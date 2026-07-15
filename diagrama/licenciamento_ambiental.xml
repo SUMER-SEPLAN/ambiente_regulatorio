@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="B8D66lVCGWsVi5pCs5-q">
+    <mxGraphModel dx="7897" dy="6053" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Licenciamento ambiental" vertex="1">
+          <mxGeometry height="60" width="660" x="84" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-112" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-111" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-54" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-124" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-106" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span&gt;&lt;/span&gt;&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt; margin-bottom: 0pt; text-indent: -0.38in;&quot;&gt;&lt;font&gt;Licenças Ambientais&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="-305" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-114" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-113" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-53" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-127" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-111" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt; margin-bottom: 0pt; text-indent: -0.38in;&quot;&gt;&lt;font&gt;Outorga de Uso da Água&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="-95" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-117" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-116" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-52" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-129" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-113" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt; margin-bottom: 0pt; text-indent: -0.38in;&quot;&gt;&lt;font&gt;Supressão Vegetal&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="135" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-119" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-118" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-50" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-131" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-116" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt; margin-bottom: 0pt; text-indent: -0.38in;&quot;&gt;&lt;font&gt;Cadastro Ambiental Rural&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="176" x="336" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-121" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-120" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-49" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-133" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-118" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt; margin-bottom: 0pt; text-indent: -0.38in;&quot;&gt;&lt;font&gt;Agente Licenciador&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="156" x="576" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-48" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-135" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-59" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="D4aP_P9Au8OuQ_5HPQlE-57" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-120" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt; margin-bottom: 0pt; text-indent: -0.38in;&quot;&gt;&lt;font&gt;Áreas Protegidas&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="792" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-126" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-125" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-124" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&amp;lt;br/&amp;gt;margin-left:.38in;text-indent:-.38in;language:pt-BR&quot;&gt;Órdinário: LP, LI, LO;&lt;br&gt;Bifásico: LP/LI, LI/LO;&lt;br&gt;&lt;br&gt;Simplificado: LAU, LAC, LAE, DBIA&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="-302.5" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-125" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in;&quot;&gt;Lei nº 4.854/96*; Res. 46/222* IN. 33/26*; Dec. 14.921/12*; IN 9/23*&lt;/p&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="-302.5" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-139" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-128" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-127" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:.38in;text-indent:-.38in;language:pt-BR&quot;&gt;Outroga preventiva; Outorga de&lt;br/&gt;Direito de Uso; Dispensa de Outorga&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="-82.5" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-128" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:.38in;text-indent:-.38in;language:pt-BR&quot;&gt;Lei nº 5.165/00*; Lei&lt;br/&gt;nº 6.742/15*; Res. Conj. 1/20*; Dec. nº 15.512/14*&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="-82.5" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-140" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-130" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-129" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:.38in;text-indent:-.38in;language:pt-BR&quot;&gt;Inventário Florestal; Compensação&lt;br/&gt;Florestal; ASV; AUTEX&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="132.5" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-130" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:.38in;text-indent:-.38in;language:pt-BR&quot;&gt;Lei nº 5.202/01*; Lei nº 7.193/19*; nº&lt;br/&gt;8.267/23*; IN 5/20*;&amp;nbsp; IN 20/2024*; Port.&lt;br/&gt;3/15*;&amp;nbsp; Port. 1/14*&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="132.5" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-141" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-132" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-131" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:.38in;text-indent:-.38in;language:pt-BR&quot;&gt;SICAR; PRA&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="351.5" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-132" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:.38in;text-indent:-.38in;language:pt-BR&quot;&gt;Lei nº 6.132/11*; IN 5/20*&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="351.5" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-142" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-134" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-133" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:.38in;text-indent:-.38in;language:pt-BR&quot;&gt;Municipal; Estadual; Federal&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="581.5" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-134" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&amp;lt;br/&amp;gt;margin-left:.38in;text-indent:-.38in;language:pt-BR&quot;&gt;Lei Complementar 140/11; Res. 37/97&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="581.5" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-135" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&lt;br/&gt;margin-left:.38in;text-indent:-.38in;font-size:15.0pt;language:pt-BR&quot;&gt;&lt;span style=&quot;font-size:15.0pt;language:pt-BR&quot;&gt;APP, UCS&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="789.5" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-151" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;São&lt;br/&gt;Instrumento da Política Nacional do Meio Ambiente pelo qual o poder público&lt;br/&gt;autoriza a localização, instalação, ampliação e operação de empreendimentos e&lt;br/&gt;atividades que utilizam recursos ambientais ou que possam causar degradação&lt;br/&gt;ambiental. É exigida antes do início de qualquer obra ou atividade sujeita ao&lt;br/&gt;licenciamento, sendo condição obrigatória para obtenção de financiamentos&lt;br/&gt;públicos, alvarás e contratos com o poder público.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="-540" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-152" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-151" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.454;entryY=0.048;entryDx=0;entryDy=0;entryPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-154" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-124">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-153" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Os&lt;br/&gt;tipos de procedimentos são definidos pelo porte e pelo potencial poluidor do&lt;br/&gt;empreendimento (Ordinário trifásico, Bifásico ou simplificado). &lt;b&gt;LP&lt;/b&gt;: Licença&lt;br/&gt;Prévia, aprova a concepção e viabilidade ambiental do projeto, deve ser obtida&lt;br/&gt;na fase de planejamento, sua emissão pode ocorrer em até 10 meses após a&lt;br/&gt;solicitação. &lt;b&gt;LI&lt;/b&gt;: Licença de Instalação, autoriza o início das obras e a&lt;br/&gt;implantação do empreendimento conforme o projeto aprovado, com previsão de até&lt;br/&gt;3 meses para emissão. &lt;b&gt;LO&lt;/b&gt;: Licença de Operação, autoriza o início do&lt;br/&gt;funcionamento após verificação do cumprimento das condicionantes da LI, podendo&lt;br/&gt;ser emitida em até 3 meses. &lt;b&gt;LAU&lt;/b&gt;: Licença Ambiental Única, é uma licença&lt;br/&gt;simplificada que unifica todas as fases em um único ato para atividades de&lt;br/&gt;baixo impacto. &lt;b&gt;LAE&lt;/b&gt;: Licença Ambiental Especial, destinada a&lt;br/&gt;empreendimento com características especificas que demandam procedimento&lt;br/&gt;diferenciado. Sua emissão pode ocorrer em até 12 meses. &lt;b&gt;LAC&lt;/b&gt;: licença Por&lt;br/&gt;Adesão e Compromisso, é a modalidade em que o empreendedor adere a&lt;br/&gt;condicionantes padronizadas previamente definidas pelo órgão ambiental sem&lt;br/&gt;necessidade de analise individualizada do processo. &lt;b&gt;DBIA&lt;/b&gt;: Declaração de&lt;br/&gt;Baixo Impacto Ambiental, é a declaração simplificada para atividades de mínimo&lt;br/&gt;impacto, sem necessidade de licença formal.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="-550" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-155" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;As&lt;br/&gt;normas estaduais do Piauí são fundamentadas e corroboradas pela legislação&lt;br/&gt;federal, em caso de omissão da norma estadual, aplica-se subsidiariamente a&lt;br/&gt;norma federal. PNMA nº 6.938/81; LGLA nº 15.190/25; Res. 237/97.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="-540" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-156" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-155" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.024;entryY=0.616;entryDx=0;entryDy=0;entryPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-125">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-158" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-157" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-157" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;É o&lt;br/&gt;instrumento pelo qual o poder público autoriza o uso de recursos hídricos por&lt;br/&gt;parte de um usuário, garantindo o controle quantitativo e qualitativo da água e&lt;br/&gt;assegurando o acesso equilibrado entre os diversos usos. É obrigatória para&lt;br/&gt;captação, derivação, extração de água subterrânea, lançamento de efluentes e&lt;br/&gt;outros usos que possam interferir no regime dos corpos d’água. A outorga é&lt;br/&gt;exigida antes da implantação ou operação de atividades que utilizem recursos&lt;br/&gt;hídricos e deve ser solicitada ao órgão competente.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="-400" y="-290" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-160" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-127">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-159" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;margin-left:-35.45pt&quot;&gt;O processo avalia a&lt;br/&gt;disponibilidade hídrica e o impacto do uso pretendido. &lt;b&gt;Outorga Preventiva:&lt;/b&gt;&lt;br/&gt;reserva a disponibilidade hídrica para uso futuro, sem permitir ainda a&lt;br/&gt;utilização da água, utilizada na fase de planejamento do empreendimento. &lt;b&gt;Outorga&lt;br/&gt;de Direito de Uso:&lt;/b&gt; autoriza efetivamente o uso da água por prazo&lt;br/&gt;determinado. &lt;b&gt;Dispensa de Outorga:&lt;/b&gt; aplicável para usos considerados&lt;br/&gt;insignificantes, conforme critérios do órgão gestor. O prazo de análise e&lt;br/&gt;emissão pode variar conforme a complexidade do uso, disponibilidade hídrica e&lt;br/&gt;necessidade de estudos complementares. A outorga pode estabelecer&lt;br/&gt;condicionantes, limites de captação e exigências de monitoramento, o usuário&lt;br/&gt;deve verificar esses critérios junto à SEMARH-PI.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="-340" y="-160" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-162" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-161" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-128">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo16OP1xxp4yjsuZDWTS-161" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;As&lt;br/&gt;normas estaduais do Piauí seguem as diretrizes federais (PNRH 9.433/97; Res.&lt;br/&gt;CNRH 16/01; Res. CNRH 37/04; ANA 707/04), e podem ser complementadas por&lt;br/&gt;legislações específicas. Em caso de omissão estadual, aplica-se a legislação&lt;br/&gt;federal.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="-240" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-11" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-2" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Procedimento&lt;br/&gt;pelo qual se obtém autorização para remoção de cobertura vegetal nativa em área&lt;br/&gt;determinada, necessário antes de qualquer intervenção em vegetação natural.&lt;br/&gt;Deve considerar o bioma, o estágio sucessional da vegetação, a localização em&lt;br/&gt;relação a APPs e Reserva Legal, e a necessidade de reposição florestal. É uma etapa&lt;br/&gt;essencial no processo de licenciamento de obras e empreendimentos que&lt;br/&gt;interfiram em áreas com vegetação nativa.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="-140" y="-230" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-14" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-129">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-7" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;O&lt;br/&gt;pedido é dirigido à SEMARH para vegetação em área de competência estadual ou ao&lt;br/&gt;IBAMA quando se tratar de área federal ou biomas com legislação específica, o&lt;br/&gt;órgão realiza visita técnica à área para levantamento das espécies, volume de&lt;br/&gt;madeira e estágio de conservação da vegetação a ser suprimida. &lt;b&gt;Inventário&lt;br/&gt;Florestal&lt;/b&gt;: levantamento das espécies existentes; &lt;b&gt;Compensação Florestal:&lt;/b&gt;&lt;br/&gt;reposição vegetal ou compensação em área equivalente; &lt;b&gt;ASV&lt;/b&gt;: Autorização&lt;br/&gt;de Supressão de Vegetação é emitida para supressão em áreas de uso alternativo&lt;br/&gt;do solo fora de APP e Reserva Legal, com obrigação de reposição florestal; &lt;b&gt;AUTEX&lt;/b&gt;:&lt;br/&gt;Autorização de Exploração, autoriza a exploração de produtos e subprodutos&lt;br/&gt;florestais. Exige plano de manejo ou reposição florestal conforme volume&lt;br/&gt;explorado.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="145" y="-740" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-8" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&#xa;&lt;span style=&quot;font-size:12.0pt;line-height:115%;&#xa;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&#xa;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&#xa;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&#xa;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Os&#xa;processos de Supressão vegetal estadual, tem aporte nas legislações federais,&#xa;como: Código florestal nº 12.651/12; Mata Atlântica nº 11.428/06; LGLA nº&#xa;15.190/25; Res. 369/06; Port. MMA 443/14.&lt;/span&gt;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="80" width="120" x="-10" y="-400" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-16" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-9" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Registro&lt;br/&gt;público eletrônico de abrangência nacional, obrigatório para todos os imóveis&lt;br/&gt;rurais, que integra as informações ambientais das propriedades referentes à&lt;br/&gt;situação das APPs, Reserva Legal, remanescentes de vegetação nativa e áreas&lt;br/&gt;consolidadas. É pré-requisito para acesso ao Programa de Regularização&lt;br/&gt;Ambiental (PRA) e para obtenção de financiamentos e benefícios agrícolas.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="336" y="-910" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-13" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.013;entryY=0.68;entryDx=0;entryDy=0;entryPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-130">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-18" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-15" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&#xa;&lt;span style=&quot;font-size:12.0pt;line-height:115%;&#xa;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&#xa;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&#xa;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&#xa;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Os&#xa;procedimentos de inscrição no CAR devem considerar os limites georreferenciados&#xa;do imóvel rural, as Áreas de Preservação Permanente, a Reserva Legal e as áreas&#xa;consolidadas; o órgão estadual gestor será responsável pela análise e validação&#xa;das informações declaradas pelo proprietário; ficará a encargo do proprietário&#xa;rural a regularidade cadastral e, quando necessário, a adesão ao &lt;b&gt;PRA&lt;/b&gt; - Programa&#xa;de Regularização Ambiental, para adequação dos passivos ambientais&#xa;identificados. &lt;b&gt;SICAR&lt;/b&gt;: Sistema de Cadastro Ambiental Rural é o sistema&#xa;eletrônico por meio do qual é realizado o cadastro imóvel.&lt;/span&gt;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="80" width="120" x="300" y="-700" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-19" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;O&lt;br/&gt;registro do CAR, tem aporte na legislação federal: Código florestal nº&lt;br/&gt;12.651/12; Mata Atlântica nº 11.428/06; LGLA nº 15.190/25; Res. 369/06; Port.&lt;br/&gt;MMA 443/14&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="414" y="-490" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-20" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.003;entryY=0.648;entryDx=0;entryDy=0;entryPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-132">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-34" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-118">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-21" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&#xa;&lt;span style=&quot;font-size:12.0pt;line-height:115%;&#xa;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&#xa;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&#xa;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&#xa;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;É o&#xa;órgão integrante do SISNAMA responsável por conduzir o processo de&#xa;licenciamento ambiental. A definição do agente competente leva em conta a&#xa;abrangência territorial dos impactos diretos do empreendimento ou atividade,&#xa;observando a legislação de repartição de competências entre os entes&#xa;federativos.&lt;/span&gt;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="80" width="120" x="534" y="-970" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-35" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-133">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-22" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&#xa;&#xa;&#xa;&lt;p class=&quot;MsoNormal&quot; style=&quot;margin-left:-35.45pt&quot;&gt;A definição do ente responsável&#xa;segue critérios estabelecidos na legislação, especialmente quanto à abrangência&#xa;do impacto ambiental. &lt;b&gt;Municipal:&lt;/b&gt; empreendimentos de impacto local; &lt;b&gt;Estadual:&lt;/b&gt;&#xa;atividades com impacto regional ou que não sejam de competência federal; &lt;b&gt;Federal:&lt;/b&gt;&#xa;empreendimentos com impacto em mais de um estado, em áreas federais ou que&#xa;envolvam bens da União.&lt;/p&gt;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="80" width="120" x="580" y="-830" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-36" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-134">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-23" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&#xa;&lt;span style=&quot;font-size:12.0pt;line-height:115%;&#xa;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&#xa;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&#xa;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&#xa;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Normativo&#xa;federais que corroboram os estaduais: Código florestal nº 12.651/12; Dec.&#xa;7.830/12; IN MMA 2/14&lt;/span&gt;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="80" width="120" x="640" y="-730" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-30" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-120">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-24" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&#xa;&lt;span style=&quot;font-size:12.0pt;line-height:115%;&#xa;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&#xa;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&#xa;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&#xa;background:yellow;mso-highlight:yellow;mso-ansi-language:PT-BR;mso-fareast-language:&#xa;EN-US;mso-bidi-language:AR-SA&quot;&gt;São territórios com restrições legais de uso,&#xa;como Áreas de Preservação Permanente (APP) e Unidades de Conservação (UC), que&#xa;influenciam diretamente a localização, o traçado e a viabilidade de&#xa;empreendimentos do setor energético.&lt;/span&gt;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="80" width="120" x="760" y="-980" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-31" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-25" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&#xa;&lt;span style=&quot;font-size:12.0pt;line-height:115%;&#xa;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&#xa;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&#xa;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&#xa;background:yellow;mso-highlight:yellow;mso-ansi-language:PT-BR;mso-fareast-language:&#xa;EN-US;mso-bidi-language:AR-SA&quot;&gt;Para empreendimentos do setor energético, a&#xa;identificação prévia dessas áreas é essencial para evitar conflitos ambientais&#xa;e atrasos no licenciamento. &lt;b&gt;APP:&lt;/b&gt; Área de Preservação Permanente, são áreas&#xa;que restringem intervenções em margens de rios, nascentes, encostas e áreas&#xa;sensíveis, podendo inviabilizar ou exigir adequações no projeto, a intervenção&#xa;ocorre somente em casos excepcionais previstos no Código Florestal. &lt;b&gt;UC&lt;/b&gt;:&#xa;Unidade de Conservação, é o Espaço territorial protegido por ato do poder&#xa;público, com características naturais relevantes. Divididas em Proteção&#xa;Integral e Uso Sustentável. Empreendimentos no interior ou entorno exigem&#xa;licença do órgão gestor da UC.&lt;/span&gt;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="80" width="120" x="806" y="-840" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-32" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="D4aP_P9Au8OuQ_5HPQlE-57">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1055.516129032258" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-27" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&#xa;&#xa;&#xa;&lt;p class=&quot;MsoNormal&quot; style=&quot;margin-left:-35.45pt&quot;&gt;&lt;span style=&quot;background:yellow;&#xa;mso-highlight:yellow&quot;&gt;São instrumentos técnicos exigidos no licenciamento&#xa;ambiental que avaliam os impactos de empreendimentos de energia e orientam a&#xa;tomada de decisão quanto à sua viabilidade ambiental.&lt;/span&gt;&lt;/p&gt;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="80" width="120" x="960" y="-990" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-41" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="D4aP_P9Au8OuQ_5HPQlE-58">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1128" y="309.75000000000045" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-28" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;background:yellow;mso-highlight:yellow;mso-ansi-language:PT-BR;mso-fareast-language:&lt;br/&gt;EN-US;mso-bidi-language:AR-SA&quot;&gt;A complexidade do estudo está diretamente ligada&lt;br/&gt;ao porte e ao potencial de impacto do empreendimento energético. &lt;b&gt;EIA/RIMA&lt;/b&gt;:&lt;br/&gt;Estudo e Relatório de Impacto Ambiental, são exigidos para grandes&lt;br/&gt;empreendimentos, Avalia alternativas locacionais, impactos e medidas&lt;br/&gt;mitigadoras. É o principal fator de prazo no licenciamento. &lt;b&gt;RCA&lt;/b&gt;:&lt;br/&gt;Relatório de Controle Ambiental, é utilizado para empreendimentos de médio&lt;br/&gt;impacto, com análise mais simplificada. &lt;b&gt;PCA&lt;/b&gt;: Plano de Controle&lt;br/&gt;Ambiental, define medidas de mitigação e controle dos impactos identificados. &lt;b&gt;RAS&lt;/b&gt;:&lt;br/&gt;Relatório Ambiental Simplificado, é aplicado a projetos de menor impacto (ex.:&lt;br/&gt;algumas usinas solares ou eólicas).&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="1150" y="-930" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-56" edge="1" parent="1" source="D4aP_P9Au8OuQ_5HPQlE-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="D4aP_P9Au8OuQ_5HPQlE-58" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-57" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt; margin-bottom: 0pt; text-indent: -0.38in;&quot;&gt;&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt; margin-bottom: 0pt; text-indent: -0.38in;&quot;&gt;Estudos Ambientais&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="982.5" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D4aP_P9Au8OuQ_5HPQlE-58" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;O0&quot; style=&quot;language:pt-BR;margin-top:0pt;margin-bottom:0pt;&amp;lt;br/&amp;gt;margin-left:.38in;text-indent:-.38in;font-size:15.0pt;language:pt-BR&quot;&gt;&lt;span style=&quot;font-size: 6px; text-indent: -36.48px;&quot;&gt;EIA/RIMA; RCA, PCA, AP; RAS&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="145" x="980" y="201" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

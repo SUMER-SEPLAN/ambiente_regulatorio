@@ -248,14 +248,14 @@ a.link-btn:hover { background: #1351B4; color: white; }
    ========================================================================== */
 .mindmap-section {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    overflow-x: auto; /* Permite arrastar para o lado caso o mapa fique gigantesco */
+    padding: 20px 0;
 }
 
 #mindmap-container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    /* Note que a linha max-width: 1200px foi apagada para liberar o tamanho livre */
     min-height: 800px;
     background: transparent;
     margin: 0 auto;
