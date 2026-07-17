@@ -366,7 +366,7 @@ a.link-btn:hover { background: #1351B4; color: white; }
    ========================================================================== */
 #custom-tooltip {
     position: absolute;
-    background: rgba(19, 81, 180, 0.95);
+    background: rgba(45, 55, 72, 0.95);
     color: white;
     padding: 15px;
     border-radius: 8px;
@@ -380,7 +380,7 @@ a.link-btn:hover { background: #1351B4; color: white; }
     display: none;
     transition: opacity 0.2s ease;
     backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ==========================================================================
