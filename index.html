@@ -41,16 +41,34 @@
         
         <!-- PÁGINA INTRODUTÓRIA (Aparece ao carregar) -->
         <div class="intro-section" id="intro-section">
-            <div class="intro-hero">
-                <h2>Bem-vindo ao Ambiente Regulatório</h2>
-                <p>O Ambiente Regulatório foi desenvolvido com objetivo de tornar mais acessível a consulta às normas do setor energético.</p>
-                <p>Para facilitar a navegação, o conteúdo está organizado em 10 macrotemas, que funcionam como eixos de consulta da plataforma. Ao selecionar um deles, você terá acesso ao fluxograma da respectiva estrutura regulatória e às normas vinculadas, visualizando de forma clara como os diferentes atos e instrumentos se relacionam em cada matéria.</p>
-                <p>A página inicial também reúne o Repositório de Normas Direcionadoras, que concentra, em um único espaço, todas as normas associadas aos macrotemas apresentados.</p>
-                <p>Além disso, os filtros de pesquisa permitem consultar especificamente a legislação do Estado do Piauí aplicável ao setor energético, reunindo e organizando os atos normativos estaduais relacionados a cada tema.</p>
-                <button type="button" class="intro-action" id="open-theme-menu-btn">Explorar macrotemas</button>
+            <div class="intro-top-row">
+                <!-- Lado Esquerdo: Mensagem -->
+                <div class="intro-left">
+                    <div class="intro-hero">
+                        <h2>Bem-vindo ao Ambiente Regulatório</h2>
+                        <p>O Ambiente Regulatório foi desenvolvido com objetivo de tornar mais acessível a consulta às normas do setor energético.</p>
+                        <p>Para facilitar a navegação, o conteúdo está organizado em 10 macrotemas, que funcionam como eixos de consulta da plataforma. Ao selecionar um deles, você terá acesso ao fluxograma da respectiva estrutura regulatória e às normas vinculadas, visualizando de forma clara como os diferentes atos e instrumentos se relacionam em cada matéria.</p>
+                        <p>A página inicial também reúne o Repositório de Normas Direcionadoras, que concentra, em um único espaço, todas as normas associadas aos macrotemas apresentados.</p>
+                        <p>Além disso, os filtros de pesquisa permitem consultar especificamente a legislação do Estado do Piauí aplicável ao setor energético, reunindo e organizando os atos normativos estaduais relacionados a cada tema.</p>
+                        <button type="button" class="intro-action" id="open-theme-menu-btn">Explorar macrotemas</button>
+                    </div>
+                </div>
+                
+                <!-- Lado Direito: Card Principal e Gráfico -->
+                <div class="intro-right">
+                    <div id="stat-normativas-container" style="width: 100%;">
+                        <!-- O Card "Normativas Mapeadas" será injetado aqui via JS -->
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="tipoChart"></canvas>
+                    </div>
+                    <div id="chart-reset-container" style="display:none; text-align:center; margin-top:10px;">
+                        <button id="reset-tipo-btn" class="seplan-apps-bar__site-button" style="margin:0 auto; cursor: pointer;">Limpar Filtro do Gráfico</button>
+                    </div>
+                </div>
             </div>
             
-            <!-- Cards que serão preenchidos pelo JS -->
+            <!-- Cards inferiores que serão preenchidos pelo JS -->
             <div class="intro-stats" id="intro-stats">
                 <div class="stat-card">
                     <span class="stat-number">...</span>
@@ -136,6 +154,9 @@
 
     <!-- Biblioteca para desenhar as setas do mapa mental -->
     <script src="https://cdn.jsdelivr.net/npm/leader-line-new@1.1.9/leader-line.min.js"></script>
+    <!-- Bibliotecas para o Gráfico de Pizza -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

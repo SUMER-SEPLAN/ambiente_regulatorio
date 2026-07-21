@@ -388,41 +388,60 @@ a.link-btn:hover { background: #1351B4; color: white; }
    ========================================================================== */
 .intro-section { 
     width: 100%; 
-    max-width: 900px; 
+    max-width: 1100px; /* Aumentado para caber o gráfico ao lado */
     display: flex; 
     flex-direction: column; 
-    gap: 30px; 
+    gap: 20px; 
     animation: fadeIn 0.8s ease forwards; 
     margin-top: 20px;
 }
 
-.intro-hero { 
-    background: white; 
-    padding: 40px; 
-    border-radius: 12px; 
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
-    text-align: center; 
-    border-top: 5px solid #1351B4; 
+.intro-top-row {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
 }
 
-.intro-hero h2 { 
-    color: #1351B4; 
-    margin-top: 0; 
-    font-size: 26px; 
-    margin-bottom: 15px;
+/* Em telas de celular, joga o gráfico para baixo do texto */
+@media (max-width: 850px) {
+    .intro-top-row { flex-direction: column; }
 }
 
-.intro-hero p { 
-    color: #555; 
-    font-size: 15px; 
-    line-height: 1.6; 
-    margin-bottom: 15px; 
+.intro-left {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
 }
 
-.intro-hero p:last-child {
-    margin-bottom: 0;
-    color: #333;
+.intro-right {
+    flex: 0.8;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 5px solid #1351B4;
 }
+
+.intro-hero {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 5px solid #1351B4;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-hero h2 { color: #1351B4; margin-top: 0; font-size: 26px; margin-bottom: 15px; }
+.intro-hero p { color: #555; font-size: 15px; line-height: 1.6; margin-bottom: 15px; }
+.intro-hero p:last-child { margin-bottom: 0; color: #333; }
 
 .intro-action {
     background: #1351B4;
@@ -435,6 +454,7 @@ a.link-btn:hover { background: #1351B4; color: white; }
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 12px rgba(19, 81, 180, 0.25);
+    margin-top: 20px;
 }
 
 .intro-action:hover {
@@ -442,42 +462,15 @@ a.link-btn:hover { background: #1351B4; color: white; }
     box-shadow: 0 6px 16px rgba(19, 81, 180, 0.3);
 }
 
-.intro-stats { 
-    display: flex; 
-    gap: 20px; 
-    justify-content: center; 
-    flex-wrap: wrap; 
+.chart-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-top: 10px;
 }
 
-.stat-card { 
-    background: white; 
-    padding: 25px 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-    min-width: 180px; 
-    text-align: center; 
-    border: 1px solid #eef2f7; 
-    flex: 1;
-    transition: transform 0.3s;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-}
-
-.stat-number { 
-    font-size: 38px; 
-    font-weight: 700; 
-    color: #1351B4; 
-    display: block; 
-    margin-bottom: 5px; 
-    line-height: 1;
-}
-
-.stat-label { 
-    font-size: 12px; 
-    color: #666; 
-    font-weight: 600; 
-    text-transform: uppercase; 
-    letter-spacing: 0.5px;
-}
+.intro-stats { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.stat-card { background: white; padding: 25px 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-width: 180px; text-align: center; border: 1px solid #eef2f7; flex: 1; transition: transform 0.3s; }
+.stat-card:hover { transform: translateY(-5px); }
+.stat-number { font-size: 38px; font-weight: 700; color: #1351B4; display: block; margin-bottom: 5px; line-height: 1; }
+.stat-label { font-size: 12px; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }

@@ -27,6 +27,10 @@ const THEME_FILES = {
 let consolidadaData = [];
 let activeLeaderLines = []; 
 let currentSelectedTheme = ""; // NOVO: Guarda o tema que está ativo na tela
+let currentTipoFilter = "";
+let currentTipoFilterValues = [];
+let tipoChartInstance = null;
+let tipoChartGroupMap = {};
 let diagramRequestCounter = 0; // Controla requisições concorrentes para evitar que diagramas antigos sobreponham os novos.
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -107,9 +111,26 @@ function goToHome() {
     
     document.getElementById('animated-menu').classList.remove('is-open');
 
-    // Mostra a introdução e a tabela completa
+    // Mostra a introdução
     document.getElementById('intro-section').style.display = 'flex';
-    showRepositoryView(''); // Exibe a tabela com todos os itens
+    
+    // 1. Reseta os filtros do Gráfico
+    currentTipoFilter = "";
+    currentTipoFilterValues = [];
+    if (document.getElementById('chart-reset-container')) {
+        document.getElementById('chart-reset-container').style.display = 'none';
+    }
+
+    // 2. Reseta o filtro de Competência na tabela
+    const filterComp = document.getElementById('filter-competencia');
+    if (filterComp) filterComp.value = 'todas';
+
+    // 3. REDESENHA OS CARDS E O GRÁFICO (Isso corrige o erro!)
+    renderIntroStats();
+
+    // 4. Redesenha a tabela mostrando todas as leis
+    showRepositoryView(''); 
+
     // Garante que as outras seções específicas de temas estejam ocultas
     document.getElementById('reclamacao-section').style.display = 'none';
     document.getElementById('mindmap-section').style.display = 'none';
@@ -139,11 +160,17 @@ function selectTheme(selectedTheme) {
     
     document.getElementById('animated-menu').classList.remove('is-open');
     
-    // Reseta o filtro para "Todas" ao clicar num tema novo no menu
+    // Reseta os filtros ao clicar num tema novo no menu
+    currentTipoFilter = "";
+    currentTipoFilterValues = [];
+    if (document.getElementById('chart-reset-container')) {
+        document.getElementById('chart-reset-container').style.display = 'none';
+    }
     const filterComp = document.getElementById('filter-competencia');
     if (filterComp) filterComp.value = 'todas';
 
     const reclamacaoSection = document.getElementById('reclamacao-section');
+
     if (selectedTheme.toLowerCase().includes("direito do consumidor")) {
         reclamacaoSection.style.display = 'block';
     } else { 
@@ -559,12 +586,17 @@ function parseCSV(str) {
     return data;
 }
 
+function normalizeTipoValue(value) {
+    const normalized = removeAcentos(String(value || '').trim()).toLowerCase();
+    return normalized === '-' ? '' : normalized;
+}
+
 function renderTable(theme) {
     const tbody = document.getElementById('laws-body');
     tbody.innerHTML = '';
 
     const themeClean = removeAcentos(theme).toLowerCase();
-    const compFilter = document.getElementById('filter-competencia').value; // Pega valor selecionado ('todas', 'estadual', 'federal')
+    const compFilter = document.getElementById('filter-competencia').value;
     
     const getCol = (row, possibleNames) => {
         for(let key of Object.keys(row)) {
@@ -577,38 +609,34 @@ function renderTable(theme) {
 
     let dadosProcessados = [];
     
-    // Passo 1: Puxar do CSV e filtrar apenas por Tema, ignorando linhas mal formatadas
     consolidadaData.forEach(row => {
-        // Encontra em qual chave/coluna está o nome do macrotema (para ter flexibilidade se mudar o cabeçalho)
         const macrotemaKeys = Object.keys(row).filter(k => removeAcentos(k).toLowerCase().includes('macrotema'));
         let valMacrotema = macrotemaKeys.length > 0 ? row[macrotemaKeys[0]] : "";
 
         const macrotemaClean = removeAcentos(valMacrotema || "").toLowerCase();
         const rawStringClean = removeAcentos(row._rawString || "").toLowerCase();
         
-        // Verifica se a linha pertence ao macrotema clicado no menu
         if (macrotemaClean.includes(themeClean) || rawStringClean.includes(themeClean)) {
-            
             const valNorma = getCol(row, ['nº', 'numero', 'norma', 'lei']);
             const valNome = getCol(row, ['nome', 'definição', 'iniciativa']);
             const valDesc = getCol(row, ['ementa', 'descrição', 'descricao']);
             const valComp = getCol(row, ['competência', 'competencia', 'esfera']);
             let valLink = getCol(row, ['link']);
+            const valTipo = getCol(row, ['tipo']);
             
-            // Medida extra: Exclui a linha se os três campos mais importantes estiverem vazios (isso previne "tabela branca")
             if (valNorma !== "-" || valNome !== "-" || valDesc !== "-") {
                 dadosProcessados.push({
                     norma: valNorma,
                     nome: valNome,
                     desc: valDesc,
                     comp: valComp,
-                    link: valLink
+                    link: valLink,
+                    tipo: valTipo
                 });
             }
         }
     });
 
-    // Passo 2: O Novo Filtro por Competência (Estadual ou Federal)
     if (compFilter !== "todas") {
         dadosProcessados = dadosProcessados.filter(item => {
             const compLower = removeAcentos(item.comp).toLowerCase();
@@ -618,7 +646,10 @@ function renderTable(theme) {
         });
     }
 
-    // Passo 3: Renderizar Tabela no HTML
+    if (currentTipoFilterValues.length > 0) {
+        dadosProcessados = dadosProcessados.filter(item => currentTipoFilterValues.includes(item.tipo));
+    }
+
     if (dadosProcessados.length === 0) {
         tbody.innerHTML = `<tr><td colspan="5" class="no-data">Nenhuma legislação encontrada para os filtros selecionados.</td></tr>`;
         return;
@@ -626,35 +657,28 @@ function renderTable(theme) {
 
     dadosProcessados.forEach(item => {
         const tr = document.createElement('tr');
-        
         let linkHtml = "-";
-        if (item.link !== "-" && item.link !== "") {
-            linkHtml = `<a href="${item.link}" target="_blank" class="link-btn">Acessar</a>`;
-        }
-
-        tr.innerHTML = `
-            <td><strong>${item.norma}</strong></td>
-            <td>${item.nome}</td>
-            <td>${item.desc}</td>
-            <td>${item.comp}</td>
-            <td style="text-align:center;">${linkHtml}</td>
-        `;
+        if (item.link !== "-" && item.link !== "") { linkHtml = `<a href="${item.link}" target="_blank" class="link-btn">Acessar</a>`; }
+        tr.innerHTML = `<td><strong>${item.norma}</strong></td><td>${item.nome}</td><td>${item.desc}</td><td>${item.comp}</td><td style="text-align:center;">${linkHtml}</td>`;
         tbody.appendChild(tr);
     });
 }
 
-// COLOQUE ESTA FUNÇÃO NO FINAL DO ARQUIVO JS
 function renderIntroStats() {
     const statsContainer = document.getElementById('intro-stats');
+    const normativasContainer = document.getElementById('stat-normativas-container');
     if (!statsContainer) return;
 
     let totalNormas = 0;
     let totalEstaduais = 0;
     let totalFederais = 0;
-
-    // Em vez de contar o que o CSV diz, vamos verificar 
-    // quais dos 10 temas oficiais realmente possuem leis cadastradas
     let temasComLeis = new Set(); 
+    let tipoCounts = {};
+
+    const matchesTipoFilter = (tipo) => {
+        if (currentTipoFilterValues.length === 0) return true;
+        return currentTipoFilterValues.includes(tipo);
+    };
 
     const getColVal = (row, possibleNames) => {
         for(let key of Object.keys(row)) {
@@ -669,30 +693,35 @@ function renderIntroStats() {
         const valNorma = getColVal(row, ['nº', 'numero', 'norma', 'lei']);
         const valComp = getColVal(row, ['competência', 'competencia', 'esfera']);
         const valMacrotema = getColVal(row, ['macrotema']);
+        const valTipo = getColVal(row, ['tipo']);
 
         if (valNorma !== "") {
-            totalNormas++;
-            
-            const compLower = removeAcentos(valComp).toLowerCase();
-            if (compLower.includes("estadual")) totalEstaduais++;
-            if (compLower.includes("federal")) totalFederais++;
-            
-            // Só adiciona se o tema do CSV existir na nossa lista oficial (THEMES)
-            // Isso ignora erros de digitação ou temas extras
-            const temaNormalizado = THEMES.find(t => removeAcentos(t).toLowerCase() === removeAcentos(valMacrotema).toLowerCase());
-            if (temaNormalizado) {
-                temasComLeis.add(temaNormalizado);
+            const tipoChave = valTipo || "Outros";
+            tipoCounts[tipoChave] = (tipoCounts[tipoChave] || 0) + 1;
+
+            if (matchesTipoFilter(valTipo)) {
+                totalNormas++;
+                const compLower = removeAcentos(valComp).toLowerCase();
+                if (compLower.includes("estadual")) totalEstaduais++;
+                if (compLower.includes("federal")) totalFederais++;
+                const temaNormalizado = THEMES.find(t => removeAcentos(valMacrotema).toLowerCase().includes(removeAcentos(t).toLowerCase()));
+                if (temaNormalizado) temasComLeis.add(temaNormalizado);
             }
         }
     });
 
+    if (normativasContainer) {
+        normativasContainer.innerHTML = `
+            <div class="stat-card" style="width: 100%; max-width: 320px; margin:0 auto 10px; border: none; box-shadow: none;" data-tooltip="Total de leis, decretos, resoluções e regulamentos mapeados.">
+                <span class="stat-number" style="font-size: 44px;">${totalNormas}</span>
+                <span class="stat-label">Normativas Mapeadas</span>
+            </div>
+        `;
+    }
+
     statsContainer.innerHTML = `
-        <div class="stat-card" data-tooltip="Total de leis, decretos, resoluções e regulamentos em vigor que estruturam, orientam e ditam as regras do setor de energia.">
-            <span class="stat-number">${totalNormas}</span>
-            <span class="stat-label">Normativas Mapeadas</span>
-        </div>
         <div class="stat-card" data-tooltip="Grandes áreas de atuação que agrupam a legislação por assunto, facilitando a consulta e a compreensão do arcabouço legal.">
-            <span class="stat-number">${THEMES.length}</span>
+            <span class="stat-number">${temasComLeis.size}</span>
             <span class="stat-label">Macrotemas</span>
         </div>
         <div class="stat-card" data-tooltip="Legislações e diretrizes estabelecidas pelo poder público estadual para planejar, regular e incentivar o desenvolvimento energético no âmbito local.">
@@ -704,4 +733,125 @@ function renderIntroStats() {
             <span class="stat-label">Normas Federais</span>
         </div>
     `;
+
+    renderTipoChart(tipoCounts);
+}
+
+function renderTipoChart(tipoCounts) {
+    const ctx = document.getElementById('tipoChart');
+    if (!ctx) return;
+
+    const totalCount = Object.values(tipoCounts).reduce((sum, value) => sum + value, 0);
+    const groupedCounts = {};
+    let smallCount = 0;
+    let smallTipos = [];
+    tipoChartGroupMap = {};
+
+    Object.entries(tipoCounts).forEach(([tipo, count]) => {
+        const percentage = totalCount > 0 ? count / totalCount : 0;
+        if (!tipo || tipo === "Outros" || percentage <= 0.02) {
+            smallCount += count;
+            smallTipos.push(tipo || "");
+            return;
+        }
+
+        groupedCounts[tipo] = count;
+        tipoChartGroupMap[tipo] = [tipo];
+    });
+
+    if (smallCount > 0) {
+        groupedCounts.Outros = (groupedCounts.Outros || 0) + smallCount;
+        tipoChartGroupMap.Outros = [...new Set(smallTipos)];
+    }
+
+    const labels = Object.keys(groupedCounts);
+    const data = labels.map(label => groupedCounts[label]);
+    const colors = ['#1351B4', '#2c3e50', '#6c8ebf', '#e9f2ff', '#a3c2e0', '#185abc', '#ced4da'];
+
+    if (tipoChartInstance) {
+        tipoChartInstance.data.labels = labels;
+        tipoChartInstance.data.datasets[0].data = data;
+        tipoChartInstance.update();
+        return;
+    }
+
+    Chart.register(ChartDataLabels);
+
+    tipoChartInstance = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: colors.slice(0, labels.length),
+                borderWidth: 2,
+                borderColor: '#ffffff',
+                hoverOffset: 10
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            onClick: (event, elements) => {
+                if (elements.length > 0) {
+                    const index = elements[0].index;
+                    const selectedTipo = tipoChartInstance.data.labels[index];
+
+                    if (currentTipoFilter === selectedTipo) {
+                        currentTipoFilter = "";
+                        currentTipoFilterValues = [];
+                        document.getElementById('chart-reset-container').style.display = 'none';
+                    } else {
+                        currentTipoFilter = selectedTipo;
+                        currentTipoFilterValues = tipoChartGroupMap[selectedTipo] || [selectedTipo];
+                        document.getElementById('chart-reset-container').style.display = 'block';
+                    }
+
+                    renderIntroStats();
+                    renderTable(currentSelectedTheme);
+                }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) { return ` ${context.label}: ${context.parsed} Normativas`; }
+                    }
+                },
+                datalabels: {
+                    color: '#333',
+                    anchor: 'end',
+                    align: 'end',
+                    offset: 6,
+                    clamp: true,
+                    clip: false,
+                    formatter: (value, context) => {
+                        const total = context.chart._metasets[context.datasetIndex].total;
+                        const percentage = total > 0 ? Math.round((value / total) * 100) + '%' : '0%';
+                        const label = context.chart.data.labels[context.dataIndex];
+                        return `${label}\n${percentage}`;
+                    },
+                    font: { weight: 'bold', size: 10 },
+                    textAlign: 'center'
+                }
+            },
+            // SUBSTITUA APENAS ESTA PARTE DO LAYOUT:
+            layout: { 
+                padding: {
+                    top: 40,
+                    bottom: 30,
+                    left: 110,  /* Espaço generoso para os nomes longos na esquerda */
+                    right: 70  /* Espaço generoso para os nomes longos na direita */
+                } 
+            }
+        }
+    });
+
+    document.getElementById('reset-tipo-btn').addEventListener('click', () => {
+        currentTipoFilter = "";
+        currentTipoFilterValues = [];
+        document.getElementById('chart-reset-container').style.display = 'none';
+        renderIntroStats();
+        renderTable(currentSelectedTheme);
+    });
 }
