@@ -1,143 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net">
   <diagram name="Página-1" id="B8D66lVCGWsVi5pCs5-q">
-    <mxGraphModel dx="1178" dy="619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4713" dy="2477" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-1" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-9">
+        <mxCell id="SajsEpII87U50bQgRagn-1" edge="1" parent="1" source="SajsEpII87U50bQgRagn-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="SajsEpII87U50bQgRagn-7">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="424" y="220" as="targetPoint" />
+            <mxPoint x="428.0033333333339" y="209.99666666666695" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-3" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-30" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-2" edge="1" parent="1" source="SajsEpII87U50bQgRagn-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="SajsEpII87U50bQgRagn-23" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-4" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;CNPE&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Conselho Nacional de  Politica Energética)&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="130" width="130" x="349" y="90" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-3" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;CNPE&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Conselho Nacional de  Politica Energética)&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="353.0033333333339" y="79.99666666666695" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-5" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-12" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-4" edge="1" parent="1" source="SajsEpII87U50bQgRagn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="SajsEpII87U50bQgRagn-10" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="414" y="420" />
-              <mxPoint x="674" y="420" />
+              <mxPoint x="418.0033333333339" y="409.99666666666695" />
+              <mxPoint x="678.0033333333339" y="409.99666666666695" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-6" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-14" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-5" edge="1" parent="1" source="SajsEpII87U50bQgRagn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="SajsEpII87U50bQgRagn-12" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="414" y="420" />
-              <mxPoint x="154" y="420" />
+              <mxPoint x="418.0033333333339" y="409.99666666666695" />
+              <mxPoint x="158.00333333333393" y="409.99666666666695" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-7" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Vo16OP1xxp4yjsuZDWTS-17" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-6" edge="1" parent="1" source="SajsEpII87U50bQgRagn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="SajsEpII87U50bQgRagn-16" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-9" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;MME&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Ministério de Minas  e Energia)&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="140" width="140" x="344" y="270" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-7" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;MME&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Ministério de Minas  e Energia)&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="140" x="348.0033333333339" y="259.99666666666695" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Setor elétrico: arquitetura institucional e marco regulatório" vertex="1">
-          <mxGeometry height="60" width="660" x="84" y="10" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Arquitetura institucional e marco regulatório do setor elétrico" vertex="1">
+          <mxGeometry height="60" width="660" x="88.00333333333393" y="-0.0033333333330460846" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-41" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.55;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Vo16OP1xxp4yjsuZDWTS-35" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-9" edge="1" parent="1" source="SajsEpII87U50bQgRagn-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.55;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="SajsEpII87U50bQgRagn-27" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-12" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;EPE&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Empresa de Pesquisa  Energética)&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="140" width="140" x="604" y="460" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-10" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;EPE&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Empresa de Pesquisa  Energética)&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="140" x="608.0033333333339" y="449.99666666666695" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-40" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.51;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.508;exitY=1.006;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-34" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-11" edge="1" parent="1" source="SajsEpII87U50bQgRagn-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.51;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.508;exitY=1.006;exitDx=0;exitDy=0;exitPerimeter=0;" target="SajsEpII87U50bQgRagn-26" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-14" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;CMSE&lt;br&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Comitê de Monitoramento &lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;do Setor Elétrico)&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="140" width="140" x="84" y="460" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-12" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;CMSE&lt;br&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Comitê de Monitoramento &lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;do Setor Elétrico)&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="140" x="88.00333333333393" y="449.99666666666695" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-15" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.501;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-20" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-13" edge="1" parent="1" source="SajsEpII87U50bQgRagn-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.501;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;" target="SajsEpII87U50bQgRagn-18" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="414" y="810" />
-              <mxPoint x="674" y="810" />
+              <mxPoint x="418.0033333333339" y="799.9966666666669" />
+              <mxPoint x="678.0033333333339" y="799.9966666666669" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-16" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Vo16OP1xxp4yjsuZDWTS-22" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-14" edge="1" parent="1" source="SajsEpII87U50bQgRagn-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="SajsEpII87U50bQgRagn-20" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="414" y="810" />
-              <mxPoint x="154" y="810" />
+              <mxPoint x="418.0033333333339" y="799.9966666666669" />
+              <mxPoint x="158.00333333333393" y="799.9966666666669" />
             </Array>
-            <mxPoint x="414" y="660" as="sourcePoint" />
-            <mxPoint x="153.99703703703696" y="900" as="targetPoint" />
+            <mxPoint x="418.0033333333339" y="649.9966666666669" as="sourcePoint" />
+            <mxPoint x="158.00037037037092" y="889.9966666666669" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-43" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.007;entryY=0.505;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.004;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-42" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-15" edge="1" parent="1" source="SajsEpII87U50bQgRagn-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.007;entryY=0.505;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.004;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="SajsEpII87U50bQgRagn-31" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-17" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;ANEEL&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Agência Nacional de  Energia Elétrica)&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="140" width="140" x="344" y="460" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-16" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;ANEEL&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Agência Nacional de  Energia Elétrica)&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="140" x="348.0033333333339" y="449.99666666666695" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-44" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.512;exitY=0.002;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-38">
+        <mxCell id="SajsEpII87U50bQgRagn-17" edge="1" parent="1" source="SajsEpII87U50bQgRagn-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.512;exitY=0.002;exitDx=0;exitDy=0;exitPerimeter=0;" target="SajsEpII87U50bQgRagn-29">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-20" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;CCEE&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Câmara de Comercialização&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt; de Energia Elétrica)&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="140" width="140" x="604" y="860" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-18" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;CCEE&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Câmara de Comercialização&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt; de Energia Elétrica)&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="140" x="608.0033333333339" y="849.9966666666669" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-45" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.509;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="Vo16OP1xxp4yjsuZDWTS-37">
+        <mxCell id="SajsEpII87U50bQgRagn-19" edge="1" parent="1" source="SajsEpII87U50bQgRagn-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.509;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="SajsEpII87U50bQgRagn-28">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-22" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;ONS&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Operador Nacional  do Sistema Elétrico)&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="140" width="140" x="84" y="860" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-20" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;ONS&lt;br/&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;(Operador Nacional  do Sistema Elétrico)&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="140" x="88.00333333333393" y="849.9966666666669" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-23" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;AGENTES&lt;br&gt;Geração&lt;br&gt;-Transmissão&lt;br&gt;-Distribuição&lt;br&gt;-Comercialização&lt;/span&gt;" vertex="1">
-          <mxGeometry height="140" width="140" x="339" y="1100" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-21" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;AGENTES&lt;br&gt;Geração&lt;br&gt;-Transmissão&lt;br&gt;-Distribuição&lt;br&gt;-Comercialização&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="140" x="343.0033333333339" y="1089.996666666667" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-24" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-23" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-22" edge="1" parent="1" source="SajsEpII87U50bQgRagn-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="SajsEpII87U50bQgRagn-21" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="409" y="930" />
+              <mxPoint x="413.0033333333339" y="919.9966666666669" />
             </Array>
-            <mxPoint x="224" y="930" as="sourcePoint" />
-            <mxPoint x="414" y="1030" as="targetPoint" />
+            <mxPoint x="228.00333333333393" y="919.9966666666669" as="sourcePoint" />
+            <mxPoint x="418.0033333333339" y="1019.9966666666669" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-30" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Vinculado à Presidência da&lt;br/&gt;República, com a atribuição de propor ao Presidente da República políticas&lt;br/&gt;nacionais e medidas para o setor.&lt;/font&gt;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="80" width="120" x="180" y="115" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-23" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Vinculado à Presidência da&lt;br/&gt;República, com a atribuição de propor ao Presidente da República políticas&lt;br/&gt;nacionais e medidas para o setor.&lt;/font&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="184.00333333333393" y="104.99666666666695" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-31" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-23" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-24" edge="1" parent="1" source="SajsEpII87U50bQgRagn-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="SajsEpII87U50bQgRagn-21" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="410" y="930" />
-              <mxPoint x="410" y="1100" />
+              <mxPoint x="414.0033333333339" y="919.9966666666669" />
+              <mxPoint x="414.0033333333339" y="1089.996666666667" />
             </Array>
-            <mxPoint x="600" y="920" as="sourcePoint" />
-            <mxPoint x="410" y="1100" as="targetPoint" />
+            <mxPoint x="604.0033333333339" y="909.9966666666669" as="sourcePoint" />
+            <mxPoint x="414.0033333333339" y="1089.996666666667" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-32" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;line-height: 115%;&quot;&gt;&lt;font style=&quot;font-size: 3px;&quot;&gt;O&lt;br&gt;Ministério de Minas e Energia (MME) foi criado em 1960. Anteriormente, os&lt;br&gt;assuntos de minas e energia eram de competência do Ministério da Agricultura.&lt;br&gt;Dentre as atuais e principais responsabilidades do MME estão o Conselho&lt;br&gt;Nacional de Política Energética (CNPE) e o Comitê de Monitoramento do Setor&lt;br&gt;Elétrico (CMSE), ambos presididos pelo ministro de Minas e Energia.&lt;/font&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="80" width="120" x="180" y="300" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-25" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;line-height: 115%;&quot;&gt;&lt;font style=&quot;font-size: 3px;&quot;&gt;O&lt;br&gt;Ministério de Minas e Energia (MME) foi criado em 1960. Anteriormente, os&lt;br&gt;assuntos de minas e energia eram de competência do Ministério da Agricultura.&lt;br&gt;Dentre as atuais e principais responsabilidades do MME estão o Conselho&lt;br&gt;Nacional de Política Energética (CNPE) e o Comitê de Monitoramento do Setor&lt;br&gt;Elétrico (CMSE), ambos presididos pelo ministro de Minas e Energia.&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="184.00333333333393" y="289.99666666666695" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-34" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Aptos&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Aptos;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Tem&lt;br/&gt;a função de acompanhar e avaliar permanentemente a continuidade e a segurança&lt;br/&gt;do suprimento eletroenergético em todo o território nacional.&lt;/span&gt;" vertex="1">
-          <mxGeometry height="80" width="120" x="94" y="640" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-26" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;span style=&quot;font-size:12.0pt;line-height:115%;&lt;br/&gt;font-family:&amp;quot;Aptos&amp;quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&lt;br/&gt;Aptos;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&lt;br/&gt;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-theme-font:minor-bidi;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Tem&lt;br/&gt;a função de acompanhar e avaliar permanentemente a continuidade e a segurança&lt;br/&gt;do suprimento eletroenergético em todo o território nacional.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="98.00333333333393" y="629.9966666666669" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-35" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;A Empresa de Pesquisa Energética (EPE) é responsável&lt;br/&gt;pela realização de estudos e pesquisas que subsidiam o planejamento do setor&lt;br/&gt;energético brasileiro, abrangendo energia elétrica, petróleo, gás natural e&lt;br/&gt;biocombustíveis.&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;Sua atuação apoia o Ministério de Minas e Energia na&lt;br/&gt;formulação de políticas e diretrizes, contribuindo para o desenvolvimento&lt;br/&gt;sustentável e a segurança do suprimento energético no país.&lt;/span&gt;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="80" width="120" x="624" y="630" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-27" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;A Empresa de Pesquisa Energética (EPE) é responsável&lt;br/&gt;pela realização de estudos e pesquisas que subsidiam o planejamento do setor&lt;br/&gt;energético brasileiro, abrangendo energia elétrica, petróleo, gás natural e&lt;br/&gt;biocombustíveis.&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;Sua atuação apoia o Ministério de Minas e Energia na&lt;br/&gt;formulação de políticas e diretrizes, contribuindo para o desenvolvimento&lt;br/&gt;sustentável e a segurança do suprimento energético no país.&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="628.0033333333339" y="619.9966666666669" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-37" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;O Operador Nacional do Sistema Elétrico (ONS) é&lt;br/&gt;responsável pela coordenação e controle da operação das instalações de geração&lt;br/&gt;e transmissão de energia no Sistema Interligado Nacional (SIN), além do&lt;br/&gt;planejamento da operação dos sistemas isolados.&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;Sua atuação visa garantir a segurança, confiabilidade&lt;br/&gt;e eficiência do suprimento de energia elétrica no país, promovendo a otimização&lt;br/&gt;da operação do sistema, o acesso não discriminatório à rede de transmissão e o&lt;br/&gt;suporte à expansão sustentável do setor elétrico.&lt;/span&gt;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="80" width="120" x="10" y="760" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-28" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;O Operador Nacional do Sistema Elétrico (ONS) é&lt;br/&gt;responsável pela coordenação e controle da operação das instalações de geração&lt;br/&gt;e transmissão de energia no Sistema Interligado Nacional (SIN), além do&lt;br/&gt;planejamento da operação dos sistemas isolados.&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;Sua atuação visa garantir a segurança, confiabilidade&lt;br/&gt;e eficiência do suprimento de energia elétrica no país, promovendo a otimização&lt;br/&gt;da operação do sistema, o acesso não discriminatório à rede de transmissão e o&lt;br/&gt;suporte à expansão sustentável do setor elétrico.&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="14.003333333333927" y="749.9966666666669" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-38" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;A Câmara de Comercialização de Energia Elétrica (CCEE)&lt;br/&gt;conecta os agentes do setor elétrico e viabiliza a comercialização de energia&lt;br/&gt;no Brasil com segurança, eficiência e transparência.&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot;font-size:12.0pt;line-height:115%;font-family:&amp;quot;Aptos&amp;quot;,sans-serif;&lt;br/&gt;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Aptos;mso-fareast-theme-font:&lt;br/&gt;minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;&lt;br/&gt;mso-bidi-theme-font:minor-bidi;background:lightgrey;mso-highlight:lightgrey;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Reconhecida&lt;br/&gt;como a casa do mercado, opera o mercado de energia, gerencia recursos e&lt;br/&gt;impulsiona a evolução do setor por meio de inovação e excelência operacional.&lt;/span&gt;" vertex="1">
-          <mxGeometry height="80" width="120" x="690" y="760" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-29" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;A Câmara de Comercialização de Energia Elétrica (CCEE)&lt;br/&gt;conecta os agentes do setor elétrico e viabiliza a comercialização de energia&lt;br/&gt;no Brasil com segurança, eficiência e transparência.&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot;font-size:12.0pt;line-height:115%;font-family:&amp;quot;Aptos&amp;quot;,sans-serif;&lt;br/&gt;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Aptos;mso-fareast-theme-font:&lt;br/&gt;minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;&lt;br/&gt;mso-bidi-theme-font:minor-bidi;background:lightgrey;mso-highlight:lightgrey;&lt;br/&gt;mso-ansi-language:PT-BR;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot;&gt;Reconhecida&lt;br/&gt;como a casa do mercado, opera o mercado de energia, gerencia recursos e&lt;br/&gt;impulsiona a evolução do setor por meio de inovação e excelência operacional.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="694.0033333333339" y="749.9966666666669" as="geometry" />
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-39" edge="1" parent="1" source="Vo16OP1xxp4yjsuZDWTS-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Vo16OP1xxp4yjsuZDWTS-32" value="">
+        <mxCell id="SajsEpII87U50bQgRagn-30" edge="1" parent="1" source="SajsEpII87U50bQgRagn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="SajsEpII87U50bQgRagn-25" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
-            <mxPoint x="359" y="150" as="sourcePoint" />
-            <mxPoint x="310" y="150" as="targetPoint" />
+            <mxPoint x="363.0033333333339" y="139.99666666666695" as="sourcePoint" />
+            <mxPoint x="314.0033333333339" y="139.99666666666695" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vo16OP1xxp4yjsuZDWTS-42" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;A Agência Nacional de Energia Elétrica (ANEEL) é o&lt;br/&gt;órgão regulador responsável por normatizar e fiscalizar o setor elétrico&lt;br/&gt;brasileiro, abrangendo as atividades de geração, transmissão, distribuição e&lt;br/&gt;comercialização de energia elétrica.&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;Sua atuação inclui a regulação tarifária, a&lt;br/&gt;fiscalização dos serviços e a implementação das diretrizes do Governo Federal,&lt;br/&gt;garantindo equilíbrio entre os agentes do setor e os consumidores.&lt;/span&gt;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="50" width="76" x="500" y="505" as="geometry" />
+        <mxCell id="SajsEpII87U50bQgRagn-31" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;A Agência Nacional de Energia Elétrica (ANEEL) é o&lt;br/&gt;órgão regulador responsável por normatizar e fiscalizar o setor elétrico&lt;br/&gt;brasileiro, abrangendo as atividades de geração, transmissão, distribuição e&lt;br/&gt;comercialização de energia elétrica.&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;text-align:justify&quot;&gt;&lt;span style=&quot;background:lightgrey;&lt;br/&gt;mso-highlight:lightgrey&quot;&gt;Sua atuação inclui a regulação tarifária, a&lt;br/&gt;fiscalização dos serviços e a implementação das diretrizes do Governo Federal,&lt;br/&gt;garantindo equilíbrio entre os agentes do setor e os consumidores.&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="50" width="76" x="504.0033333333339" y="494.99666666666695" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -103,11 +103,11 @@ body, html {
    4. CONTEÚDO PRINCIPAL (MAPA MENTAL E TABELA)
    ========================================================================== */
 .main-content {
-    margin-top: 104px;
+    margin-top: 80px;
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2px;
     align-items: center;
 }
 
@@ -142,6 +142,22 @@ body, html {
 }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
+/* ==========================================================================
+   Tabelas Sanfonadas (Collapsible)
+   ========================================================================== */
+.collapsible-wrapper { margin-bottom: 25px; }
+.collapsible-btn {
+    background-color: #1351B4; color: white; cursor: pointer; padding: 18px 25px; 
+    width: 100%; border: none; text-align: left; outline: none; font-size: 16px; 
+    font-weight: 700; border-radius: 8px; display: flex; justify-content: space-between; 
+    align-items: center; transition: background-color 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.collapsible-btn:hover { background-color: #0f4092; }
+.collapsible-content { display: none; overflow: hidden; margin-top: 15px; animation: fadeIn 0.4s ease; }
+.collapsible-content.is-open { display: block; }
+.collapsible-btn .arrow { transition: transform 0.3s ease; font-size: 14px; }
+.collapsible-btn.active .arrow { transform: rotate(-180deg); }
+.table-description { color: #555; font-size: 14px; margin: 0 0 15px 5px; font-style: italic; }
 /* Restaura o título para o visual original */
 .table-header { 
     margin-bottom: 20px; font-size: 20px; font-weight: 700; color: #1351B4; 
@@ -384,6 +400,30 @@ a.link-btn:hover { background: #1351B4; color: white; }
 }
 
 /* ==========================================================================
+   8.1. INTRODUÇÃO DO TEMA
+   ========================================================================== */
+.theme-intro-section {
+    width: 100%;
+    max-width: 1100px;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border-top: 5px solid #1351B4;
+    animation: fadeIn 0.5s forwards;
+    box-sizing: border-box;
+}
+.theme-intro-section h3 {
+    color: #1351B4;
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.theme-intro-section p {
+    color: #555; font-size: 15px; line-height: 1.6; margin: 0;
+}
+
+/* ==========================================================================
    9. PÁGINA INTRODUTÓRIA (HOME)
    ========================================================================== */
 .intro-section { 
@@ -431,7 +471,7 @@ a.link-btn:hover { background: #1351B4; color: white; }
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    text-align: center;
+    text-align: left;
     border-top: 5px solid #1351B4;
     height: 100%;
     display: flex;

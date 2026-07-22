@@ -27,7 +27,7 @@
         </div>
 
         <div class="topbar-center">
-            <span id="project-title">AMBIENTE REGULATÓRIO DE ENERGIA - PI</span>
+            <span id="project-title">AMBIENTE REGULATÓRIO DE ENERGIA</span>
         </div>
 
         <div class="topbar-right">
@@ -77,6 +77,12 @@
             </div>
         </div>
 
+        <!-- Seção de Introdução do Tema -->
+        <div class="theme-intro-section" id="theme-intro-section" style="display: none;">
+            <h3 id="theme-intro-title"></h3>
+            <p id="theme-intro-text"></p>
+        </div>
+
         <!-- Mapa Mental Interativo -->
         <div class="mindmap-section" id="mindmap-section" style="display: none; width: 100%;">
             <!-- Aqui é onde o mapa mental será desenhado dinamicamente -->
@@ -119,35 +125,184 @@
                 </div>
             </div>
         </div>
-
-        <!-- Área da Tabela de Leis -->
-        <div class="table-section" id="table-section">
-            <div class="table-header" id="selected-theme-title">Legislação Relacionada</div>
-            <div class="table-container">
-                <table id="laws-table">
-                    <thead>
-                        <tr>
-                            <th width="12%">Nº da Norma</th>
-                            <th width="22%">Nome/Definição da iniativa</th>
-                            <th width="40%">Ementa/Descrição</th>
-                            <th width="16%">
-                                Competência
-                                <select id="filter-competencia" class="header-filter">
-                                    <option value="todas">Todas</option>
-                                    <option value="estadual">Estadual</option>
-                                    <option value="federal">Federal</option>
-                                </select>
-                            </th>
-                            <th width="10%">Link</th>
-                        </tr>
-                    </thead>
-                    <tbody id="laws-body">
-                        </tbody>
-                </table>
+        <!-- Seção: Links Institucionais (Setor Elétrico) -->
+        <div class="reclamacao-section" id="institucional-links-section" style="display: none; margin-top: 20px;">
+            <div class="reclamacao-card">
+                <div class="reclamacao-header">Links Oficiais das Instituições</div>
+                <div class="reclamacao-body">
+                    <a href="https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>CNPE</strong>
+                            <p>Conselho Nacional de Política Energética</p>
+                        </div>
+                    </a>
+                    <a href="https://www.gov.br/mme/pt-br" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>MME</strong>
+                            <p>Ministério de Minas e Energia</p>
+                        </div>
+                    </a>
+                    <a href="https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cmse" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>CMSE</strong>
+                            <p>Comitê de Monitoramento do Setor Elétrico</p>
+                        </div>
+                    </a>
+                    <a href="https://www.gov.br/aneel/pt-br" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>ANEEL</strong>
+                            <p>Agência Nacional de Energia Elétrica</p>
+                        </div>
+                    </a>
+                    <a href="https://www.epe.gov.br/pt" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>EPE</strong>
+                            <p>Empresa de Pesquisa Energética</p>
+                        </div>
+                    </a>
+                    <a href="https://www.ons.org.br/" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>ONS</strong>
+                            <p>Operador Nacional do Sistema Elétrico</p>
+                        </div>
+                    </a>
+                    <a href="https://www.ccee.org.br/" target="_blank" class="reclamacao-item">
+                        <span class="reclamacao-icon">›</span>
+                        <div class="reclamacao-text">
+                            <strong>CCEE</strong>
+                            <p>Câmara de Comercialização de Energia Elétrica</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
+        <!-- Área da Tabela de Leis -->
+        <div class="table-section" id="table-section">
+            <div class="table-header" id="selected-theme-title">Catálogo de Normas</div>
+            
+            <!-- Tabelas da Página Inicial (Sanfonadas) -->
+            <div id="home-tables-container">
+                
+                <!-- Tabela 1: Específicas -->
+                <div class="collapsible-wrapper">
+                    <button class="collapsible-btn" id="btn-especificas" onclick="toggleTable('especificas')">Normas específicas do setor energético <span class="arrow">▼</span></button>
+                    <div class="collapsible-content" id="content-especificas" style="display: block;">
+                        <p class="table-description">Tabela destinada aos atos normativos diretamente relacionados ao setor energético.</p>
+                        <div class="table-container">
+                            <table class="laws-table">
+                                <thead>
+                                    <tr>
+                                        <th width="14%">Tipo 
+                                            <select class="filter-tipo header-filter">
+                                                <option value="todas">Todos</option>
+                                                <option value="lei">Lei</option>
+                                                <option value="decreto">Decreto</option>
+                                                <option value="resolução">Resolução</option>
+                                                <option value="portaria">Portaria</option>
+                                                <option value="instrução">Instrução Normativa</option>
+                                            </select>
+                                        </th>
+                                        <th width="12%">Nº da Norma</th>
+                                        <th width="20%">Nome/Definição da iniciativa</th>
+                                        <th width="32%">Ementa/Descrição</th>
+                                        <th width="14%">Competência 
+                                            <select class="filter-competencia header-filter">
+                                                <option value="todas">Todas</option>
+                                                <option value="estadual">Estadual</option>
+                                                <option value="federal">Federal</option>
+                                            </select>
+                                        </th>
+                                        <th width="8%">Link</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="laws-body-especificas"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
 
-    </div>
+                <!-- Tabela 2: Ambientais -->
+                <div class="collapsible-wrapper">
+                    <button class="collapsible-btn" id="btn-ambientais" onclick="toggleTable('ambientais')">Normas ambientais correlatas ao setor energético <span class="arrow">▼</span></button>
+                    <div class="collapsible-content" id="content-ambientais" style="display: block;">
+                        <p class="table-description">Tabela destinada às normas ambientais que possuem interface com o setor energético.</p>
+                        <div class="table-container">
+                            <table class="laws-table">
+                                <thead>
+                                    <tr>
+                                        <th width="11%">Tipo 
+                                            <select class="filter-tipo header-filter">
+                                                <option value="todas">Todos</option>
+                                                <option value="lei">Lei</option>
+                                                <option value="decreto">Decreto</option>
+                                                <option value="resolução">Resolução</option>
+                                                <option value="portaria">Portaria</option>
+                                                <option value="instrução">Instrução Normativa</option>
+                                            </select>
+                                        </th>
+                                        <th width="10%">Nº da Norma</th>
+                                        <th width="18%">Nome/Definição</th>
+                                        <th width="22%">Ementa/Descrição</th>
+                                        <th width="22%">Relação com o Setor Energético</th>
+                                        <th width="11%">Competência 
+                                            <select class="filter-competencia header-filter">
+                                                <option value="todas">Todas</option>
+                                                <option value="estadual">Estadual</option>
+                                                <option value="federal">Federal</option>
+                                            </select>
+                                        </th>
+                                        <th width="6%">Link</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="laws-body-ambientais"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tabela dos Macrotemas (Quando algum menu é clicado) -->
+            <div id="theme-table-container" style="display: none;">
+                <div class="table-container">
+                    <table class="laws-table">
+                        <thead>
+                            <tr>
+                                <th width="11%">Tipo 
+                                    <select class="filter-tipo header-filter">
+                                        <option value="todas">Todos</option>
+                                        <option value="lei">Lei</option>
+                                        <option value="decreto">Decreto</option>
+                                        <option value="resolução">Resolução</option>
+                                        <option value="portaria">Portaria</option>
+                                        <option value="instrução">Instrução Normativa</option>
+                                    </select>
+                                </th>
+                                <th width="10%">Nº da Norma</th>
+                                <th width="18%">Nome/Definição</th>
+                                <th width="22%">Ementa/Descrição</th>
+                                <th width="22%">Relação com o Setor Energético</th>
+                                <th width="11%">Competência 
+                                    <select class="filter-competencia header-filter">
+                                        <option value="todas">Todas</option>
+                                        <option value="estadual">Estadual</option>
+                                        <option value="federal">Federal</option>
+                                    </select>
+                                </th>
+                                <th width="6%">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody id="laws-body-theme"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
     <!-- Div para o balão flutuante (Tooltip dos hexágonos) -->
     <div id="custom-tooltip"></div>

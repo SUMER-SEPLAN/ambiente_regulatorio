@@ -1,5 +1,5 @@
 const THEMES = [
-    "Setor elétrico: arquitetura institucional e marco regulatório",
+    "Arquitetura institucional e marco regulatório do setor elétrico",
     "Direito do Consumidor de Energia",
     "Politicas e Mecanismos de Inclusão Energética",
     "Tributação Estadual do Setor Elétrico",
@@ -12,7 +12,7 @@ const THEMES = [
 ];
 
 const THEME_FILES = {
-    "Setor elétrico: arquitetura institucional e marco regulatório": "setor_eletrico.xml",
+    "Arquitetura institucional e marco regulatório do setor elétrico": "setor_eletrico.xml",
     "Direito do Consumidor de Energia": "direito_consumidor.xml",
     "Politicas e Mecanismos de Inclusão Energética": "inclusao_energetica.xml",
     "Tributação Estadual do Setor Elétrico": "tributacao_estadual.xml",
@@ -24,32 +24,83 @@ const THEME_FILES = {
     "Licenciamento Ambiental": "licenciamento_ambiental.xml"
 };
 
+const THEME_INTRO_TEXTS = {
+    "Arquitetura institucional e marco regulatório do setor elétrico": "Este tema detalha a estrutura de governança do setor elétrico brasileiro, apresentando as principais instituições, suas competências e como elas se inter-relacionam. O diagrama ilustra o fluxo de comando e as responsabilidades de órgãos como o Ministério de Minas e Energia (MME), a Agência Nacional de Energia Elétrica (ANEEL), o Operador Nacional do Sistema (ONS) e a Câmara de Comercialização de Energia Elétrica (CCEE).",
+    "Direito do Consumidor de Energia": "Aqui são abordados os direitos e deveres dos consumidores de energia elétrica, conforme estabelecido pela ANEEL. O conteúdo explora as regras sobre faturamento, qualidade do serviço, atendimento, e os canais disponíveis para registro de reclamações, garantindo a proteção e o tratamento justo aos usuários do serviço de distribuição.",
+    "Politicas e Mecanismos de Inclusão Energética": "Este macrotema foca nas políticas públicas voltadas para universalizar o acesso à energia elétrica e mitigar a pobreza energética. São apresentados programas como o Luz para Todos e a Tarifa Social de Energia Elétrica (TSEE), que oferecem subsídios e condições especiais para populações de baixa renda e comunidades remotas.",
+    "Tributação Estadual do Setor Elétrico": "A tributação é um componente crucial na formação do preço da energia. Este tema explora a incidência de impostos estaduais, com destaque para o ICMS (Imposto sobre Circulação de Mercadorias e Serviços), detalhando sua base de cálculo, alíquotas e o impacto na fatura de energia dos consumidores.",
+    "Conexão e Acesso à Rede": "O acesso às redes de transmissão e distribuição é fundamental para geradores e grandes consumidores. Este diagrama descreve os procedimentos, normas técnicas e regulatórias que devem ser seguidas para solicitar a conexão de um novo empreendimento ao Sistema Interligado Nacional (SIN), garantindo um acesso seguro e não discriminatório.",
+    "Geração Distribuída": "A Geração Distribuída (GD) permite que os consumidores gerem sua própria energia, principalmente a partir de fontes renováveis como a solar. Este tema aborda o marco legal da GD, o sistema de compensação de energia elétrica (net metering) e as regras para conexão de micro e minigeradores à rede da distribuidora.",
+    "Mercado Livre de Energia": "O Ambiente de Contratação Livre (ACL), ou Mercado Livre, permite que determinados consumidores escolham seu fornecedor de energia, negociando livremente preços, prazos e volumes. Este tema explora as regras de migração, os agentes envolvidos (comercializadoras, geradores) e as vantagens deste modelo de contratação.",
+    "Planejamento Energético": "Para garantir a segurança e a eficiência do suprimento de energia no futuro, o setor realiza estudos de planejamento de longo prazo. Este macrotema aborda como são elaborados os planos de expansão da geração e da transmissão, considerando a previsão de demanda, a diversidade de fontes e os investimentos necessários.",
+    "Transição Energética e Novas tecnologias": "A transição para uma matriz energética mais limpa e sustentável é um desafio global. Este tema explora as políticas de incentivo às fontes renováveis, o desenvolvimento de novas tecnologias como armazenamento de energia e hidrogênio verde, e as estratégias para a descarbonização do setor elétrico.",
+    "Licenciamento Ambiental": "Todo empreendimento de energia deve passar por um rigoroso processo de licenciamento ambiental para garantir sua sustentabilidade. Este tema detalha as etapas do licenciamento (Licença Prévia, de Instalação e de Operação), os estudos ambientais exigidos (EIA/RIMA) e os órgãos responsáveis pela aprovação dos projetos."
+};
+
 let consolidadaData = [];
 let activeLeaderLines = []; 
-let currentSelectedTheme = ""; // NOVO: Guarda o tema que está ativo na tela
+let currentSelectedTheme = ""; 
 let currentTipoFilter = "";
 let currentTipoFilterValues = [];
 let tipoChartInstance = null;
 let tipoChartGroupMap = {};
-let diagramRequestCounter = 0; // Controla requisições concorrentes para evitar que diagramas antigos sobreponham os novos.
+let diagramRequestCounter = 0; 
+
+// Variáveis globais para espelhar os filtros entre as tabelas
+let globalCompFilter = 'todas';
+let globalTipoFilter = 'todas';
 
 document.addEventListener("DOMContentLoaded", () => {
     initUI();
     loadCSV();
     initTooltip();
 
-    // NOVO: Faz a tabela atualizar sozinha quando mudar o botão de competência
-    const filterComp = document.getElementById('filter-competencia');
-    if (filterComp) {
-        filterComp.addEventListener('change', () => {
+    // GARANTE QUE AS TABELAS COMECEM FECHADAS NO PRIMEIRO CARREGAMENTO
+    if (document.getElementById('content-especificas')) {
+        document.getElementById('content-especificas').style.display = 'none';
+        document.getElementById('btn-especificas').classList.remove('active');
+    }
+    if (document.getElementById('content-ambientais')) {
+        document.getElementById('content-ambientais').style.display = 'none';
+        document.getElementById('btn-ambientais').classList.remove('active');
+    }
+
+    // Sincroniza todos os filtros de Competência
+    document.querySelectorAll('.filter-competencia').forEach(el => {
+        el.addEventListener('change', (e) => {
+            globalCompFilter = e.target.value;
+            document.querySelectorAll('.filter-competencia').forEach(select => select.value = globalCompFilter);
             renderTable(currentSelectedTheme || '');
         });
-    }
+    });
+
+    // Sincroniza todos os filtros de Tipo
+    document.querySelectorAll('.filter-tipo').forEach(el => {
+        el.addEventListener('change', (e) => {
+            globalTipoFilter = e.target.value;
+            document.querySelectorAll('.filter-tipo').forEach(select => select.value = globalTipoFilter);
+            renderTable(currentSelectedTheme || '');
+        });
+    });
 });
 
 function removeAcentos(str) {
     if (!str) return "";
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+// Abre/Fecha as tabelas sanfonadas da página inicial
+function toggleTable(id) {
+    const content = document.getElementById('content-' + id);
+    const btn = document.getElementById('btn-' + id);
+    
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        btn.classList.add('active');
+    } else {
+        content.style.display = 'none';
+        btn.classList.remove('active');
+    }
 }
 
 function initUI() {
@@ -97,85 +148,101 @@ function showRepositoryView(selectedTheme = "") {
         tableSection.style.display = 'block';
     }
     if (titleElement) {
-        // Se um tema for selecionado, o título é o tema. Senão, é o título geral.
-        titleElement.textContent = selectedTheme ? `Legislação: ${selectedTheme}` : 'Repositório Completo de Normas';
+        titleElement.textContent = selectedTheme ? `Legislação: ${selectedTheme}` : 'Catálogo de Normas';
     }
     renderTable(selectedTheme || '');
 }
 
 function goToHome() {
-    currentSelectedTheme = ''; 
-    
-    // Mostra o botão "Voltar"
-    document.querySelector('.seplan-apps-bar__site-button').style.visibility = 'visible';
-    
-    document.getElementById('animated-menu').classList.remove('is-open');
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola para o topo
 
-    // Mostra a introdução
+    currentSelectedTheme = ''; 
+    document.querySelector('.seplan-apps-bar__site-button').style.visibility = 'visible';
+    document.getElementById('animated-menu').classList.remove('is-open');
     document.getElementById('intro-section').style.display = 'flex';
     
-    // 1. Reseta os filtros do Gráfico
+    // Reseta filtros do Gráfico
     currentTipoFilter = "";
     currentTipoFilterValues = [];
     if (document.getElementById('chart-reset-container')) {
         document.getElementById('chart-reset-container').style.display = 'none';
     }
 
-    // 2. Reseta o filtro de Competência na tabela
-    const filterComp = document.getElementById('filter-competencia');
-    if (filterComp) filterComp.value = 'todas';
+    // Reseta filtros Globais
+    globalCompFilter = 'todas';
+    globalTipoFilter = 'todas';
+    document.querySelectorAll('.filter-competencia').forEach(select => select.value = 'todas');
+    document.querySelectorAll('.filter-tipo').forEach(select => select.value = 'todas');
 
-    // 3. REDESENHA OS CARDS E O GRÁFICO (Isso corrige o erro!)
     renderIntroStats();
-
-    // 4. Redesenha a tabela mostrando todas as leis
     showRepositoryView(''); 
 
-    // Garante que as outras seções específicas de temas estejam ocultas
+    // Oculta demais seções
     document.getElementById('reclamacao-section').style.display = 'none';
+    document.getElementById('institucional-links-section').style.display = 'none';
+    document.getElementById('theme-intro-section').style.display = 'none';
     document.getElementById('mindmap-section').style.display = 'none';
-
-    // Limpa as linhas do mapa mental
+// Garante que as tabelas sanfonadas voltem a ficar fechadas
+    if (document.getElementById('content-especificas')) {
+        document.getElementById('content-especificas').style.display = 'none';
+        document.getElementById('btn-especificas').classList.remove('active');
+    }
+    if (document.getElementById('content-ambientais')) {
+        document.getElementById('content-ambientais').style.display = 'none';
+        document.getElementById('btn-ambientais').classList.remove('active');
+    }
     activeLeaderLines.forEach(line => line.remove());
     activeLeaderLines = [];
 
-    // Atualiza o estado ativo dos botões do menu
     document.querySelectorAll('.menu-btn').forEach(el => {
-        if (el.textContent.includes('Página inicial')) {
-            el.classList.add('active');
-        } else {
-            el.classList.remove('active');
-        }
+        if (el.textContent.includes('Página inicial')) el.classList.add('active');
+        else el.classList.remove('active');
     });
 }
 
 function selectTheme(selectedTheme) {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola para o topo
+
     currentSelectedTheme = selectedTheme; 
-    
-    // Deixa o botão invisível, mas mantendo o espaço dele no layout
     document.querySelector('.seplan-apps-bar__site-button').style.visibility = 'hidden';
-    
-    // ESCONDE A INTRODUÇÃO
     document.getElementById('intro-section').style.display = 'none';
-    
     document.getElementById('animated-menu').classList.remove('is-open');
     
-    // Reseta os filtros ao clicar num tema novo no menu
+    // Reseta filtros do Gráfico
     currentTipoFilter = "";
     currentTipoFilterValues = [];
     if (document.getElementById('chart-reset-container')) {
         document.getElementById('chart-reset-container').style.display = 'none';
     }
-    const filterComp = document.getElementById('filter-competencia');
-    if (filterComp) filterComp.value = 'todas';
+
+    // Reseta filtros Globais
+    globalCompFilter = 'todas';
+    globalTipoFilter = 'todas';
+    document.querySelectorAll('.filter-competencia').forEach(select => select.value = 'todas');
+    document.querySelectorAll('.filter-tipo').forEach(select => select.value = 'todas');
+
+    // Intro do Tema
+    const themeIntroSection = document.getElementById('theme-intro-section');
+    const themeIntroTitle = document.getElementById('theme-intro-title');
+    const themeIntroText = document.getElementById('theme-intro-text');
+    const introText = THEME_INTRO_TEXTS[selectedTheme];
+
+    if (introText && themeIntroSection && themeIntroTitle && themeIntroText) {
+        themeIntroTitle.textContent = selectedTheme;
+        themeIntroText.textContent = introText;
+        themeIntroSection.style.display = 'block';
+    } else {
+        if (themeIntroSection) themeIntroSection.style.display = 'none';
+    }
 
     const reclamacaoSection = document.getElementById('reclamacao-section');
-
-    if (selectedTheme.toLowerCase().includes("direito do consumidor")) {
-        reclamacaoSection.style.display = 'block';
-    } else { 
-        reclamacaoSection.style.display = 'none';
-    }
+    const institucionalSection = document.getElementById('institucional-links-section'); 
+    
+    if (selectedTheme.toLowerCase().includes("direito do consumidor")) reclamacaoSection.style.display = 'block';
+    else reclamacaoSection.style.display = 'none';
+    
+    if (selectedTheme.toLowerCase().includes("arquitetura institucional")) institucionalSection.style.display = 'block';
+    else institucionalSection.style.display = 'none';
 
     document.querySelectorAll('.menu-btn').forEach(el => {
         if(el.textContent === selectedTheme) el.classList.add('active');
@@ -199,7 +266,7 @@ function loadDiagram(themeName) {
     // RESET DE DIMENSÕES: Evita que o espaço do diagrama anterior fique sobrando na tela
     // A limpeza foi movida para o início da renderXML para garantir que o conteúdo antigo seja removido antes de desenhar o novo, evitando sobreposição.
     container.style.width = '100%';
-    container.style.minHeight = '600px';
+    container.style.minHeight = 'auto'; // Reseta a altura mínima para que o container se ajuste ao conteúdo
     section.style.display = 'none';
 
     let fileName = THEME_FILES[themeName];
@@ -333,9 +400,8 @@ function renderXML(xmlString) {
     const drawWidth = maxX - minX;
     const drawHeight = maxY - minY;
 
-    // Novo cálculo sem o limite de largura
-    const containerWidth = Math.max(900, drawWidth + 160);
-    const containerHeight = Math.max(600, drawHeight + 180);
+    const containerWidth = drawWidth + 160; // Remove a largura mínima fixa
+    const containerHeight = drawHeight + 180; // Remove a altura mínima fixa
 
     container.style.width = `${containerWidth}px`;
     container.style.height = `${containerHeight}px`;
@@ -592,11 +658,15 @@ function normalizeTipoValue(value) {
 }
 
 function renderTable(theme) {
-    const tbody = document.getElementById('laws-body');
-    tbody.innerHTML = '';
+    const tbodyEspecificas = document.getElementById('laws-body-especificas');
+    const tbodyAmbientais = document.getElementById('laws-body-ambientais');
+    const tbodyTheme = document.getElementById('laws-body-theme');
+
+    if (tbodyEspecificas) tbodyEspecificas.innerHTML = '';
+    if (tbodyAmbientais) tbodyAmbientais.innerHTML = '';
+    if (tbodyTheme) tbodyTheme.innerHTML = '';
 
     const themeClean = removeAcentos(theme).toLowerCase();
-    const compFilter = document.getElementById('filter-competencia').value;
     
     const getCol = (row, possibleNames) => {
         for(let key of Object.keys(row)) {
@@ -612,56 +682,84 @@ function renderTable(theme) {
     consolidadaData.forEach(row => {
         const macrotemaKeys = Object.keys(row).filter(k => removeAcentos(k).toLowerCase().includes('macrotema'));
         let valMacrotema = macrotemaKeys.length > 0 ? row[macrotemaKeys[0]] : "";
-
         const macrotemaClean = removeAcentos(valMacrotema || "").toLowerCase();
-        const rawStringClean = removeAcentos(row._rawString || "").toLowerCase();
         
-        if (macrotemaClean.includes(themeClean) || rawStringClean.includes(themeClean)) {
+        if (!theme || macrotemaClean.includes(themeClean)) {
             const valNorma = getCol(row, ['nº', 'numero', 'norma', 'lei']);
             const valNome = getCol(row, ['nome', 'definição', 'iniciativa']);
             const valDesc = getCol(row, ['ementa', 'descrição', 'descricao']);
             const valComp = getCol(row, ['competência', 'competencia', 'esfera']);
+            const valRelacao = getCol(row, ['relação', 'relacao', 'setor energético']); // Puxa a nova coluna
             let valLink = getCol(row, ['link']);
             const valTipo = getCol(row, ['tipo']);
             
             if (valNorma !== "-" || valNome !== "-" || valDesc !== "-") {
                 dadosProcessados.push({
-                    norma: valNorma,
-                    nome: valNome,
-                    desc: valDesc,
-                    comp: valComp,
-                    link: valLink,
-                    tipo: valTipo
+                    macrotema: valMacrotema, norma: valNorma, nome: valNome,
+                    desc: valDesc, relacao: valRelacao, comp: valComp,
+                    link: valLink, tipo: valTipo
                 });
             }
         }
     });
 
-    if (compFilter !== "todas") {
-        dadosProcessados = dadosProcessados.filter(item => {
-            const compLower = removeAcentos(item.comp).toLowerCase();
-            if (compFilter === "estadual") return compLower.includes("estadual");
-            if (compFilter === "federal") return compLower.includes("federal");
-            return true;
-        });
+    // Filtros Globais Sincronizados
+    if (globalCompFilter !== "todas") {
+        dadosProcessados = dadosProcessados.filter(item => removeAcentos(item.comp).toLowerCase().includes(globalCompFilter));
     }
-
+    if (globalTipoFilter !== "todas") {
+        dadosProcessados = dadosProcessados.filter(item => removeAcentos(item.tipo).toLowerCase().includes(globalTipoFilter));
+    }
     if (currentTipoFilterValues.length > 0) {
         dadosProcessados = dadosProcessados.filter(item => currentTipoFilterValues.includes(item.tipo));
     }
 
-    if (dadosProcessados.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5" class="no-data">Nenhuma legislação encontrada para os filtros selecionados.</td></tr>`;
-        return;
-    }
+    // Renderização das Linhas
+    if (!theme) {
+        // MODO PÁGINA INICIAL: Exibe as duas tabelas sanfonadas
+        document.getElementById('home-tables-container').style.display = 'block';
+        document.getElementById('theme-table-container').style.display = 'none';
 
-    dadosProcessados.forEach(item => {
-        const tr = document.createElement('tr');
-        let linkHtml = "-";
-        if (item.link !== "-" && item.link !== "") { linkHtml = `<a href="${item.link}" target="_blank" class="link-btn">Acessar</a>`; }
-        tr.innerHTML = `<td><strong>${item.norma}</strong></td><td>${item.nome}</td><td>${item.desc}</td><td>${item.comp}</td><td style="text-align:center;">${linkHtml}</td>`;
-        tbody.appendChild(tr);
-    });
+        const ambientais = dadosProcessados.filter(i => removeAcentos(i.macrotema).toLowerCase().includes('licenciamento ambiental'));
+        const especificas = dadosProcessados.filter(i => !removeAcentos(i.macrotema).toLowerCase().includes('licenciamento ambiental'));
+
+        const renderRows = (arr, tbody, isAmbiental) => {
+            if (arr.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="${isAmbiental ? 7 : 6}" class="no-data">Nenhuma legislação encontrada para os filtros selecionados.</td></tr>`;
+                return;
+            }
+            arr.forEach(item => {
+                const tr = document.createElement('tr');
+                let linkHtml = item.link !== "-" && item.link !== "" ? `<a href="${item.link}" target="_blank" class="link-btn">Acessar</a>` : "-";
+                
+                if (isAmbiental) {
+                    tr.innerHTML = `<td>${item.tipo}</td><td><strong>${item.norma}</strong></td><td>${item.nome}</td><td>${item.desc}</td><td>${item.relacao}</td><td>${item.comp}</td><td style="text-align:center;">${linkHtml}</td>`;
+                } else {
+                    tr.innerHTML = `<td>${item.tipo}</td><td><strong>${item.norma}</strong></td><td>${item.nome}</td><td>${item.desc}</td><td>${item.comp}</td><td style="text-align:center;">${linkHtml}</td>`;
+                }
+                tbody.appendChild(tr);
+            });
+        };
+
+        renderRows(especificas, tbodyEspecificas, false);
+        renderRows(ambientais, tbodyAmbientais, true);
+
+    } else {
+        // MODO MACROTEMA: Exibe a tabela unificada padrão
+        document.getElementById('home-tables-container').style.display = 'none';
+        document.getElementById('theme-table-container').style.display = 'block';
+
+        if (dadosProcessados.length === 0) {
+            tbodyTheme.innerHTML = `<tr><td colspan="7" class="no-data">Nenhuma legislação encontrada para os filtros selecionados.</td></tr>`;
+            return;
+        }
+        dadosProcessados.forEach(item => {
+            const tr = document.createElement('tr');
+            let linkHtml = item.link !== "-" && item.link !== "" ? `<a href="${item.link}" target="_blank" class="link-btn">Acessar</a>` : "-";
+            tr.innerHTML = `<td>${item.tipo}</td><td><strong>${item.norma}</strong></td><td>${item.nome}</td><td>${item.desc}</td><td>${item.relacao}</td><td>${item.comp}</td><td style="text-align:center;">${linkHtml}</td>`;
+            tbodyTheme.appendChild(tr);
+        });
+    }
 }
 
 function renderIntroStats() {
