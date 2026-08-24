@@ -66,13 +66,12 @@
                         <button id="reset-tipo-btn" class="seplan-apps-bar__site-button" style="margin:0 auto; cursor: pointer;">Limpar Filtro do Gráfico</button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Cards inferiores que serão preenchidos pelo JS -->
-            <div class="intro-stats" id="intro-stats">
-                <div class="stat-card">
-                    <span class="stat-number">...</span>
-                    <span class="stat-label">Carregando Dados</span>
+                <!-- Cards laterais que serão preenchidos pelo JS -->
+                <div class="intro-stats" id="intro-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">...</span>
+                        <span class="stat-label">Carregando Dados</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -287,7 +286,7 @@
                                 <th width="10%">Nº da Norma</th>
                                 <th width="18%">Nome/Definição</th>
                                 <th width="22%">Ementa/Descrição</th>
-                                <th width="22%">Relação com o Setor Energético</th>
+                                <th id="theme-relacao-header" width="22%" style="display: none;">Relação com o Setor Energético</th>
                                 <th width="11%">Competência 
                                     <select class="filter-competencia header-filter">
                                         <option value="todas">Todas</option>

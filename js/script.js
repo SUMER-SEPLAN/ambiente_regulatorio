@@ -401,13 +401,13 @@ function renderXML(xmlString) {
     const drawHeight = maxY - minY;
 
     const containerWidth = drawWidth + 160; // Remove a largura mínima fixa
-    const containerHeight = drawHeight + 180; // Remove a altura mínima fixa
+    const containerHeight = drawHeight + 20;
 
     container.style.width = `${containerWidth}px`;
     container.style.height = `${containerHeight}px`;
 
     const offsetX = (containerWidth - drawWidth) / 2 - minX;
-    const offsetY = 90 - minY;
+    const offsetY = 20 - minY;
 
     // PASSO 4: Criar as Caixas Visuais
     Object.values(nodesData).forEach(node => {
@@ -745,18 +745,22 @@ function renderTable(theme) {
         renderRows(ambientais, tbodyAmbientais, true);
 
     } else {
-        // MODO MACROTEMA: Exibe a tabela unificada padrão
+        // MODO MACROTEMA: Exibe a tabela padrão, com relação energética só no licenciamento
         document.getElementById('home-tables-container').style.display = 'none';
         document.getElementById('theme-table-container').style.display = 'block';
+        const isLicenciamento = removeAcentos(theme).toLowerCase().includes('licenciamento ambiental');
+        const themeRelacaoHeader = document.getElementById('theme-relacao-header');
+        if (themeRelacaoHeader) themeRelacaoHeader.style.display = isLicenciamento ? '' : 'none';
 
         if (dadosProcessados.length === 0) {
-            tbodyTheme.innerHTML = `<tr><td colspan="7" class="no-data">Nenhuma legislação encontrada para os filtros selecionados.</td></tr>`;
+            tbodyTheme.innerHTML = `<tr><td colspan="${isLicenciamento ? 7 : 6}" class="no-data">Nenhuma legislação encontrada para os filtros selecionados.</td></tr>`;
             return;
         }
         dadosProcessados.forEach(item => {
             const tr = document.createElement('tr');
             let linkHtml = item.link !== "-" && item.link !== "" ? `<a href="${item.link}" target="_blank" class="link-btn">Acessar</a>` : "-";
-            tr.innerHTML = `<td>${item.tipo}</td><td><strong>${item.norma}</strong></td><td>${item.nome}</td><td>${item.desc}</td><td>${item.relacao}</td><td>${item.comp}</td><td style="text-align:center;">${linkHtml}</td>`;
+            const relacaoCell = isLicenciamento ? `<td>${item.relacao}</td>` : '';
+            tr.innerHTML = `<td>${item.tipo}</td><td><strong>${item.norma}</strong></td><td>${item.nome}</td><td>${item.desc}</td>${relacaoCell}<td>${item.comp}</td><td style="text-align:center;">${linkHtml}</td>`;
             tbodyTheme.appendChild(tr);
         });
     }
