@@ -539,3 +539,110 @@ a.link-btn:hover { background: #1351B4; color: white; }
 .stat-card:hover { transform: translateY(-5px); }
 .stat-number { font-size: 38px; font-weight: 700; color: #1351B4; display: block; margin-bottom: 5px; line-height: 1; }
 .stat-label { font-size: 12px; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; overflow-wrap: anywhere; }
+/* ==========================================================================
+   10. CARDS INTERATIVOS (PLANEJAMENTO ENERGÉTICO)
+   ========================================================================== */
+.planejamento-cards-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto 30px auto;
+    animation: fadeIn 0.5s forwards;
+}
+.plan-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+.plan-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #1351B4;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.plan-card-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fdfdfd;
+    border-bottom: 1px solid transparent;
+    transition: background 0.4s ease;
+}
+.plan-card-header h4 {
+    margin: 0;
+    color: #1351B4;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.plan-card-header .arrow {
+    font-size: 14px;
+    color: #1351B4;
+    transition: transform 0.4s ease;
+}
+.plan-card-body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.5s ease;
+}
+.plan-card-body p, .plan-card-body ul {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+.plan-card-body ul {
+    padding-left: 20px;
+}
+.plan-card-body li {
+    margin-bottom: 6px;
+}
+
+/* Interação Hover e Click combinados */
+.plan-card:hover, .plan-card.expanded {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(19, 81, 180, 0.15);
+}
+.plan-card:hover .plan-card-header, .plan-card.expanded .plan-card-header {
+    border-bottom: 1px solid #eaeaea;
+    background: #f4f7fb;
+}
+.plan-card:hover .arrow, .plan-card.expanded .arrow {
+    transform: rotate(-180deg);
+}
+.plan-card:hover .plan-card-body, .plan-card.expanded .plan-card-body {
+    max-height: 2500px;
+    opacity: 1;
+    padding: 20px;
+}
+/* Botões de Link dos Cards */
+.plan-card-btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+.plan-card-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #eef2f7;
+    color: #1351B4;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    border: 1px solid #ced4da;
+}
+.plan-card-btn:hover {
+    background-color: #1351B4;
+    color: white;
+    border-color: #1351B4;
+}
