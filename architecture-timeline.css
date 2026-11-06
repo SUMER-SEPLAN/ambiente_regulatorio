@@ -1,0 +1,278 @@
+/* Linha do tempo normativa da página Arquitetura Institucional. */
+.arquitetura-timeline {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.arquitetura-timeline__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 34px;
+}
+
+.arquitetura-timeline__heading .eyebrow { margin-bottom: 10px; }
+.arquitetura-timeline__heading h2 {
+  max-width: 25ch;
+  font-size: clamp(26px, 2.6vw, 34px);
+}
+
+.arquitetura-timeline__lead {
+  max-width: 760px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+.arquitetura-timeline__controls {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.arquitetura-timeline__controls button {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--blue-800);
+  font: inherit;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.arquitetura-timeline__controls button:hover {
+  border-color: var(--blue-700);
+  background: var(--blue-700);
+  color: var(--white);
+}
+
+.arquitetura-timeline__controls button:disabled {
+  border-color: var(--line);
+  background: #f4f7fb;
+  color: #9aabc0;
+  cursor: default;
+}
+
+.arquitetura-timeline__controls button:focus-visible,
+.arquitetura-timeline__viewport:focus-visible {
+  outline: 3px solid var(--blue-300);
+  outline-offset: 3px;
+}
+
+.arquitetura-timeline__viewport {
+  --timeline-side-padding: 32px;
+  max-width: 100%;
+  padding: 22px 0 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  overscroll-behavior-inline: contain;
+  scroll-padding-inline: var(--timeline-side-padding);
+  scroll-snap-type: inline mandatory;
+  scrollbar-width: none;
+}
+
+.arquitetura-timeline__viewport::-webkit-scrollbar { display: none; width: 0; height: 0; }
+.arquitetura-timeline__viewport.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.arquitetura-timeline__list {
+  --timeline-card-width: 246px;
+  position: relative;
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  min-height: 450px;
+  margin: 0;
+  padding: 0 var(--timeline-side-padding);
+  list-style: none;
+}
+
+.arquitetura-timeline__list::before {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  left: 20px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--blue-800);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.arquitetura-timeline__item {
+  position: relative;
+  display: grid;
+  width: var(--timeline-card-width);
+  min-height: 450px;
+  grid-template-rows: 190px 70px 190px;
+  padding-inline: 10px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.arquitetura-timeline__card {
+  position: relative;
+  align-self: end;
+  padding: 16px 16px 15px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #f7faff;
+  box-shadow: 0 10px 25px rgba(8, 40, 83, .09);
+}
+
+.arquitetura-timeline__sequence {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  color: #aebdd0;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.arquitetura-timeline__item:nth-child(even) .arquitetura-timeline__card {
+  grid-row: 3;
+  align-self: start;
+}
+
+.arquitetura-timeline__year {
+  display: inline-flex;
+  margin-bottom: 7px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--blue-700);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+
+.arquitetura-timeline__card h3 {
+  color: var(--blue-900);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.arquitetura-timeline__card p {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.52;
+}
+
+.arquitetura-timeline__marker {
+  position: relative;
+  display: grid;
+  grid-row: 2;
+  place-items: center;
+}
+
+.arquitetura-timeline__marker::before {
+  width: 17px;
+  height: 17px;
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  background: var(--blue-800);
+  box-shadow: 0 0 0 2px var(--blue-800);
+  content: "";
+}
+
+.arquitetura-timeline__marker::after {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 32px;
+  background: var(--blue-800);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.arquitetura-timeline__item:nth-child(odd) .arquitetura-timeline__marker::after { top: 0; }
+.arquitetura-timeline__item:nth-child(even) .arquitetura-timeline__marker::after { bottom: 0; }
+
+.arquitetura-timeline__loading {
+  align-self: center;
+  width: min(80vw, 520px);
+  padding: 22px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.arquitetura-timeline__hint {
+  color: #7d93ad;
+  font-size: 12.5px;
+}
+
+.arquitetura-timeline__hint { margin: 10px 0 0; }
+
+@media (max-width: 760px) {
+  .arquitetura-timeline__heading { align-items: flex-start; margin-bottom: 26px; }
+  .arquitetura-timeline__heading h2 { font-size: 27px; }
+  .arquitetura-timeline__controls,
+  .arquitetura-timeline__hint { display: none; }
+  .arquitetura-timeline__viewport { padding: 2px 0; overflow: visible; }
+  .arquitetura-timeline__list {
+    display: grid;
+    width: 100%;
+    min-height: 0;
+    gap: 18px;
+    padding: 4px 0 4px 34px;
+  }
+  .arquitetura-timeline__list::before {
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 3px;
+    height: auto;
+    transform: none;
+  }
+  .arquitetura-timeline__item {
+    display: block;
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+  }
+  .arquitetura-timeline__card,
+  .arquitetura-timeline__item:nth-child(even) .arquitetura-timeline__card {
+    width: 100%;
+  }
+  .arquitetura-timeline__marker {
+    position: absolute;
+    top: 26px;
+    left: -32px;
+    display: block;
+    width: 17px;
+    height: 17px;
+  }
+  .arquitetura-timeline__marker::after { display: none; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .arquitetura-timeline__viewport { cursor: grab; }
+  .arquitetura-timeline__viewport.is-dragging { cursor: grabbing; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arquitetura-timeline__viewport { scroll-behavior: auto !important; }
+}
+body[data-macrotema="Arquitetura institucional e marco regulatório do setor elétrico"] .tema-hero h1 {
+  max-width: 28ch;
+  font-size: clamp(28px, 3.15vw, 40px);
+  line-height: 1.12;
+  text-wrap: balance;
+}

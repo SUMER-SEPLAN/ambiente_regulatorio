@@ -1,0 +1,27 @@
+AMBIENTE REGULATÓRIO DE ENERGIA
+Projeto completo e editável
+
+COMO ABRIR
+
+1. Extraia todo o conteúdo do arquivo ZIP, preservando a estrutura de pastas.
+2. Abra um terminal dentro da pasta "Ambiente Regulatorio".
+3. Inicie um servidor local com um dos comandos abaixo:
+
+   Python 3:
+   python3 -m http.server 8017
+
+   Windows com Python:
+   py -m http.server 8017
+
+4. Abra o navegador em:
+   http://localhost:8017/
+
+COMO EDITAR
+
+O projeto usa HTML, CSS e JavaScript sem dependências de compilação. Ele pode
+ser editado em qualquer editor de código. O arquivo index.html contém a página
+inicial; as páginas temáticas ficam em macrotemas/; os estilos e scripts estão
+na raiz; os dados do catálogo ficam em data/normas.csv.
+
+Observação: use um servidor local. Abrir o index.html diretamente pelo sistema
+de arquivos pode impedir o navegador de carregar o catálogo CSV.

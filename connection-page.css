@@ -1,0 +1,224 @@
+/* Conexão e Acesso à Rede — composição editorial e percurso regulatório. */
+.connection-prose,.connection-heading{max-width:900px}.connection-prose .eyebrow,.connection-heading .eyebrow{margin-bottom:10px}.connection-prose .eyebrow span,.connection-heading .eyebrow span{flex:0 0 28px}.connection-prose h2,.connection-heading h2{color:var(--blue-900);font-size:clamp(29px,2.8vw,39px);line-height:1.16;letter-spacing:-.03em}.connection-prose>p:not(.eyebrow){margin-top:18px;color:#506b84;font-family:inherit;font-size:16px;font-weight:400;line-height:1.82;text-align:justify;text-align-last:left}.connection-prose__lead{color:#506b84!important;font-family:inherit!important;font-size:16px!important;font-weight:400!important}.connection-prose strong{color:var(--blue-900);font-weight:700}.connection-heading{margin-bottom:31px}.connection-heading>h2~p{margin-top:12px;color:#58728a;font-size:15px;line-height:1.72}.connection-heading--wide{max-width:1220px}
+
+/* O enquadramento usa uma faixa comparativa horizontal, distinta do percurso em cards. */
+.connection-framing__toolbar{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:16px}.connection-framing__toolbar p{display:grid;gap:3px;margin:0}.connection-framing__toolbar strong{color:#123f6c;font-size:14px}.connection-framing__toolbar span{color:#607a91;font-size:12.5px}.connection-framing__controls{display:flex;gap:8px}.connection-framing__controls button{display:grid;width:39px;height:39px;place-items:center;border:1px solid #b9d2e7;border-radius:50%;background:#fff;color:#155da1;font:700 18px/1 inherit;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease}.connection-framing__controls button:hover,.connection-framing__controls button:focus-visible{border-color:#0d4d88;background:#0d4d88;color:#fff}.connection-framing__viewport{overflow-x:auto;padding:5px 1px 17px;cursor:grab;scrollbar-width:thin;scrollbar-color:#7faed3 #dfeaf3;overscroll-behavior-inline:contain}.connection-framing__viewport.is-dragging{cursor:grabbing;user-select:none}.connection-framing__viewport::-webkit-scrollbar{height:7px}.connection-framing__viewport::-webkit-scrollbar-track{border-radius:999px;background:#dfeaf3}.connection-framing__viewport::-webkit-scrollbar-thumb{border-radius:999px;background:#7faed3}.connection-framing__track{display:flex;align-items:flex-start;gap:18px;width:max-content}.connection-framing__card{position:relative;box-sizing:border-box;width:var(--framing-card-width,min(570px,calc(84vw - 32px)));height:var(--framing-card-height,auto);padding:21px 23px;border:1px solid #cbddec;border-radius:18px;background:#fff;box-shadow:0 13px 30px rgba(18,61,101,.065)}.connection-framing__index{margin:0 0 10px;color:#4382b8;font-size:11px;font-weight:800;letter-spacing:.13em}.connection-framing__card h3{max-width:29ch;color:#103d69;font-size:20px;line-height:1.3}.connection-framing__summary{margin:9px 0 0;color:#526f87;font-size:13.2px;line-height:1.58}.connection-framing__action{display:inline-flex;align-items:center;gap:7px;margin-top:13px;padding:8px 11px;border:1px solid #b4cfe5;border-radius:999px;background:#fff;color:#125b99!important;font-size:11.7px;font-weight:750;line-height:1.35;text-decoration:none}.connection-framing__action:hover,.connection-framing__action:focus-visible{border-color:#0b3d6f;background:#0b3d6f;color:#fff!important}.connection-framing__card dl{display:grid;gap:12px;margin:16px 0 0}.connection-framing__card dl>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;padding-top:12px;border-top:1px solid #dbe7f1}.connection-framing__card dt{color:#174d7e;font-size:10.3px;font-weight:800;line-height:1.4;letter-spacing:.055em;text-transform:uppercase}.connection-framing__card dd{margin:0;color:#536e86;font-size:13px;line-height:1.58}.connection-framing__card a{color:#155da1;font-weight:700;text-underline-offset:3px}.connection-matrix__basis{margin:14px 0 0!important;padding:12px 13px;border-left:3px solid #2e78b7;border-radius:0 9px 9px 0;background:#edf5fb;color:#385b79;font-size:11.7px;line-height:1.5}.connection-matrix__basis strong{display:block;margin-bottom:3px;color:#0f5797;font-size:10.3px;font-weight:800;letter-spacing:.075em;text-transform:uppercase}
+
+/* Distribuição e transmissão usam blocos próprios; as etapas permanecem visíveis. */
+.connection-process{overflow:hidden}.connection-route{--route-accent:#1766ad;--route-soft:#edf5fc;margin-top:40px;padding:30px;border:1px solid #cbddec;border-top:4px solid var(--route-accent);border-radius:22px;background:#fff;box-shadow:0 17px 40px rgba(17,59,99,.075)}.connection-route--transmission{--route-accent:#1766ad;--route-soft:#edf5fc;margin-top:58px}.connection-route__header{padding:1px 0 22px;border-bottom:1px solid #d5e2ed}.connection-route__header h3{margin:0;color:#0c3561;font-size:clamp(24px,2.25vw,31px);font-weight:750;line-height:1.25;letter-spacing:-.025em}.connection-route__steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:25px 0 0;padding:0;list-style:none}.connection-route__steps li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:15px;align-content:start;padding:23px;border:1px solid #d7e4ef;border-radius:16px;background:#fbfdff}.connection-route__marker{display:grid;width:34px;height:34px;place-items:center;border-radius:50%;background:var(--route-soft);color:var(--route-accent);font-size:11px;font-weight:800;letter-spacing:.04em}.connection-route__steps h4{color:#103d69;font-size:17px;line-height:1.38}.connection-route__steps p{margin-top:10px;color:#536e86;font-size:13.7px;line-height:1.72}.connection-route__definition{padding:13px 14px;border-left:3px solid var(--route-accent);border-radius:0 9px 9px 0;background:var(--route-soft);color:#44647e!important;font-size:12.8px!important}.connection-route__definition strong{display:block;margin-bottom:3px;color:#123f6c;font-size:11px;letter-spacing:.055em;text-transform:uppercase}.connection-route__steps .connection-route__reference{margin-top:13px;color:#285a83;font-size:11.5px;font-weight:650;line-height:1.58}.connection-policy-note{margin:23px 0 0;padding:17px 20px;border-left:3px solid var(--route-accent);background:var(--route-soft);color:#4d6982;font-size:13.2px;line-height:1.68}.connection-policy-note strong{color:#123f6c}
+
+.connection-process__closing{display:grid;grid-template-columns:minmax(170px,.32fr) minmax(0,1fr);gap:26px;margin-top:34px;padding:23px 26px;border:1px solid #cbddec;border-radius:16px;background:#edf5fb}.connection-process__closing>strong{color:#0c3b68;font-size:16px;line-height:1.45}.connection-process__closing p{margin:0;color:#4a6881;font-size:13.8px;line-height:1.72}.connection-process__actions{display:grid;grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:0}.connection-process__actions a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:9px 11px;border:1px solid #0b3d6f;border-radius:999px;background:#0b3d6f;color:#fff;font-size:clamp(10px,.72vw,12px);font-weight:750;line-height:1.3;text-align:center;text-decoration:none}.connection-process__actions a:hover,.connection-process__actions a:focus-visible{border-color:#0b3d6f;background:#fff;color:#0b3d6f}.connection-process__actions span{flex:0 0 auto;font-size:14px}.connection-norms{border-top:1px solid #d7e4ef}
+
+@media(max-width:900px){.connection-route{padding:24px}.connection-route__steps{grid-template-columns:1fr}}
+@media(max-width:800px){.connection-prose>p:not(.eyebrow){text-align:left}.connection-process__closing{grid-template-columns:1fr;gap:8px}.connection-process__actions{grid-template-columns:1fr}.connection-framing__card{width:var(--framing-card-width,calc(100vw - 34px))}}
+@media(max-width:520px){.connection-route{margin-inline:-5px;padding:19px 16px;border-radius:17px}.connection-route__steps li{grid-template-columns:1fr;gap:8px;padding:18px}.connection-route__marker{width:31px;height:31px}.connection-policy-note{padding:15px 16px}.connection-process__closing{padding:19px}.connection-framing__toolbar{align-items:center}.connection-framing__toolbar span{display:none}.connection-framing__controls button{width:36px;height:36px}.connection-framing__card{padding:21px}.connection-framing__card dl>div{grid-template-columns:1fr;gap:6px}}
+
+
+/* v326 — alinhamento editorial dos textos descritivos. */
+.connection-heading,.connection-heading--wide{max-width:none}
+.connection-heading>h2~p,.connection-framing__summary,.connection-framing__card dd,.connection-matrix__basis{text-align:justify;text-align-last:left;-webkit-hyphens:none;hyphens:none;word-break:normal;overflow-wrap:normal}
+
+/* v327 — justificação integral do percurso regulatório e da finalização. */
+.connection-route__steps p,.connection-policy-note,.connection-process__closing p{text-align:justify;text-align-last:left;-webkit-hyphens:none;hyphens:none;word-break:normal;overflow-wrap:normal}
+
+/* v329 — enquadramento compacto para manter título, orientação e cards no mesmo campo visual. */
+.connection-framing{padding-block:50px}.connection-framing .connection-heading{margin-bottom:14px}.connection-framing__toolbar{margin-bottom:10px}
+
+/* v330 — o nome do sistema acompanha verticalmente as respectivas etapas. */
+.connection-process{overflow:visible}.connection-route__header{position:sticky;top:74px;z-index:4;margin-inline:-1px;padding:14px 1px 18px;background:#fff;box-shadow:0 1px 0 #d5e2ed}
+@media(max-width:800px){.connection-route__header{top:60px}}
+
+/* v334 — a orientação prática encerra o percurso como um bloco autônomo. */
+.connection-process__closing{position:relative;margin-top:82px;border-color:#d7e0e7;background:#fff;box-shadow:0 14px 34px rgba(17,59,99,.07)}
+.connection-process__closing::before{content:"";position:absolute;top:-43px;left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,#cbd9e4 12%,#cbd9e4 88%,transparent)}
+@media(max-width:800px){.connection-process__closing{margin-top:62px}.connection-process__closing::before{top:-33px}}
+
+/* v340 — título curto centralizado na orientação final. */
+.connection-process__closing>strong{align-self:center;justify-self:center;text-align:center}
+
+
+/* v345 — ênfase proporcional no título da orientação final. */
+.connection-process__closing>strong{font-size:clamp(21px,1.55vw,25px);font-weight:800;letter-spacing:-.02em}
+
+
+/* v346 — título no tamanho original dentro de um campo retangular. */
+.connection-process__closing>strong{display:grid;width:100%;min-height:76px;padding:14px 18px;place-items:center;border:1px solid #d2e1ed;border-radius:12px;background:#f2f7fb;font-size:16px;font-weight:750;line-height:1.45;letter-spacing:normal;box-sizing:border-box}
+@media(max-width:800px){.connection-process__closing>strong{min-height:58px}}
+
+
+/* v347 — campo de atenção sem preenchimento, apenas contorno leve. */
+.connection-process__closing>strong{border-color:#d5e3ee;background:transparent}
+
+/* v348 — percurso revelado como sequência conectada. */
+.connection-route.is-process-sequence .connection-route__steps{position:relative;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:46px;row-gap:22px;isolation:isolate}
+.connection-route.is-process-sequence .connection-route__steps::before{content:"";position:absolute;z-index:0;top:0;bottom:0;left:50%;width:2px;border-radius:999px;background:linear-gradient(180deg,var(--route-accent),#78acd3);transform:translateX(-50%) scaleY(var(--route-progress,0));transform-origin:top;transition:transform .7s cubic-bezier(.22,.75,.28,1)}
+.connection-route.is-process-sequence .connection-route__steps>li{position:relative;z-index:1;opacity:0;filter:blur(2px);transform:translateY(18px) scale(.985);transition:opacity .58s ease,transform .68s cubic-bezier(.22,.75,.28,1),filter .5s ease,box-shadow .5s ease}
+.connection-route.is-process-sequence .connection-route__steps>li::after{content:"";position:absolute;top:39px;width:24px;height:2px;border-radius:999px;background:var(--route-accent);opacity:0;transform:scaleX(0);transition:transform .5s ease .16s,opacity .35s ease .16s}
+.connection-route.is-process-sequence .connection-route__steps>li:nth-child(odd)::after{right:-24px;transform-origin:right}
+.connection-route.is-process-sequence .connection-route__steps>li:nth-child(even)::after{left:-24px;transform-origin:left}
+.connection-route.is-process-sequence .connection-route__steps>li.is-revealed{opacity:1;filter:none;transform:none;box-shadow:0 12px 27px rgba(17,67,111,.07)}
+.connection-route.is-process-sequence .connection-route__steps>li.is-revealed::after{opacity:1;transform:scaleX(1)}
+.connection-route.is-process-sequence .connection-route__steps>li.is-revealed .connection-route__marker{background:var(--route-accent);color:#fff;box-shadow:0 0 0 5px var(--route-soft);transition:background .4s ease,color .4s ease,box-shadow .4s ease}
+.connection-route.is-process-complete .connection-route__steps::before{box-shadow:0 0 0 1px rgba(23,102,173,.08),0 0 18px rgba(23,102,173,.16)}
+@media(max-width:900px){.connection-route.is-process-sequence .connection-route__steps{grid-template-columns:1fr;column-gap:0;padding-left:34px}.connection-route.is-process-sequence .connection-route__steps::before{left:13px}.connection-route.is-process-sequence .connection-route__steps>li::after,.connection-route.is-process-sequence .connection-route__steps>li:nth-child(odd)::after,.connection-route.is-process-sequence .connection-route__steps>li:nth-child(even)::after{top:39px;left:-21px;right:auto;width:21px;transform-origin:left}}
+@media(prefers-reduced-motion:reduce){.connection-route.is-process-sequence .connection-route__steps::before,.connection-route.is-process-sequence .connection-route__steps>li,.connection-route.is-process-sequence .connection-route__steps>li::after{transition:none}}
+
+/* v349 — linha em zigue-zague a partir do canto esquerdo, sincronizada com cada card. */
+.connection-route.is-process-sequence .connection-route__steps::before{display:none}
+.connection-route.is-process-sequence .connection-route__steps>li:nth-child(4n+1),.connection-route.is-process-sequence .connection-route__steps>li:nth-child(4n){grid-column:1}
+.connection-route.is-process-sequence .connection-route__steps>li:nth-child(4n+2),.connection-route.is-process-sequence .connection-route__steps>li:nth-child(4n+3){grid-column:2}
+.connection-route__process-line{position:absolute;z-index:0;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.connection-route__process-line path{fill:none;stroke:var(--route-accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset .62s cubic-bezier(.22,.75,.28,1);filter:drop-shadow(0 0 4px rgba(23,102,173,.13))}
+.connection-route.is-process-sequence .connection-route__steps>li::after{display:none}
+.connection-route.is-process-sequence .connection-route__steps>li{background:#fbfdff}
+@media(max-width:900px){.connection-route.is-process-sequence .connection-route__steps>li:nth-child(n){grid-column:1}.connection-route__process-line path{stroke-width:2}}
+
+/* v350 — dois cards por linha e percurso em cobra, com a linha passando atrás dos cards. */
+.connection-route.is-process-sequence .connection-route__steps{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;row-gap:24px}
+.connection-route.is-process-sequence .connection-route__steps>li:nth-child(n){grid-column:auto}
+.connection-route.is-process-sequence .connection-route__steps>li{z-index:2;background:#fbfdff}
+.connection-route__process-line{z-index:1}
+.connection-route__process-line path{stroke-width:2.5}
+@media(max-width:900px){.connection-route.is-process-sequence .connection-route__steps{grid-template-columns:1fr;padding-left:34px}.connection-route.is-process-sequence .connection-route__steps>li:nth-child(n){grid-column:1}.connection-route__process-line path{stroke-width:2}}
+
+/* v351 — conectores externos, entrada mais suave e conteúdo fixo durante a subida. */
+.connection-route__process-line path{transition:stroke-dashoffset 1.05s cubic-bezier(.22,.75,.28,1)}
+.connection-route.is-process-sequence .connection-route__steps>li{transition:opacity .92s ease,transform 1.05s cubic-bezier(.22,.75,.28,1),filter .82s ease,box-shadow .72s ease}
+
+/* v352 — conectores orientados para a direita e uma única curva entre as duplas. */
+.connection-route.is-process-sequence .connection-route__steps{padding-inline:28px}
+@media(max-width:900px){.connection-route.is-process-sequence .connection-route__steps{padding-right:0;padding-left:34px}}
+
+/* v353 — percurso ortogonal e repetição rearmada apenas no topo da seção completa. */
+.connection-route__process-line path{stroke-linejoin:miter}
+
+/* v354 — contorno externo conforme o desenho de referência. */
+.connection-route__process-line path{stroke-linecap:square}
+
+/* v354 — travessia horizontal centralizada no espaço livre entre as fileiras. */
+.connection-route.is-process-sequence .connection-route__steps{row-gap:34px}
+
+/* v355 — geometria calculada pela grade fixa, sem o deslocamento da animação. */
+
+/* v370 — enquadramento explicado em três passos, com cards mais leves. */
+.connection-framing{padding-block:68px 62px}
+.connection-framing .connection-heading{margin-bottom:24px}
+.connection-framing__guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 28px}
+.connection-framing__guide article{display:grid;grid-template-columns:38px minmax(0,1fr);gap:13px;align-items:start;padding:17px 18px;border:1px solid #d3e2ef;border-radius:15px;background:rgba(255,255,255,.72)}
+.connection-framing__guide article>span{display:grid;width:34px;height:34px;place-items:center;border-radius:50%;background:#e7f1fa;color:#1764a6;font-size:11px;font-weight:800}
+.connection-framing__guide strong{display:block;margin:1px 0 5px;color:#123f6c;font-size:14px;line-height:1.35}
+.connection-framing__guide p{margin:0;color:#5c758b;font-size:12.5px;line-height:1.55}
+.connection-framing__toolbar{align-items:center;margin-bottom:16px;padding-top:3px}
+.connection-framing__toolbar strong{font-size:15px}
+.connection-framing__card{width:var(--framing-card-width,min(545px,calc(84vw - 32px)));padding:26px 27px 24px;border-radius:20px}
+.connection-framing__index{display:grid;width:34px;height:34px;place-items:center;margin:0 0 15px;border-radius:50%;background:#e8f2fb;color:#1765a8;font-size:10.5px}
+.connection-framing__card h3{font-size:21px;line-height:1.27}
+.connection-framing__summary{margin-top:10px;padding-bottom:16px;color:#4f6c84;font-size:14px;line-height:1.62}
+.connection-framing__card dl{gap:0;margin:0}
+.connection-framing__card dl>div{grid-template-columns:132px minmax(0,1fr);gap:16px;padding:15px 0;border-top:1px solid #dbe7f1}
+.connection-framing__card dt{font-size:10.5px;letter-spacing:.07em}
+.connection-framing__card dd{font-size:13px;line-height:1.62}
+.connection-matrix__basis{margin-top:4px!important;padding:13px 14px;font-size:11.5px;line-height:1.55}
+@media(max-width:900px){.connection-framing__guide{grid-template-columns:1fr}.connection-framing__guide article{padding:15px 16px}}
+@media(max-width:520px){.connection-framing{padding-block:50px}.connection-framing__card{padding:22px}.connection-framing__card dl>div{grid-template-columns:1fr;gap:6px}.connection-framing__guide{margin-bottom:22px}}
+
+/* v375 — enquadramento incorporado ao final do percurso regulatório. */
+.connection-framing--embedded{margin:68px 0 38px;padding:52px 32px 42px;border:1px solid #d8e5f1;border-radius:26px;background:#f4f8fc}
+.connection-framing--embedded .connection-heading{margin-bottom:26px}
+.connection-framing--embedded .connection-framing__viewport{margin-bottom:0}
+@media(max-width:700px){.connection-framing--embedded{margin-top:48px;padding:36px 18px 30px;border-radius:20px}}
+
+/* v379 — transição entre seções no padrão editorial aprovado. */
+.connection-intro{padding-bottom:92px;background:#fff}
+.connection-process{padding-top:78px;border-top:1px solid #d9e6f0;background:#f3f7fb}
+.connection-route,.connection-route__header{background:#fff}
+@media(max-width:800px){.connection-intro{padding-bottom:66px}.connection-process{padding-top:58px}}
+
+/* v380 — enquadramento tratado como seção autônoma, com transição editorial. */
+.connection-framing--embedded{position:relative;left:50%;box-sizing:border-box;width:100vw;margin:92px 0 42px -50vw;padding:76px max(24px,calc((100vw - 1220px)/2)) 64px;border:0;border-top:1px solid #d9e6f0;border-radius:0;background:#fff}
+.connection-framing--embedded .connection-heading,.connection-framing--embedded .connection-framing__toolbar,.connection-framing--embedded .connection-framing__viewport{width:100%;max-width:1220px;margin-right:auto;margin-left:auto}
+@media(max-width:800px){.connection-framing--embedded{margin-top:68px;padding-top:56px;padding-bottom:48px}}
+
+/* v422 — transição editorial entre o enquadramento e os percursos. */
+.connection-framing__transition{width:100%;max-width:1220px;margin:26px auto 0;padding:0;border:0;color:#526f87;font-size:15px;line-height:1.72}
+.connection-framing__transition strong{color:#123f6c;font-weight:750}
+
+/* v430 — barra superior dos percursos em azul mais suave. */
+.connection-route{border-top-width:2px;border-top-color:#4f8fc4}
+
+/* v431 — jornada mais compacta, com três enquadramentos visíveis no desktop. */
+.connection-framing__card{width:var(--framing-card-width,calc((min(1220px,100vw - 48px) - 36px)/3));padding:22px 21px 20px}
+.connection-framing__index{position:absolute;top:19px;right:20px;margin:0}
+.connection-framing__card h3{max-width:calc(100% - 48px);min-height:46px;font-size:18px;line-height:1.28}
+.connection-framing__summary{margin-top:7px;padding-bottom:12px;font-size:13px;line-height:1.55}
+.connection-framing__card dl>div{grid-template-columns:105px minmax(0,1fr);gap:12px;padding:12px 0}
+.connection-framing__card dd{font-size:12.4px;line-height:1.55}
+.connection-matrix__basis{padding:11px 12px;font-size:11px;line-height:1.48}
+@media(max-width:900px){.connection-framing__card{width:var(--framing-card-width,calc(100vw - 48px))}}
+@media(max-width:520px){.connection-framing__card{padding:21px 19px}.connection-framing__card h3{min-height:0;padding-right:40px;font-size:18px}.connection-framing__card dl>div{grid-template-columns:1fr;gap:6px}}
+
+/* v432 — referências normativas alinhadas ao rodapé dos cards. */
+.connection-framing__card{display:flex;flex-direction:column}
+.connection-framing__card .connection-matrix__basis{box-sizing:border-box;min-height:var(--framing-basis-height,auto);margin-top:auto!important}
+
+/* v434 — profundidade discreta nas bordas dos cards da jornada. */
+.connection-framing__card{box-shadow:0 1px 3px rgba(18,61,101,.08),0 7px 18px rgba(18,61,101,.075)}
+
+/* v435 — a faixa superior dos percursos dá lugar a uma sombra azul suave. */
+.connection-route{border-top-width:1px;border-top-color:#cbddec;box-shadow:0 -9px 25px rgba(79,143,196,.22),0 17px 40px rgba(17,59,99,.075)}
+
+/* v437 — cards mais destacados e canais oficiais com marcas institucionais. */
+.connection-framing__card{box-shadow:0 0 0 1px rgba(79,143,196,.1),0 0 18px rgba(18,61,101,.16),0 10px 28px rgba(18,61,101,.12)}
+.connection-process__closing>strong{grid-column:1/-1;justify-self:start;width:auto;min-height:0;padding:0;border:0;border-radius:0;background:transparent;text-align:left}
+.connection-process__closing>p{grid-column:1/-1}
+.connection-process__brands{display:flex;grid-column:1/-1;gap:34px;align-items:center;margin-top:2px;padding:7px 0 3px}
+.connection-process__brands span{display:flex;min-width:132px;min-height:48px;align-items:center}
+.connection-process__brands img{display:block;width:132px;height:auto;max-height:46px;object-fit:contain;object-position:left center}
+.connection-process__brands .connection-process__brand-ons{width:82px;max-height:34px;filter:brightness(0)}
+@media(max-width:600px){.connection-process__brands{gap:24px}.connection-process__brands span{min-width:112px}.connection-process__brands img{width:112px}.connection-process__brands .connection-process__brand-ons{width:72px}}
+
+/* v438 — continuidade entre seções e marcas alinhadas aos respectivos acessos. */
+.connection-intro{padding-bottom:42px}
+.connection-process{padding-top:0}
+.connection-framing--embedded{margin-top:0;padding-top:52px;background:#f3f7fb}
+.connection-process__closing{row-gap:11px}
+.connection-process__brands{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:-2px;padding:0 0 2px}
+.connection-process__brands span{min-width:0;min-height:42px;justify-content:center}
+.connection-process__brands img{width:118px;max-height:40px;object-position:center}
+.connection-process__brands .connection-process__brand-ons{width:78px;max-height:32px}
+.connection-process__actions{margin-top:0}
+@media(max-width:800px){.connection-intro{padding-bottom:34px}.connection-framing--embedded{margin-top:0;padding-top:44px}.connection-process__brands{grid-template-columns:1fr;gap:5px}.connection-process__brands span{min-height:38px}.connection-process__actions{grid-template-columns:1fr}}
+
+/* v439 — cantos retos na jornada e hierarquia refinada nos canais oficiais. */
+.connection-framing__card{border-radius:0}
+.connection-process__closing>strong{font-size:19px;line-height:1.35}
+.connection-process__brands{margin-top:7px;padding-bottom:4px}
+.connection-process__actions{margin-top:2px}
+
+/* v441 — botões claros no repouso e azuis durante a interação. */
+.connection-process__actions a{border-color:#0b3d6f;background:#fff;color:#0b3d6f;font-size:clamp(12px,.82vw,13.5px)}
+.connection-process__actions a:hover,.connection-process__actions a:focus-visible{border-color:#0b3d6f;background:#0b3d6f;color:#fff}
+
+/* Ajustes editoriais — cantos discretos e correlação normativa. */
+.connection-framing__card{border-radius:10px}
+.connection-framing__card{padding:18px 19px 17px}
+.connection-framing__index{top:16px;right:17px;width:31px;height:31px}
+.connection-framing__card h3{min-height:42px;font-size:17px;line-height:1.24}
+.connection-framing__summary{margin-top:5px;padding-bottom:9px;font-size:12.7px;line-height:1.48}
+.connection-framing__card dl>div{grid-template-columns:100px minmax(0,1fr);gap:10px;padding:9px 0}
+.connection-framing__card dd{font-size:12px;line-height:1.48}
+.connection-matrix__basis{padding:9px 11px;font-size:10.8px;line-height:1.42}
+.connection-norms .theme-law-relation{margin:13px 0 0;padding:11px 12px;border-left:3px solid var(--blue-300);border-radius:0 8px 8px 0;background:#f1f6fc;color:var(--ink);font-size:12.5px;line-height:1.55;text-align:justify;text-align-last:left;text-justify:inter-word;-webkit-hyphens:none;hyphens:none;overflow-wrap:normal;word-break:normal}
+.connection-norms .theme-law-relation strong{color:var(--blue-900)}
+
+/* A navegação permanece disponível pelas setas e pelo arraste, sem barra inferior. */
+.connection-framing__viewport{scrollbar-width:none}
+.connection-framing__viewport::-webkit-scrollbar{display:none;width:0;height:0}
+
+/* A separação entre os capítulos é apenas cromática; fluxo e disposição permanecem intactos. */
+.connection-process{background:#fff}
+.connection-framing--embedded{background:#f3f7fb}
+
+/* A primeira seção após a introdução não espera a interseção do contêiner
+   completo (que reúne vários blocos e é muito alto). */
+.connection-process>.container.macrotema-reveal{opacity:1;transform:none}

@@ -1,0 +1,33 @@
+/* Ícones dos cartões de números. */
+.metric-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--blue-100);
+  color: #0b4a92;
+}
+
+.metric-icon svg { width: 25px; height: 25px; }
+
+/* Os mapas entram como <img> e não herdam cor, então o hover só aprofunda o
+   fundo e amplia um pouco — inverter para azul escuro apagaria o traço. */
+.metric-icon { transition: background-color 240ms ease, transform 240ms ease; }
+.stat-card:hover .metric-icon { background-color: #cfe1fa; transform: scale(1.07); }
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-card:hover .metric-icon { transform: none; }
+}
+
+.metric-icon img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+/* Os três ícones ficam na mesma família azul; os mapas variam só no tom do
+   traço, já que vão como <img> e não herdam currentColor. */
+.metric-icon--brazil { background: #e4eefc; }
+.metric-icon--piaui { background: #dde9fa; }
+.metric-icon--consolidation { background: #e1ecfa; }

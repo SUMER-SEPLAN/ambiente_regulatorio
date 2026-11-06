@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Créditos cartográficos e de fontes de dados do portal Ambiente Regulatório de Energia.">
+    <meta name="theme-color" content="#0b4a92">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; base-uri 'self'; form-action 'self'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230b4a92'/%3E%3Cpath d='M15 44V24l17-9 17 9v20H15Zm7-7h20V28L32 23l-10 5v9Z' fill='%23fff'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalog.css?v=20261015-8">
+    <link rel="stylesheet" href="reference-shell.css?v=20260916-5">
+    <link rel="stylesheet" href="metric-icons.css">
+    <link rel="stylesheet" href="theme-icons.css">
+    <link rel="stylesheet" href="stats-interactions.css">
+    <link rel="stylesheet" href="credits.css">
+    <title>Créditos cartográficos — Ambiente Regulatório de Energia</title>
+  <link rel="stylesheet" href="mobile-overrides.css?v=20261021-1">
+</head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="reference-header">
+      <div class="reference-header__bar">
+        <div class="reference-header__inner">
+          <nav id="site-navigation" class="reference-header__nav" aria-label="Navegação principal">
+            <a href="index.html#inicio">Início</a>
+            <a href="index.html#macrotemas">Temas</a>
+            <a href="index.html#catalogo">Catálogo de Normas</a>
+            <a class="is-active" href="creditos.html">Créditos</a>
+          </nav>
+          <div class="reference-header__identity">
+            <span class="reference-header__secretariat">SECRETARIA DO<br>PLANEJAMENTO - SEPLAN</span>
+            <img class="reference-header__logo" src="assets/brand/logo-governo-piaui.png" alt="Governo do Piauí — Aqui tem trabalho. Aqui tem futuro." width="600" height="357">
+          </div>
+        </div>
+      </div>
+      <div class="reference-header__spacer" aria-hidden="true"></div>
+    </header>
+
+    <main id="conteudo" class="section">
+      <div class="container prose">
+        <p class="eyebrow"><span></span>Transparência</p>
+        <h1>Créditos cartográficos e de dados</h1>
+        <p class="prose__lead">Esta página descreve a origem das informações e das representações gráficas usadas no portal.</p>
+
+        <h2>Acervo de normas</h2>
+        <p>O catálogo reúne 105 registros temáticos, correspondentes a 90 normas únicas — 63 de competência federal e 27 de competência estadual — organizadas em onze temas. Os registros foram compilados a partir da planilha <code>normas_setor_energetico.xlsx</code>, mantida pela SEPLAN/SUMER, e publicados no portal como o arquivo <code>data/normas.csv</code>.</p>
+        <p>Cada registro traz o link para o texto oficial da norma na fonte primária: Planalto, Senado Federal, ANEEL, CNPE, MME ou o Sistema de Apoio ao Processo Legislativo da Assembleia Legislativa do Piauí (SAPL/ALEPI). O portal não hospeda cópias dos textos legais — a versão vigente é sempre a publicada pelo órgão emissor.</p>
+        <p>O enquadramento de cada norma em um tema é uma classificação editorial da SEPLAN, feita para facilitar a consulta. Não substitui a leitura da norma nem constitui interpretação jurídica vinculante.</p>
+
+        <h2>Representações cartográficas</h2>
+        <p>Os dois contornos exibidos nos cartões de números — Brasil e Piauí — vêm da <strong>malha territorial oficial do IBGE</strong>, obtida pela API de malhas (<code>servicodados.ibge.gov.br/api/v3/malhas</code>) na qualidade intermediária. Para caber num ícone de 27 pixels, os polígonos foram reprojetados em Mercator e simplificados pelo algoritmo de Douglas-Peucker: o Piauí passou de 556 para 170 vértices, o Brasil de 1.124 para 224, e as ilhas oceânicas foram descartadas.</p>
+        <p class="callout">A simplificação preserva a silhueta, mas <strong>descarta detalhe de fronteira</strong>. Os contornos servem como pictograma para distinguir competência federal de competência estadual e não substituem a malha oficial em usos de referência territorial, delimitação de fronteiras ou análise espacial.</p>
+        <p>Para bases cartográficas oficiais, consulte o <a href="https://www.ibge.gov.br/geociencias/downloads-geociencias.html" target="_blank" rel="noopener noreferrer">acervo de geociências do IBGE</a>.</p>
+
+        <h2>Tipografia e ícones</h2>
+        <p>A família tipográfica Plus Jakarta Sans é distribuída sob SIL Open Font License 1.1, via Google Fonts. Os pictogramas de tema, de métricas e de navegação foram desenhados especificamente para este portal em SVG.</p>
+
+        <h2>Atualização e correções</h2>
+        <p>O acervo é revisado periodicamente. Se identificar norma revogada, link quebrado ou classificação equivocada, escreva para <a href="mailto:energia@seplan.pi.gov.br?subject=Corre%C3%A7%C3%A3o%20no%20acervo%20do%20Ambiente%20Regulat%C3%B3rio">energia@seplan.pi.gov.br</a>.</p>
+
+        <p class="prose__back"><a class="button button--quiet" href="index.html">← Voltar ao portal</a></p>
+      </div>
+    </main>
+
+    <footer class="reference-footer">
+      <div class="reference-footer__bottom">
+        <span>© 2026 Governo do Estado do Piauí — SEPLAN/SUMER. Todos os direitos reservados.</span>
+        <a href="index.html">Ambiente Regulatório de Energia</a>
+      </div>
+    </footer>
+    <script src="nav-dropdown.js?v=20261104-1" defer></script>
+  </body>
+</html>

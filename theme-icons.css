@@ -1,0 +1,201 @@
+/* Cartões de macrotema e seus pictogramas. */
+#macrotemas.section--soft {
+  background: #f2f5f8;
+  border-block-color: #e6ecf3;
+  overflow: hidden;
+  padding-block: 48px;
+}
+
+.macrothemes-heading { align-items: end; margin-bottom: 22px; }
+.macrothemes-heading .eyebrow {
+  margin-bottom: 22px;
+  color: var(--blue-700);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.macrothemes-heading .eyebrow span { background: var(--blue-600); }
+.macrothemes-heading h2 { margin-bottom: 8px; }
+.macrothemes-heading p:last-child { max-width: 660px; }
+
+.macrothemes-controls {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  pointer-events: none;
+}
+.macrothemes-controls button {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 64px;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translateY(-50%);
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+.macrothemes-controls button::before {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid var(--blue-600);
+  border-right: 2px solid var(--blue-600);
+  content: "";
+}
+.macrothemes-control--next::before { left: 2px; transform: translateY(-50%) rotate(45deg); }
+.macrothemes-control--previous::before { right: 2px; transform: translateY(-50%) rotate(-135deg); }
+.macrothemes-controls button:hover { opacity: .62; }
+.macrothemes-controls button:focus-visible { outline: 3px solid var(--blue-300); outline-offset: 2px; }
+.macrothemes-controls button[hidden] { display: none; }
+.macrothemes-control--previous { left: -40px; }
+.macrothemes-control--next { right: -40px; }
+
+.theme-carousel { position: relative; width: 100%; overflow: visible; }
+.theme-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  max-height: 330px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.theme-grid::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+.theme-card {
+  position: relative;
+  display: grid;
+  flex: 0 0 calc((100% - 72px) / 5);
+  grid-template-rows: auto auto 1fr auto;
+  gap: 8px;
+  align-content: center;
+  overflow: hidden;
+  min-height: 282px;
+  padding: 25px 20px 21px;
+  border: 1px solid #e1e8f0;
+  border-radius: 0;
+  background: var(--white);
+  box-shadow: 0 12px 26px rgba(24, 50, 78, .07);
+  color: inherit;
+  font: inherit;
+  isolation: isolate;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transform: translateY(24px);
+  opacity: 0;
+  transition: border-color 260ms ease, transform 520ms cubic-bezier(.2,.75,.25,1), box-shadow 260ms ease, opacity 500ms ease;
+}
+
+.theme-card > * { position: relative; z-index: 1; }
+.theme-card::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 48px;
+  background: var(--blue-700);
+  transform: scaleY(.17);
+  transform-origin: center bottom;
+  transition: transform 420ms cubic-bezier(.2,.75,.25,1);
+}
+.theme-card.is-visible { transform: translateY(0); opacity: 1; }
+.theme-card.is-visible:hover,
+.theme-card.is-visible:focus-visible { transform: scale(1.018); }
+
+.theme-card:hover,
+.theme-card:focus-visible {
+  border-color: #e1e8f0;
+  transform: scale(1.018);
+  box-shadow: 0 18px 34px rgba(8, 40, 83, .18);
+}
+.theme-card:hover::before,
+.theme-card:focus-visible::before { transform: scaleY(1); }
+
+.theme-card__go {
+  align-self: end;
+  justify-self: center;
+  margin-top: auto;
+  padding-top: 10px;
+  color: var(--blue-700);
+  font-size: 11.5px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.theme-card__go::after { content: " →"; }
+.theme-card:hover .theme-card__go,
+.theme-card:focus-visible .theme-card__go { color: var(--white); text-decoration: underline; }
+.theme-card:focus-visible { outline: 3px solid var(--blue-300); outline-offset: 3px; }
+.theme-card strong {
+  max-width: 220px;
+  margin-inline: auto;
+  color: var(--blue-900);
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.38;
+  letter-spacing: -.012em;
+  text-wrap: balance;
+  transition: color 220ms ease;
+}
+.theme-card small { color: var(--muted); font-size: 13px; line-height: 1.5; transition: color 220ms ease; }
+.theme-icon {
+  display: grid;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 13px;
+  place-items: center;
+  border: 1px solid rgba(117, 167, 223, .18);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(235,244,253,.78));
+  color: #0b4a92;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.96), 0 9px 24px rgba(8,40,83,.055);
+  transition: background 180ms ease, color 180ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+.theme-icon svg {
+  width: 32px;
+  height: 32px;
+  overflow: visible;
+  shape-rendering: geometricPrecision;
+}
+.theme-card:hover .theme-icon,
+.theme-card:focus-visible .theme-icon {
+  color: var(--blue-700);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 10px 23px rgba(8,40,83,.1);
+  transform: translateY(-2px);
+}
+.theme-grid { cursor: grab; user-select: none; }
+.theme-grid.is-dragging { cursor: grabbing; scroll-snap-type: none; }
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .theme-card { flex-basis: calc((100% - 54px) / 4); }
+}
+
+@media (max-width: 760px) {
+  .macrothemes-heading { display: block; }
+  .macrothemes-controls button { width: 28px; height: 52px; }
+  .macrothemes-control--previous { left: -2px; }
+  .macrothemes-control--next { right: -2px; }
+  .theme-card { flex-basis: min(78vw, 276px); min-height: 286px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-grid { scroll-behavior: auto; }
+  .theme-card { transform: none; opacity: 1; transition: border-color 200ms ease, box-shadow 200ms ease; }
+  .theme-card::before { transition: none; }
+  .theme-card:hover,
+  .theme-card:focus-visible { transform: none; }
+  .theme-card:hover .theme-icon,
+  .theme-card:focus-visible .theme-icon { transform: none; }
+}

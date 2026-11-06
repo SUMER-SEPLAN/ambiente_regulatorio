@@ -1,0 +1,321 @@
+/* Políticas e mecanismos de inclusão energética. */
+.inclusion-hero h1{max-width:970px}.inclusion-intro>.container{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:clamp(48px,7vw,92px);align-items:center}.inclusion-intro__copy{max-width:850px}.inclusion-intro .eyebrow,.inclusion-heading .eyebrow{margin-bottom:10px}.inclusion-intro .eyebrow span,.inclusion-heading .eyebrow span{flex:0 0 28px}.inclusion-intro h2,.inclusion-heading h2{color:var(--blue-900);font-size:clamp(28px,2.8vw,36px);line-height:1.2;letter-spacing:-.025em}.inclusion-intro__copy>p:not(.eyebrow){margin-top:17px;color:var(--muted);font-size:16px;line-height:1.78;text-align:justify;text-align-last:left}.inclusion-definition{position:relative;padding:28px 26px;overflow:hidden;border:1px solid #dce7f2;border-radius:18px;background:linear-gradient(145deg,#f8fbff,#edf5fc);box-shadow:0 16px 34px rgba(8,40,83,.09)}.inclusion-definition:after{position:absolute;right:-34px;bottom:-42px;width:130px;height:130px;border:24px solid rgba(31,111,199,.07);border-radius:50%;content:""}.inclusion-definition__mark{display:block;color:#1f6fc7;font-size:58px;font-weight:800;line-height:1}.inclusion-definition p{position:relative;z-index:1;margin-top:8px;color:var(--muted);font-size:13px;line-height:1.65}.inclusion-definition p strong{color:var(--blue-900);font-size:17px}
+.inclusion-evolution{border-block:1px solid rgba(207,221,235,.6);background:linear-gradient(180deg,#fbfcfe,#f5f9fd)}.inclusion-heading{max-width:790px;margin-bottom:34px}.inclusion-heading--wide{max-width:900px}.inclusion-heading>p:last-child{margin-top:11px;color:var(--muted);font-size:15px;line-height:1.68}.inclusion-timeline{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin:0;padding:0;list-style:none}.inclusion-timeline:before{position:absolute;top:43px;right:10%;left:10%;height:2px;background:linear-gradient(90deg,#a9c9e9,#1f6fc7);content:""}.inclusion-timeline li{position:relative}.inclusion-timeline__year{display:block;color:#1f6fc7;font-size:12px;font-weight:800;letter-spacing:.08em}.inclusion-timeline__dot{position:relative;z-index:1;display:block;width:18px;height:18px;margin:16px 0 22px;border:5px solid #e7f1fb;border-radius:50%;background:#1f6fc7;box-shadow:0 0 0 1px #7faee0}.inclusion-timeline strong{color:var(--blue-900);font-size:16px;line-height:1.35}.inclusion-timeline p{margin-top:7px;color:var(--muted);font-size:13px;line-height:1.6}
+.inclusion-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}.inclusion-card{overflow:hidden;border:1px solid #dce7f2;border-radius:16px;background:#fff;box-shadow:0 7px 20px rgba(8,40,83,.06);transition:border-color 180ms ease,box-shadow 180ms ease,transform 180ms ease}.inclusion-card:hover,.inclusion-card.is-open{border-color:#99bee6;box-shadow:0 14px 30px rgba(8,40,83,.11);transform:translateY(-2px)}.inclusion-card__summary{display:grid;width:100%;min-height:265px;padding:24px;grid-template-columns:42px 1fr;grid-template-rows:auto auto auto 1fr auto;column-gap:14px;border:0;background:linear-gradient(145deg,#fff 45%,#f7faff);color:inherit;font:inherit;text-align:left;cursor:pointer}.inclusion-card__summary:focus-visible{outline:3px solid #8bb7e6;outline-offset:-4px}.inclusion-card__number{grid-row:1/span 4;display:grid;width:38px;height:38px;place-items:center;border-radius:11px;background:#eaf3fc;color:#0b4a92;font-size:12px;font-weight:800}.inclusion-card__label{color:#3976b8;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.inclusion-card__summary>strong{margin-top:8px;color:var(--blue-900);font-size:20px;line-height:1.3}.inclusion-card__summary>p{margin-top:12px;color:var(--muted);font-size:13.5px;line-height:1.67}.inclusion-card__action{display:flex;margin-top:22px;padding-top:16px;grid-column:1/-1;align-items:center;justify-content:space-between;border-top:1px solid #e2eaf2;color:#2468ad;font-size:12px;font-weight:750}.inclusion-card__action i{display:grid;width:27px;height:27px;place-items:center;border-radius:50%;background:#eaf3fc;font-size:18px;font-style:normal;transition:transform 180ms ease}.inclusion-card.is-open .inclusion-card__action i{transform:rotate(45deg)}.inclusion-card__detail{padding:0 24px 24px 80px}.inclusion-card__detail p{margin-top:14px;color:var(--muted);font-size:13.5px;line-height:1.72;text-align:justify;text-align-last:left}.inclusion-card__practical{padding:13px 15px;border-left:3px solid #8fb9e5;border-radius:0 9px 9px 0;background:#f3f7fb}.inclusion-card__detail strong{color:var(--blue-900)}.inclusion-card__base{padding-top:14px;border-top:1px solid #e2eaf2;color:#587087!important;font-size:12px!important;text-align:left!important}
+.inclusion-pathways{border-block:1px solid rgba(207,221,235,.55);background:linear-gradient(180deg,#f8fafc,#fff)}.inclusion-pathways__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.inclusion-pathways__grid article{display:flex;min-height:250px;padding:24px 22px;flex-direction:column;border:1px solid #dce7f2;border-radius:15px;background:#fff;box-shadow:0 6px 16px rgba(8,40,83,.05)}.inclusion-pathways__grid article>span{color:#8bb7e6;font-size:12px;font-weight:800;letter-spacing:.1em}.inclusion-pathways h3{margin-top:13px;color:var(--blue-900);font-size:18px;line-height:1.35}.inclusion-pathways article p{margin-top:11px;color:var(--muted);font-size:13.5px;line-height:1.67}.inclusion-pathways article a{display:inline-flex;margin-top:auto;padding-top:18px;align-items:center;justify-content:space-between;border-top:1px solid #e2eaf2;color:#1f6fc7;font-size:12.5px;font-weight:750;text-decoration:none}
+.inclusion-channels__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.inclusion-channels__grid a{position:relative;display:grid;min-height:116px;padding:20px 58px 20px 22px;border:1px solid #dce7f2;border-radius:14px;background:#fbfcfe;color:inherit;text-decoration:none;transition:transform 180ms ease,box-shadow 180ms ease,border-color 180ms ease}.inclusion-channels__grid a:hover{border-color:#9cc0e5;box-shadow:0 10px 24px rgba(8,40,83,.09);transform:translateY(-2px)}.inclusion-channels__grid span{color:#3976b8;font-size:10px;font-weight:800;letter-spacing:.12em}.inclusion-channels__grid strong{margin-top:4px;color:var(--blue-900);font-size:17px}.inclusion-channels__grid small{margin-top:5px;color:var(--muted);font-size:12px;line-height:1.5}.inclusion-channels__grid i{position:absolute;top:50%;right:22px;color:#1f6fc7;font-size:19px;font-style:normal;transform:translateY(-50%)}
+.inclusion-norms{border-top:1px solid rgba(207,221,235,.55);background:#f8fafc}.inclusion-table table{min-width:720px}.inclusion-table td:nth-child(3),.inclusion-table td:nth-child(4){text-align:justify;text-align-last:left;text-justify:inter-word;hyphens:none;-webkit-hyphens:none;word-break:normal;overflow-wrap:normal}.inclusion-reveal{opacity:0;transform:translateY(16px);transition:opacity 520ms ease,transform 520ms cubic-bezier(.22,.61,.36,1)}.inclusion-reveal.is-visible{opacity:1;transform:none}
+@media(max-width:880px){.inclusion-intro>.container{grid-template-columns:1fr;gap:28px}.inclusion-definition{max-width:520px}.inclusion-timeline{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}.inclusion-timeline:before{display:none}.inclusion-pathways__grid{grid-template-columns:1fr}.inclusion-pathways__grid article{min-height:0}}
+@media(max-width:680px){.inclusion-card-grid,.inclusion-channels__grid,.inclusion-timeline{grid-template-columns:1fr}.inclusion-card__summary{min-height:0;padding:21px 18px;grid-template-columns:36px 1fr}.inclusion-card__number{width:32px;height:32px}.inclusion-card__detail{padding:0 18px 20px}.inclusion-intro__copy>p:not(.eyebrow),.inclusion-card__detail p,.inclusion-table td:nth-child(3),.inclusion-table td:nth-child(4){text-align:left}}
+@media(prefers-reduced-motion:reduce){.inclusion-reveal,.inclusion-card,.inclusion-card__action i,.inclusion-channels__grid a{transition:none}.inclusion-reveal{opacity:1;transform:none}}
+
+/* Abertura contínua e centralizada. */
+.inclusion-intro>.container{display:block}.inclusion-intro__copy{width:min(calc(100% - 40px),860px);max-width:860px;margin-inline:auto}.inclusion-intro__copy .eyebrow{justify-content:flex-start;color:var(--muted);font-size:15.5px;line-height:1.7;letter-spacing:.14em;text-align:left}.inclusion-intro__copy h2{max-width:30ch;margin:0 0 18px;color:var(--blue-900);font-size:clamp(28px,2.8vw,36px);line-height:1.2;letter-spacing:-.02em;text-align:left}.inclusion-intro__copy>p:not(.eyebrow){color:var(--muted);font-size:16px;line-height:1.75;text-align:justify;text-align-last:left}.inclusion-definition{display:none}
+
+/* Percurso editorial: quatro capítulos visíveis, conectados por uma linha. */
+.inclusion-mechanisms{border-top:1px solid rgba(207,221,235,.55);background:linear-gradient(180deg,#fbfcfe,#fff)}.inclusion-route{position:relative;max-width:1040px;margin-inline:auto}.inclusion-route:before{position:absolute;top:38px;bottom:38px;left:96px;width:2px;background:linear-gradient(#75a9dc,#d8e5f2);content:""}.inclusion-route article{position:relative;display:grid;grid-template-columns:194px minmax(0,1fr);gap:28px;padding:0 0 28px}.inclusion-route article:last-child{padding-bottom:0}.inclusion-route__marker{position:relative;z-index:1;display:flex;padding-top:24px;align-items:center;gap:12px}.inclusion-route__marker span{display:grid;width:46px;height:46px;flex:0 0 46px;place-items:center;border:7px solid #f6f9fc;border-radius:50%;background:#1f6fc7;box-shadow:0 0 0 1px #86b2df;color:#fff;font-size:11px;font-weight:800}.inclusion-route__marker strong{color:#315878;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.inclusion-route__content{padding:27px 30px 24px;border:1px solid #dce7f2;border-radius:15px;background:#fff;box-shadow:0 8px 22px rgba(8,40,83,.06)}.inclusion-route__eyebrow{color:#3976b8!important;font-size:11px!important;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.inclusion-route__content h3{margin-top:6px;color:var(--blue-900);font-size:21px;line-height:1.32}.inclusion-route__content>p{margin-top:12px;color:var(--muted);font-size:13.5px;line-height:1.72;text-align:justify;text-align-last:left}.inclusion-route__insight{padding:13px 15px;border-left:3px solid #8fb9e5;border-radius:0 9px 9px 0;background:#f3f7fb}.inclusion-route__insight strong{color:var(--blue-900)}.inclusion-route__base{padding-top:13px;border-top:1px solid #e2eaf2;color:#587087!important;font-size:12px!important;text-align:left!important}
+.inclusion-evolution{background:#fff}.inclusion-evolution .arquitetura-timeline__heading{margin-bottom:24px}.inclusion-evolution .arquitetura-timeline__card strong{color:var(--blue-900)}
+.inclusion-table .theme-law-relation{margin:13px 0 0;padding:11px 12px;border-left:3px solid var(--blue-300);border-radius:0 8px 8px 0;background:var(--blue-050);color:var(--ink);font-size:12.5px;line-height:1.55;text-align:justify;text-align-last:left}.inclusion-table .theme-law-relation strong{color:var(--blue-900)}
+.inclusion-table .theme-law-relation{hyphens:none;-webkit-hyphens:none;word-break:normal;overflow-wrap:normal}
+.inclusion-table th:nth-child(2){width:11%!important;white-space:nowrap}
+.inclusion-table th:nth-child(3){width:22%!important}
+.inclusion-table td:nth-child(2){white-space:nowrap;word-break:keep-all;overflow-wrap:normal}
+.inclusion-norms{background:#fff}.inclusion-norms .catalog-table-shell{margin-top:16px}.inclusion-norms .inclusion-table{padding-right:0;scrollbar-width:none}.inclusion-norms .inclusion-table::-webkit-scrollbar{width:0;height:0}.inclusion-norms .catalog-scrollbar{top:66px;right:6px;bottom:12px}
+@media(max-width:760px){.inclusion-intro__copy .eyebrow{justify-content:flex-start}.inclusion-intro__copy h2{text-align:left}.inclusion-intro__copy>p:not(.eyebrow){text-align:left}.inclusion-route:before{left:17px}.inclusion-route article{grid-template-columns:1fr;gap:10px;padding-left:45px}.inclusion-route__marker{margin-left:-45px;padding-top:0}.inclusion-route__marker span{width:36px;height:36px;flex-basis:36px;border-width:5px}.inclusion-route__content{padding:22px 18px}.inclusion-route__content>p{text-align:left}}
+
+/* Hierarquia editorial aprovada: linha azul e subtítulo em cinza institucional. */
+.inclusion-intro__copy .eyebrow,.inclusion-heading .eyebrow,.inclusion-evolution .eyebrow{color:var(--muted)}
+.inclusion-intro__sources{margin-top:20px!important;padding-top:15px;border-top:1px solid #dce7f2;color:#667b90!important;font-size:12.5px!important;line-height:1.6!important;text-align:left!important}
+.inclusion-intro__sources a{color:#356fa9;font-weight:700;text-decoration-thickness:1px;text-underline-offset:3px}
+.inclusion-route__marker strong{max-width:124px;line-height:1.35}
+.inclusion-pathways .inclusion-heading{max-width:920px}
+
+/* Refinamentos editoriais e de composição. */
+.inclusion-route:before{left:23px}
+.inclusion-heading>p:last-child,.inclusion-route__content>p,.inclusion-pathways article p,.arquitetura-timeline__lead,.inclusion-intro__copy>p:not(.eyebrow){text-align:justify;text-align-last:left;hyphens:none;-webkit-hyphens:none;word-break:normal;overflow-wrap:normal}
+.inclusion-heading>p:last-child,.arquitetura-timeline__lead{max-width:none}
+.inclusion-evolution .arquitetura-timeline__heading>div{max-width:none;width:100%}
+.inclusion-evolution #evolucao-titulo{white-space:nowrap;font-size:clamp(27px,3vw,46px)}
+@media(max-width:760px){.inclusion-evolution #evolucao-titulo{white-space:normal}}
+.inclusion-norms .catalog-scrollbar{right:8px}
+.inclusion-evolution .arquitetura-timeline__controls{margin-left:auto;justify-content:flex-end}
+.inclusion-evolution .arquitetura-timeline__navigation{position:relative}
+
+/* Ajustes de hierarquia e profundidade visual. */
+.inclusion-evolution #evolucao-titulo{font-size:clamp(28px,2.8vw,36px)}
+.inclusion-route__content{box-shadow:0 12px 30px rgba(8,40,83,.11)}
+
+/* Composição editorial: hierarquia institucional. */
+.inclusion-intro__copy .eyebrow{color:#607184}
+.inclusion-mechanisms .inclusion-heading--wide{max-width:1180px}
+.inclusion-mechanisms .inclusion-heading>p:last-child{text-align:justify!important;text-align-last:left}
+
+/* Introdução no padrão editorial do macrotema Arquitetura Institucional. */
+.inclusion-intro{background:var(--white)}
+.inclusion-intro__copy{width:min(calc(100% - 40px),860px);max-width:860px;margin-inline:auto}
+.inclusion-intro__copy .eyebrow{margin-bottom:10px;color:var(--muted);text-align:left;text-align-last:auto}
+.inclusion-intro__copy .eyebrow span{flex:0 0 28px;background:var(--blue-600)}
+.inclusion-intro__copy h2{max-width:30ch;margin-bottom:18px;text-align:left}
+.inclusion-intro__copy>p:not(.eyebrow){text-align:justify;text-align-last:left;text-justify:inter-word}
+@media(min-width:961px){.inclusion-intro{padding-block:68px}}
+@media(max-width:760px){.inclusion-intro__copy{width:min(calc(100% - 32px),860px)}.inclusion-intro__copy h2{font-size:28px}.inclusion-intro__copy>p:not(.eyebrow){font-size:15px;line-height:1.65;text-align:left;text-align-last:auto}}
+
+/* A especificidade garante o padrão neutro da primeira chamada editorial. */
+body[data-macrotema] main .inclusion-intro .inclusion-intro__copy .eyebrow{
+  color:var(--muted);
+  font-size:15.5px;
+  line-height:1.7;
+  letter-spacing:.14em;
+}
+
+/* Somente o título da página permanece alinhado à esquerda; a introdução segue centralizada. */
+body[data-macrotema] main .inclusion-hero > .container{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+body[data-macrotema] main .inclusion-hero h1,
+body[data-macrotema] main .inclusion-hero .tema-hero__lead{
+  margin-right:auto;
+  text-align:left;
+}
+body[data-macrotema] main .inclusion-hero h1 span{
+  display:block;
+}
+
+/* Canais oficiais: texto editorial justificado e ações reconhecíveis como botões. */
+body[data-macrotema] main .inclusion-pathways .inclusion-heading > p:last-child{
+  width:100%;
+  text-align:justify;
+  text-align-last:left;
+  text-justify:inter-word;
+}
+body[data-macrotema] main .inclusion-pathways .inclusion-heading{
+  width:100%;
+  max-width:1180px;
+}
+body[data-macrotema] main .inclusion-pathways__grid article a{
+  width:fit-content;
+  margin-top:auto;
+  padding:10px 14px;
+  gap:18px;
+  border:1px solid #b9d2ec;
+  border-radius:10px;
+  background:#f7fbff;
+  box-shadow:0 4px 10px rgba(8,40,83,.05);
+  transition:border-color 180ms ease,background 180ms ease,box-shadow 180ms ease,transform 180ms ease;
+}
+body[data-macrotema] main .inclusion-pathways__grid article a:hover,
+body[data-macrotema] main .inclusion-pathways__grid article a:focus-visible{
+  border-color:#6fa4d8;
+  background:#edf6ff;
+  box-shadow:0 7px 16px rgba(8,40,83,.10);
+  transform:translateY(-1px);
+}
+.inclusion-pathway__brand{display:flex;min-height:48px;margin:auto 0 8px;padding-top:12px;align-items:center;justify-content:center}
+.inclusion-pathway__brand img{display:block;width:108px;height:37px;object-fit:contain}
+.inclusion-pathway__brand img.inclusion-pathway__govbr{width:92px;height:34px}
+
+/* Graduação visual leve entre os instrumentos e a linha do tempo normativa. */
+body[data-macrotema] main .inclusion-evolution{
+  border-top:1px solid rgba(207,221,235,.38);
+  border-bottom:1px solid rgba(207,221,235,.28);
+  background:linear-gradient(180deg,#f8fbfe 0%,#fbfdff 42%,#ffffff 100%);
+  box-shadow:inset 0 12px 24px -30px rgba(8,40,83,.16);
+}
+body[data-macrotema] main .inclusion-evolution .arquitetura-timeline__lead{
+  width:100%;
+  max-width:1080px;
+  text-align:justify;
+  text-align-last:left;
+  text-justify:inter-word;
+}
+
+/* Percurso dos eixos: a linha cresce com a rolagem e libera cada capítulo em sequência. */
+.inclusion-route.inclusion-route-motion{
+  --route-progress:0;
+}
+.inclusion-route.inclusion-route-motion::before{
+  background:#d8e5f2;
+}
+.inclusion-route.inclusion-route-motion::after{
+  position:absolute;
+  z-index:0;
+  top:38px;
+  bottom:38px;
+  left:23px;
+  width:2px;
+  background:linear-gradient(180deg,#1f6fc7 0%,#75a9dc 72%,#a9c9e9 100%);
+  content:"";
+  transform:scaleY(var(--route-progress));
+  transform-origin:top;
+  will-change:transform;
+}
+.inclusion-route.inclusion-route-motion article .inclusion-route__marker{
+  opacity:1;
+  transform:none;
+}
+.inclusion-route.inclusion-route-motion article .inclusion-route__marker span{
+  position:relative;
+  z-index:2;
+  opacity:0;
+  transform:scale(.72);
+  transition:opacity 220ms ease,transform 360ms cubic-bezier(.16,1,.3,1);
+}
+.inclusion-route.inclusion-route-motion article .inclusion-route__marker strong{
+  position:relative;
+  z-index:1;
+  opacity:0;
+  transform:translate3d(-26px,0,0);
+  transition:opacity 900ms cubic-bezier(.25,.46,.45,.94) 80ms,transform 1180ms cubic-bezier(.16,.72,.18,1) 60ms;
+  will-change:opacity,transform;
+}
+.inclusion-route.inclusion-route-motion article .inclusion-route__content{
+  opacity:0;
+  transform:translate3d(24px,14px,0);
+  transition:opacity 1280ms cubic-bezier(.25,.46,.45,.94),transform 1720ms cubic-bezier(.14,.7,.16,1);
+  will-change:opacity,transform;
+}
+.inclusion-route.inclusion-route-motion article.is-number-visible .inclusion-route__marker span,
+.inclusion-route.inclusion-route-motion article.is-name-visible .inclusion-route__marker strong,
+.inclusion-route.inclusion-route-motion article.is-content-visible .inclusion-route__content{
+  opacity:1;
+  transform:none;
+}
+.inclusion-route.inclusion-route-motion article.is-content-visible .inclusion-route__content{
+  transition-delay:40ms;
+}
+@media(max-width:760px){
+  .inclusion-route.inclusion-route-motion::after{left:17px}
+}
+@media(prefers-reduced-motion:reduce){
+  .inclusion-route.inclusion-route-motion{--route-progress:1}
+  .inclusion-route.inclusion-route-motion article .inclusion-route__marker,
+  .inclusion-route.inclusion-route-motion article .inclusion-route__marker span,
+  .inclusion-route.inclusion-route-motion article .inclusion-route__marker strong,
+  .inclusion-route.inclusion-route-motion article .inclusion-route__content{opacity:1;transform:none;transition:none;transition-delay:0ms}
+}
+body[data-macrotema] main .inclusion-pathways{
+  border-top-color:rgba(207,221,235,.28);
+  border-bottom-color:rgba(207,221,235,.28);
+}
+body[data-macrotema] main .inclusion-route.inclusion-route-motion::before{
+  background:#e5edf5;
+}
+
+/* Linha do tempo mais compacta para caber integralmente na área visível. */
+body[data-macrotema] main .inclusion-evolution{
+  padding-block:42px;
+}
+body[data-macrotema] main .inclusion-evolution .arquitetura-timeline__heading{
+  margin-bottom:10px;
+}
+body[data-macrotema] main .inclusion-evolution .arquitetura-timeline__lead{
+  margin-top:6px;
+}
+@media(min-width:761px){
+  body[data-macrotema] main .inclusion-evolution .arquitetura-timeline__controls{
+    position:absolute;
+    top:4px;
+    right:0;
+    z-index:2;
+  }
+  body[data-macrotema] main .inclusion-evolution .arquitetura-timeline__viewport{
+    padding:8px 0 10px;
+  }
+  body[data-macrotema] main .inclusion-evolution .arquitetura-timeline__list{
+    min-height:410px;
+  }
+  body[data-macrotema] main .inclusion-evolution .arquitetura-timeline__item{
+    min-height:410px;
+    grid-template-rows:170px 70px 170px;
+  }
+}
+
+/* Ritmo interno uniforme e ações alinhadas nos cards de atendimento. */
+body[data-macrotema] main .inclusion-pathways__grid article{
+  display:grid;
+  min-height:292px;
+  grid-template-rows:auto minmax(50px,auto) 1fr auto;
+  align-items:start;
+}
+body[data-macrotema] main .inclusion-pathways__grid article h3{
+  min-height:50px;
+}
+body[data-macrotema] main .inclusion-pathways__grid article > p{
+  margin-top:12px;
+}
+body[data-macrotema] main .inclusion-pathways__grid article > a{
+  justify-self:end;
+  align-self:end;
+  margin-top:22px;
+}
+@media(max-width:880px){
+  body[data-macrotema] main .inclusion-pathways__grid article{
+    min-height:0;
+  }
+}
+
+/* Paleta institucional unificada para os detalhes da página de inclusão energética. */
+body[data-macrotema] main .inclusion-definition__mark,
+body[data-macrotema] main .inclusion-timeline__year,
+body[data-macrotema] main .inclusion-card__action,
+body[data-macrotema] main .inclusion-pathways article a,
+body[data-macrotema] main .inclusion-channels__grid i{
+  color:var(--blue-600);
+}
+body[data-macrotema] main .inclusion-card__label,
+body[data-macrotema] main .inclusion-channels__grid span,
+body[data-macrotema] main .inclusion-route__eyebrow{
+  color:var(--blue-700)!important;
+}
+body[data-macrotema] main .inclusion-timeline__dot,
+body[data-macrotema] main .inclusion-route__marker span{
+  background:var(--blue-600);
+  box-shadow:0 0 0 1px var(--blue-300);
+}
+body[data-macrotema] main .inclusion-timeline:before,
+body[data-macrotema] main .inclusion-route:before{
+  background:linear-gradient(180deg,var(--blue-300),var(--line));
+}
+body[data-macrotema] main .inclusion-timeline:before{
+  background:linear-gradient(90deg,var(--blue-300),var(--blue-600));
+}
+body[data-macrotema] main .inclusion-route__marker strong{
+  color:var(--blue-800);
+}
+body[data-macrotema] main .inclusion-pathways__grid article > span{
+  color:var(--blue-300);
+}
+
+/* A nota ganha volume pela sombra, sem a antiga barra lateral. */
+body[data-macrotema] main .inclusion-route__insight,
+body[data-macrotema] main .inclusion-card__practical{
+  border-left:0;
+  border-radius:9px;
+  background:#f7faff;
+  box-shadow:0 4px 12px rgba(8,40,83,.05),inset 0 0 0 1px rgba(117,167,223,.10);
+}
+
+/* Ações dos canais no mesmo padrão preenchido dos demais cards do portal. */
+body[data-macrotema] main .inclusion-pathways__grid article > a{
+  width:100%;
+  min-height:46px;
+  margin-top:22px;
+  padding:11px 18px;
+  justify-content:center;
+  gap:10px;
+  border:1px solid var(--blue-700);
+  border-radius:10px;
+  background:var(--blue-700);
+  box-shadow:0 5px 12px rgba(8,40,83,.10);
+  color:#fff;
+  text-align:center;
+}
+body[data-macrotema] main .inclusion-pathways__grid article > a:hover,
+body[data-macrotema] main .inclusion-pathways__grid article > a:focus-visible{
+  border-color:var(--blue-800);
+  background:var(--blue-800);
+  box-shadow:0 8px 18px rgba(8,40,83,.16);
+  color:#fff;
+}

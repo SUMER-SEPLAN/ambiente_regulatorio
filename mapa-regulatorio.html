@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mapa interativo das conexões entre temas e normas do ambiente regulatório de energia.">
+    <meta name="theme-color" content="#0b4a92">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; base-uri 'self'; form-action 'self'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230b4a92'/%3E%3Cpath d='M15 44V24l17-9 17 9v20H15Zm7-7h20V28L32 23l-10 5v9Z' fill='%23fff'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reference-shell.css?v=20260916-5">
+    <link rel="stylesheet" href="brain-graph.css?v=20261015-6">
+    <link rel="stylesheet" href="brain-map.css?v=20261015-24">
+    <title>Mapa regulatório interativo — Ambiente Regulatório de Energia</title>
+  <link rel="stylesheet" href="mobile-overrides.css?v=20261021-1">
+</head>
+  <body class="brain-workspace-page">
+    <a class="skip-link" href="#mapa">Ir para o mapa regulatório</a>
+
+    <header class="reference-header">
+      <div class="reference-header__bar">
+        <div class="reference-header__inner">
+          <button class="nav-toggle reference-header__toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+            <span class="sr-only">Abrir navegação</span><span></span><span></span><span></span>
+          </button>
+          <nav id="site-navigation" class="reference-header__nav" aria-label="Navegação principal">
+            <a href="index.html#inicio">Início</a>
+            <a href="index.html#macrotemas">Temas</a>
+            <a href="index.html#catalogo">Catálogo de Normas</a>
+            <a href="index.html#instituicoes">Instituições</a>
+            <a href="index.html#atendimento">Canais de Atendimento</a>
+          </nav>
+          <div class="reference-header__identity">
+            <span class="reference-header__secretariat">SECRETARIA DO<br>PLANEJAMENTO - SEPLAN</span>
+            <img class="reference-header__logo" src="assets/brand/logo-governo-piaui.png" alt="Governo do Piauí — Aqui tem trabalho. Aqui tem futuro." width="600" height="357">
+          </div>
+        </div>
+      </div>
+      <div class="reference-header__spacer" aria-hidden="true"></div>
+    </header>
+
+    <main id="conteudo">
+      <section class="brain-workspace-intro">
+        <div class="brain-workspace-container brain-workspace-intro__grid">
+          <div class="brain-workspace-intro__copy">
+            <p class="eyebrow"><span></span>Mapa regulatório</p>
+            <h1>Explore as conexões do acervo</h1>
+            <p class="brain-workspace-intro__lead">Veja como temas, normas e atos compartilhados se relacionam. Abra grupos, revele conexões e reorganize o mapa conforme a sua leitura.</p>
+          </div>
+          <div class="brain-workspace-guide" aria-label="Como usar o mapa">
+            <section class="brain-workspace-guide__group brain-workspace-guide__group--information" aria-labelledby="guide-information-title">
+              <h2 id="guide-information-title">Informações</h2>
+              <div class="brain-workspace-guide__cards">
+                <p class="brain-workspace-guide__collection"><strong>Acervo</strong><small id="brain-record-count">Carregando conexões…</small></p>
+                <p class="brain-workspace-guide__analysis"><span class="brain-analysis-card-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span><strong>Análise por tema</strong><small><button type="button" id="brain-analysis-trigger" aria-pressed="false">Comparar concentração regulatória <span aria-hidden="true">→</span></button></small></p>
+              </div>
+            </section>
+            <section class="brain-workspace-guide__group brain-workspace-guide__group--features" aria-labelledby="guide-features-title">
+              <h2 id="guide-features-title">Funcionalidades</h2>
+              <div class="brain-workspace-guide__cards">
+                <p><strong>Clique</strong><small>Abra ou recolha as normas diretas.</small></p>
+                <p><strong>Arraste</strong><small>Reposicione livremente um ponto.</small></p>
+                <p><strong>Dois cliques</strong><small>Mostre as conexões compartilhadas.</small></p>
+                <p><strong>Repouse o cursor</strong><small>Destaque uma relação temporariamente.</small></p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="mapa" class="brain-workspace-section" aria-labelledby="brain-title">
+        <div class="brain-workspace-container">
+          <div id="regulatory-brain" class="regulatory-brain regulatory-brain--page" aria-labelledby="brain-title" aria-describedby="brain-help">
+            <div class="regulatory-brain__stage">
+              <div class="regulatory-brain__heading">
+                <h2 id="brain-title" class="sr-only">Mapa vivo do acervo regulatório</h2>
+                <div class="regulatory-brain__tools" aria-label="Controles do mapa">
+                  <button type="button" data-brain-action="zoom-out" data-tooltip="Diminuir o mapa" aria-label="Diminuir o mapa">−</button>
+                  <button type="button" data-brain-action="rotate" data-tooltip="Girar o mapa" aria-label="Girar o mapa">◎</button>
+                  <button type="button" data-brain-action="reset" data-tooltip="Reorganizar o mapa" aria-label="Reorganizar o mapa">↻</button>
+                  <button type="button" data-brain-action="zoom-in" data-tooltip="Ampliar o mapa" aria-label="Ampliar o mapa">+</button>
+                </div>
+              </div>
+              <canvas id="brain-canvas" class="regulatory-brain__canvas" tabindex="0" aria-label="Rede interativa dos temas e das normas do ambiente regulatório"></canvas>
+              <section id="brain-analysis" class="brain-analysis" aria-labelledby="brain-analysis-title" hidden>
+                <header class="brain-analysis__header">
+                  <div>
+                    <p class="brain-analysis__eyebrow">Análise comparativa</p>
+                    <h2 id="brain-analysis-title">Concentração de registros por tema</h2>
+                    <p>Quantidade de registros regulatórios vinculados a cada tema do acervo.</p>
+                  </div>
+                  <button type="button" id="brain-analysis-close">Voltar ao mapa</button>
+                </header>
+                <div id="brain-analysis-chart" class="brain-analysis__chart" role="group" aria-label="Gráfico de barras interativo com a quantidade de registros regulatórios por tema"></div>
+                <aside id="brain-analysis-popup" class="brain-analysis-popup" aria-live="polite" hidden></aside>
+                <aside class="brain-analysis__note">
+                  <strong>Como interpretar</strong>
+                  <p>Uma concentração maior de registros pode indicar atenção regulatória mais intensa, maior complexidade institucional ou mais pontos de impacto naquele tema. A quantidade, isoladamente, não determina sua importância: ela oferece uma perspectiva comparativa para orientar a leitura do acervo.</p>
+                </aside>
+              </section>
+              <p id="brain-help" class="sr-only">Clique uma vez em um tema para abrir ou recolher suas normas diretas. Arraste para posicioná-lo livremente. Clique duas vezes para mostrar ou recolher conexões compartilhadas. Repouse o cursor para destacar conexões temporariamente. Use o botão Reorganizar para retornar à visualização inicial.</p>
+            </div>
+            <div class="regulatory-brain__footer">
+              <div id="brain-tooltip" class="regulatory-brain__tooltip" role="status" aria-live="polite"></div>
+              <div class="regulatory-brain__legend" aria-label="Legenda da rede">
+                <span><i class="regulatory-brain__key regulatory-brain__key--theme" aria-hidden="true"></i>Tema</span>
+                <span><i class="regulatory-brain__key regulatory-brain__key--law" aria-hidden="true"></i>Norma</span>
+                <span><i class="regulatory-brain__key regulatory-brain__key--shared" aria-hidden="true"></i>Ato compartilhado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="brain-workspace-footer">
+      <div class="brain-workspace-container"><span>Ambiente Regulatório de Energia — SEPLAN/SUMER</span><a href="index.html#catalogo">Consultar o catálogo de normas</a></div>
+    </footer>
+    <script src="catalog-data.js?v=20261015-7" defer></script>
+    <script src="brain-graph.js?v=20261104-1" defer></script>
+    <script src="brain-page.js?v=20261104-1" defer></script>
+    <script src="nav-dropdown.js?v=20261104-1" defer></script>
+  </body>
+</html>

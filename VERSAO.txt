@@ -1,0 +1,149 @@
+AMBIENTE REGULATÓRIO DE ENERGIA
+Versão: v956
+Data da versão: 06/11/2026
+
+Esta é a versão completa e atualizada do projeto, preparada para consulta,
+compartilhamento e continuidade do desenvolvimento.
+
+Atualização principal desta versão:
+- adota Canais oficiais de atendimento e Registre e acompanhe sua reclamação, removendo o subtítulo da seção;
+- renomeia a seção de canais para eliminar a repetição de “oficial” e destacar onde registrar e acompanhar a reclamação;
+- iguala o subtítulo de Canais oficiais de atendimento à escala tipográfica das demais seções, inclusive em telas menores;
+- reduz discretamente a fonte do período 2023–2025 no canto do gráfico mensal;
+- renomeia a abertura da análise para Panorama geral e O que os dados revelam sobre as reclamações;
+- remove a silhueta do Piauí do card de padrão mensal e alinha o período 2023–2025 isoladamente no canto superior direito;
+- amplia e justifica, sem hifenização, o texto da Nota metodológica e reúne seus dois acessos lado a lado no canto inferior direito;
+- reduz discretamente a tipografia interna dos dois gráficos e preserva integralmente o novo tamanho das legendas explicativas inferiores;
+- amplia as legendas explicativas localizadas abaixo dos gráficos territorial e mensal, melhorando a legibilidade sem alterar os elementos internos dos gráficos;
+- amplia mais um nível os rótulos e valores internos dos gráficos territorial e mensal, preservando a composição e os textos explicativos;
+- amplia discretamente apenas os rótulos e valores internos dos gráficos territorial e mensal, sem alterar as legendas explicativas dos cards;
+- justifica a nota do gráfico regulatório da home e desativa sua hifenização automática;
+- remove a nota inferior das reclamações e transfere o acesso aos dados abertos da ANEEL para o canto direito da Nota metodológica;
+- iguala o subtítulo de Como proceder na prática ao corpo introdutório de Retrato das reclamações, com texto justificado e sem hifenização;
+- simplifica o rótulo Direito do Consumidor, reescreve a transição a partir da reclamação identificada e renomeia a etapa seguinte como Como proceder na prática;
+- conecta a seção Como proceder aos direitos apresentados anteriormente e transforma as quatro etapas em instruções executáveis, com checklist documental ao final;
+- esclarece, nos sete painéis de orientação, que o Grupo B corresponde aos consumidores de baixa tensão;
+- reorganiza Direito do Consumidor na Prática em sete painéis correspondentes aos sete temas da análise, com quatro orientações e referências normativas em cada painel;
+- esclarece na legenda do padrão mensal que a análise acompanha a distribuição, ao longo dos meses, das reclamações por interrupção, tema de maior participação;
+- renomeia a seção como Direito do Consumidor na Prática e iguala a escala dos textos explicativos à introdução de Retrato das reclamações;
+- transfere a explicação dos agrupamentos para a Nota metodológica, inclui o recorte de desagregação municipal e renomeia a legenda inferior como Nota;
+- remove os três cards-síntese e elimina seus espaços, cálculos e estilos, aproximando o recorte territorial e as seções seguintes;
+- move os três cards-síntese para abaixo da evolução anual e dos resultados, substituindo seu conteúdo pelos principais achados comparativo, temporal e de procedência;
+- aumenta exclusivamente a separação entre os percentuais de Piauí e Brasil na linha de interrupções do card anual;
+- amplia os percentuais de Piauí e Brasil no card de evolução anual sem alterar as dimensões das células ou do card;
+- amplia a escala vertical das barras municipais, usando o maior valor como 100% da altura e preservando a proporção relativa das demais;
+- iguala o padrão visual dos resultados ao comparativo anual, reunindo Piauí e Brasil em uma única célula azul-clara por tema, sem ampliar o card;
+- restaura o espaçamento anterior das barras, amplia o mapa territorial no espaço livre e move o período para abaixo do mapa;
+- remove a legenda do card de resultado e compacta os dois cards comparativos com alturas alinhadas;
+- desce o conjunto de barras territoriais para alinhar sua base ao final do mapa do Piauí;
+- posiciona Evolução antes de Resultado informado e alinha cabeçalhos e términos das duas tabelas;
+- remove o período repetido do recorte territorial e desce o mapa até a altura final dos nomes municipais;
+- transforma a evolução anual em comparativo Piauí–Brasil de 2021 a 2025 e renomeia os dois cards;
+- esclarece na legenda por que o recorte municipal utiliza o período de 2023 a 2025;
+- sobe o mapa territorial para a faixa do título e o desloca discretamente para a direita;
+- harmoniza os dois cards com quadros leves nos resultados e cores distintas para Piauí e Brasil;
+- reduz a legenda do indicador de procedência ao universo considerado, ao significado do percentual e à ressalva sobre satisfação;
+- amplia proporcionalmente o mapa territorial e posiciona o período lateralmente, alinhado ao cabeçalho da seção;
+- renomeia e antecipa o painel de procedência, substitui a nota de prazo médio pela fórmula do indicador e posiciona a evolução anual à direita;
+- posiciona o comparativo Piauí–Brasil antes dos três cards-síntese, que passam a funcionar como resumo do gráfico;
+- reorganiza a redação da legenda metodológica, preservando o período efetivamente analisado de 2021 a 2025;
+- reorganiza os cards-síntese para destacar a principal reclamação no Piauí e as diferenças frente ao Brasil em qualidade e interrupções;
+- renomeia o comparativo como classificação das reclamações registradas na ANEEL e esclarece os motivos das exclusões metodológicas;
+- incorpora à legenda do comparativo uma síntese do agrupamento das 79 nomenclaturas, das exclusões e da leitura visual das barras;
+- ajusta a ordem nominal do comparativo para Piauí–Brasil, acompanhando a ordem visual das séries;
+- reduz o título do card de leitura geral para uma única linha, preservando o sentido da comparação;
+- torna a comparação Brasil–Piauí mais didática, oculta barras efetivamente exibidas como 0,0% e explicita o volume total no título territorial;
+- harmonização dos três cards-síntese das reclamações, com título final em uma linha e menor altura comum;
+- Reorganiza o recorte territorial em duas áreas: barras compactadas à esquerda e mapa municipal ampliado em uma coluna exclusiva à direita.
+- Adota escala perceptiva por raiz quadrada na comparação temática, reduzindo a dominância visual dos maiores valores e tornando as menores participações legíveis, com nota metodológica explícita.
+- Amplia o mapa municipal e o desloca para a esquerda, ocupando o espaço superior entre as colunas de Luís Correia e Piripiri.
+- Torna proporcionais, em escala real de 0% a 100%, todas as barras da comparação temática entre Piauí e Brasil.
+- Amplia o mapa do Piauí no recorte territorial e destaca, sobre a malha municipal oficial do IBGE, os dez municípios com maior volume de reclamações.
+- Reposiciona o número absoluto imediatamente abaixo do percentual, mantendo ambos acima da respectiva barra, e atualiza a legenda para refletir essa leitura.
+- Adequa a legenda à ordem visual do gráfico: percentual acima da barra, município em diagonal e número absoluto na linha inferior.
+- Reescreve a legenda do recorte territorial para explicar, de forma didática e institucional, a seleção dos dez municípios e a leitura dos valores absolutos e percentuais.
+- Reposiciona os nomes dos municípios em diagonal abaixo das barras, com ângulo, espaçamento e contraste ajustados à identidade visual do projeto.
+- Posiciona cada percentual no topo da respectiva coluna territorial, separa os nomes dos municípios da área do gráfico e aperfeiçoa o título.
+- Torna as escalas dos gráficos compatíveis com a política de segurança da página e confirma alturas proporcionais sem sobreposição das legendas.
+- Refaz os gráficos verticais com escala proporcional robusta, separa as legendas das colunas e reduz a altura do recorte territorial.
+- Corrige a proporção visual das colunas mensais e inclui a silhueta do Piauí no gráfico de sazonalidade.
+- Reorganiza a análise de reclamações, retira o gráfico da Ouvidoria e destaca o recorte territorial do Piauí com colunas proporcionais, percentuais reais e mapa estadual.
+- incluídas referências normativas específicas em cada orientação da seção “Aplicação dos direitos”, com artigos da REN nº 1.000/2021 e seções dos módulos do PRODIST;
+- ajustado o texto introdutório do card de direitos para a mesma escala visual do texto de referência da seção;
+- reconstruída a seção “Retrato das reclamações” a partir das planilhas oficiais da ANEEL, com comparação Brasil–Piauí, evolução, Ouvidoria, procedência, municípios e sazonalidade estadual;
+- removidas as faixas azuis dos cards de canais oficiais, mantendo apenas contorno neutro e sombreado;
+- configurado o reinício da animação da escada ao cruzar o topo da seção nos dois sentidos de rolagem;
+- uniformizadas as alturas dos quatro degraus para manter um intervalo de elevação constante entre todas as etapas;
+- reposicionada a barra “Antes de avançar” abaixo dos degraus, eliminando a sobreposição com as legendas;
+- reorganizado o percurso “Como proceder” como uma escada crescente, do primeiro ao quarto passo, em telas amplas;
+- preservadas a animação sequencial e a leitura linear responsiva em tablets e celulares;
+- esclarecido o encaminhamento ao canal regulatório, com referência à agência estadual, à AGRESPI no Piauí e à possibilidade de recorrer diretamente à ANEEL;
+- transformados os canais oficiais de atendimento em uma seção independente, separada do percurso “Como proceder”;
+- elevado o título dos canais ao mesmo nível e escala visual de “Da reclamação ao acompanhamento da solução”;
+- configurado o reinício da animação dos gráficos sempre que o usuário cruza novamente o topo da seção, tanto em rolagem descendente quanto ascendente;
+- removido o título lateral experimental e restaurada a posição original dos botões de assuntos, alinhados ao topo do painel principal;
+- revertido o experimento sem cartões e restaurada a apresentação anterior dos gráficos em dois cards brancos com borda, cantos arredondados e sombra;
+- integrados os gráficos de reclamações diretamente ao fundo da seção, removendo cartões brancos, bordas, arredondamentos e sombras;
+- preservadas a comparação lado a lado e as animações progressivas das barras e dos números;
+- ampliado o título “Selecione o assunto da reclamação” para uma escala editorial, com maior presença visual e quebra controlada;
+- incluído o título “Selecione o assunto da reclamação” acima dos botões laterais, deslocando o conjunto para baixo e equilibrando sua altura com o painel principal;
+- retomado o azul mais claro no título de categoria dos painéis de aplicação dos direitos;
+- ampliado o título “O que observar e como proceder” e aumentado o respiro superior para posicionar os quadros mais abaixo no painel;
+- substituída a referência à “seção seguinte” por “direitos apresentados abaixo” na introdução do ranking;
+- desacelerada a animação das barras do gráfico e sincronizada a contagem progressiva dos índices até o valor final;
+- explicitada a leitura dos gráficos com cabeçalhos de coluna, escala de 0 a 100 pontos e esclarecimento de que os valores não são percentuais;
+- ampliada a largura útil da introdução das reclamações, criado o subtítulo “O que observar e como proceder” no painel e reduzidos os títulos das seções;
+- reduzido o título interno do painel de direitos para melhorar a hierarquia e adotado no rótulo o mesmo azul-marinho do assunto selecionado;
+- corrigido o reinício da animação ao retornar ao topo de “Como proceder”, com detecção da direção e posição da rolagem;
+- refinados os gráficos de reclamações com barras retangulares mais finas, rótulos alinhados em coluna e silhuetas do Brasil e do Piauí;
+- reposicionada a orientação “Antes de avançar” abaixo do percurso e ajustada a linha para ligar exatamente os centros das etapas 1 e 4;
+- reposicionada a orientação dos canais oficiais imediatamente abaixo do título da subseção;
+- removida a numeração “00” da orientação inicial do percurso, adotado azul mais suave e ampliado o tempo da animação sequencial;
+- transformados os canais oficiais de atendimento em minicards compactos, com preservação dos logotipos institucionais;
+- reorganizado o percurso da reclamação com a orientação prévia como marco zero, textos justificados sem hifenização e revelação sequencial que só é reativada no retorno ao início da seção;
+- ampliado o respiro entre os blocos da seção de ICMS aplicado, criando separação e efeito de flutuação sem retomar o visual de cartões convencionais;
+- redesenhada a seção “Como o ICMS aparece na prática” com composição editorial, menos caixas e síntese normativa integrada;
+- título da seção de materiais alterado para “Fique por dentro do que acontece no setor”;
+- substituída em toda a interface a denominação “macrotema” por “tema”, incluindo navegação, home, páginas internas, mapa regulatório, filtros e mensagens dinâmicas;
+- preservados os nomes técnicos de pastas, âncoras e atributos internos para manter os links e as funcionalidades existentes;
+- removido o botão “Consultar fonte oficial” dos painéis da seção de aplicação dos direitos;
+- reorganizada a seção de direitos conforme a jornada do usuário, iniciando por atendimento, protocolo e resposta;
+- revisados os títulos e ampliadas as orientações dos cinco painéis temáticos;
+- textos dos painéis e cards justificados, sem hifenização automática;
+- subtítulo ampliado até o alinhamento do painel principal;
+- seção de aplicação dos direitos reestruturada para conectar o ranking às soluções previstas na regulação;
+- novo título institucional sobre a orientação normativa das reclamações;
+- texto de abertura ampliado e limitado a uma largura de leitura mais confortável;
+- ampliada a introdução do ranking para contextualizar as reclamações no âmbito dos direitos do consumidor de energia;
+- explicada a harmonização das tipologias da ANEEL e a metodologia de comparação entre Brasil e Piauí;
+- fonte e link dos dados abertos reposicionados como legenda abaixo dos gráficos;
+- substituído o seletor Brasil/Piauí por dois gráficos comparativos exibidos lado a lado;
+- incluídas identificações BR e PI nos respectivos painéis;
+- removido o card azul de leitura comparativa para simplificar a seção;
+- invertida a composição do ranking, com o card comparativo à esquerda e o gráfico à direita;
+- texto metodológico do ranking ajustado para alinhamento justificado;
+- preservado o acesso aos dados abertos da ANEEL;
+- título introdutório alterado para “Da legislação geral às regras da distribuição”, evitando repetição com o macrotema;
+- identificação expressa do objeto da Lei nº 8.987/1995 no texto introdutório;
+- título introdutório reduzido para “A proteção do consumidor de energia”;
+- revisão do texto para eliminar o uso excessivo de travessões;
+- introdução ampliada com o conceito de serviço adequado da Lei nº 8.987/1995;
+- novo título introdutório: “Como se estruturou a proteção do consumidor de energia”;
+- correção da hierarquia visual da legenda da introdução;
+- retirada do ponto final do subtítulo da página;
+- harmonização dos títulos internos de cards, painéis e canais de atendimento;
+- replicação do padrão da home para a identificação visual do Consumidor.gov;
+- correção da visibilidade da marca Consumidor.gov nos canais de atendimento;
+- padronização dos títulos das seções conforme a escala aprovada do portal;
+- atualização do subtítulo da página Direito do Consumidor de Energia;
+- redução dos títulos das seções da página Direito do Consumidor de Energia;
+- harmonização da escala tipográfica com as demais páginas do portal;
+- padronização da introdução da página Direito do Consumidor de Energia;
+- inclusão de visão histórica e regulatória alinhada às demais páginas;
+- centralização exclusiva do bloco introdutório, preservando as demais seções à esquerda;
+- construção completa da página Direito do Consumidor de Energia;
+- ranking comparativo Brasil e Piauí com metodologia documentada;
+- seção dinâmica de direitos do consumidor;
+- percurso e canais oficiais para reclamações;
+- quadro normativo com relação entre cada norma e o macrotema;
+- validação responsiva e atualização do catálogo de normas.

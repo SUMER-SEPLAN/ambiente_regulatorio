@@ -1,0 +1,179 @@
+/* Licenciamento ambiental: narrativa, fluxo decisório e pontos de atenção. */
+.licensing-intro .prose { max-width: 860px; }
+.licensing-intro .eyebrow { margin-bottom: 10px; }
+.licensing-intro .eyebrow span { flex: 0 0 28px; }
+.licensing-intro h2 {
+  color: var(--blue-900); max-width: 30ch; margin-bottom: 18px; font-size: clamp(28px, 2.8vw, 36px); }
+.licensing-intro p { color: var(--muted); font-size: 16px; line-height: 1.78; text-align: justify; text-align-last: left; hyphens: auto; }
+.licensing-intro p + p { margin-top: 17px; }
+.licensing-intro strong { color: var(--blue-900); }
+.licensing-note { margin-top: 24px !important; padding: 16px 19px; border-left: 3px solid var(--blue-300); border-radius: 0 11px 11px 0; background: rgba(234, 242, 253, .72); color: var(--muted) !important; font-size: 14px !important; font-weight: 400; line-height: 1.68 !important; }
+.licensing-note strong { color: var(--ink); font-weight: 700; }
+
+.licensing-glossary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 24px 0; }
+.licensing-glossary article { padding: 17px 18px; border: 1px solid var(--line); border-radius: 13px; background: var(--soft); }
+.licensing-glossary strong { display: inline-grid; min-width: 48px; height: 30px; padding: 0 9px; place-items: center; border-radius: 8px; background: var(--blue-100); color: var(--blue-600); font-size: 13px; letter-spacing: .05em; }
+.licensing-glossary span { margin-left: 8px; color: var(--blue-900); font-size: 13px; font-weight: 760; }
+.licensing-glossary p { margin-top: 10px !important; font-size: 13px !important; line-height: 1.62 !important; text-align: left !important; hyphens: none !important; }
+
+.licensing-heading { max-width: 800px; margin-bottom: 28px; }
+.licensing-heading h2 { max-width: 25ch; font-size: clamp(26px, 2.4vw, 32px); line-height: 1.2; letter-spacing: -.02em; }
+.licensing-heading > p:last-child { margin-top: 10px; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.licensing-journey-section { border-top: 1px solid rgba(207, 221, 235, .55); border-bottom: 1px solid rgba(207, 221, 235, .48); background: linear-gradient(180deg, #fff 0%, #fbfcfe 22%, #f7fafc 100%); }
+.licensing-journey-section > .container,
+.licensing-content-section > .container {
+  width: min(calc(100% - 40px), 1140px);
+  max-width: 1140px;
+  margin-inline: auto;
+}
+.licensing-heading--journey { width: 100%; max-width: none; margin: 0; }
+.licensing-heading--journey h2 { margin: 0 0 18px; font-size: clamp(26px, 2.4vw, 32px); line-height: 1.2; letter-spacing: -.02em; }
+.licensing-heading--journey > p { color: var(--muted); font-size: 16px; line-height: 1.78; text-align: justify; text-align-last: left; text-justify: inter-word; hyphens: none; overflow-wrap: normal; word-break: normal; }
+.licensing-heading--journey > p + p { margin-top: 13px; }
+.licensing-heading--journey .eyebrow { margin-bottom: 10px; color: var(--blue-700); font-size: 12px; line-height: 1.4; letter-spacing: .12em; text-align: left; text-align-last: auto; hyphens: none; }
+.licensing-heading--journey .eyebrow span { flex: 0 0 28px; }
+.licensing-flow > .licensing-heading__instruction { margin: 0 0 16px auto; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--muted); font-size: 9px; font-weight: 650; line-height: 1.5; text-align: right; hyphens: none; }
+
+.licensing-flow { position: relative; width: 100%; max-width: none; margin: 64px 0 0; }
+.licensing-flow__track { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.licensing-flow__track::before { position: absolute; top: 30px; right: 7%; left: 7%; height: 2px; background: linear-gradient(90deg, #8bb7e6, #1f6fc7); content: ""; }
+.licensing-step { --stage-color: var(--blue-700); --stage-soft: rgba(11, 74, 146, .09); position: relative; z-index: 1; display: grid; min-height: 172px; padding: 16px 14px; align-content: start; border: 1px solid #d9e5f1; border-radius: 15px; background: rgba(255, 255, 255, .96); box-shadow: 0 7px 18px rgba(8, 40, 83, .065); color: inherit; font: inherit; text-align: left; cursor: pointer; transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease, background 180ms ease; }
+.licensing-step:nth-child(1) { --stage-color: #082853; --stage-soft: rgba(8, 40, 83, .09); }
+.licensing-step:nth-child(2) { --stage-color: #0a3a72; --stage-soft: rgba(10, 58, 114, .09); }
+.licensing-step:nth-child(3) { --stage-color: #0b4a92; --stage-soft: rgba(11, 74, 146, .09); }
+.licensing-step:nth-child(4) { --stage-color: #145fbc; --stage-soft: rgba(20, 95, 188, .09); }
+.licensing-step:nth-child(5) { --stage-color: #1f6fc7; --stage-soft: rgba(31, 111, 199, .09); }
+.licensing-step:hover, .licensing-step.is-active { border-color: var(--stage-color); background: linear-gradient(180deg, var(--stage-soft), #fff 34%), #fff; box-shadow: 0 11px 25px rgba(8, 40, 83, .11); transform: translateY(-3px); }
+.licensing-step:focus-visible { outline: 3px solid #8bb7e6; outline-offset: 3px; }
+.licensing-step__number { display: grid; width: 28px; height: 28px; margin-bottom: 30px; place-items: center; border-radius: 50%; background: var(--stage-color); box-shadow: 0 0 0 6px var(--stage-soft); color: #fff; font-size: 11px; font-weight: 800; }
+.licensing-step strong { color: var(--blue-900); font-size: 15px; line-height: 1.3; }
+.licensing-step small { margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.48; }
+.licensing-flow__detail { --detail-stage-color: #082853; --detail-stage-soft: rgba(8, 40, 83, .09); display: grid; min-height: 210px; margin-top: 16px; padding: 28px 30px 28px; border: 1px solid var(--detail-stage-color); border-radius: 15px; background: linear-gradient(105deg, var(--detail-stage-soft) 0%, rgba(250, 252, 254, .38) 24%, #fff 58%); box-shadow: var(--shadow-sm); text-align: left; transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease; }
+.licensing-flow__detail[data-stage="1"] { --detail-stage-color: #082853; --detail-stage-soft: rgba(8, 40, 83, .09); }
+.licensing-flow__detail[data-stage="2"] { --detail-stage-color: #0a3a72; --detail-stage-soft: rgba(10, 58, 114, .09); }
+.licensing-flow__detail[data-stage="3"] { --detail-stage-color: #0b4a92; --detail-stage-soft: rgba(11, 74, 146, .09); }
+.licensing-flow__detail[data-stage="4"] { --detail-stage-color: #145fbc; --detail-stage-soft: rgba(20, 95, 188, .09); }
+.licensing-flow__detail[data-stage="5"] { --detail-stage-color: #1f6fc7; --detail-stage-soft: rgba(31, 111, 199, .09); }
+.licensing-flow__detail h3 { display: flex; width: 100%; align-items: center; gap: 12px; color: var(--blue-900); font-size: 17px; font-weight: 720; line-height: 1.3; }
+.licensing-flow__detail-number { display: grid; width: 28px; height: 28px; flex: 0 0 28px; place-items: center; border-radius: 50%; background: var(--detail-stage-color); box-shadow: 0 0 0 6px var(--detail-stage-soft); color: #fff; font-size: 11px; font-weight: 800; transition: background 180ms ease, box-shadow 180ms ease; }
+.licensing-flow__detail-label { color: var(--ink); }
+.licensing-flow__detail p { width: 100%; margin-top: 17px; padding-top: 17px; border-top: 1px solid #d1dfef; color: var(--muted); font-size: 14.5px; line-height: 1.78; text-align: justify; text-align-last: left; text-justify: inter-word; hyphens: none; overflow-wrap: normal; word-break: normal; }
+.licensing-flow__detail strong { color: var(--blue-900); }
+
+.licensing-content-section { position: relative; background: #fff; }
+.licensing-content-section + .licensing-content-section { border-top: 1px solid rgba(207, 221, 235, .55); }
+.licensing-content-section--analyses { background: linear-gradient(180deg, #fbfcfe 0%, #fff 100%); }
+.licensing-content-section .licensing-heading { max-width: 860px; }
+
+.licensing-pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.licensing-pillar { position: relative; display: grid; min-height: 0; padding: 24px 24px 22px; overflow: hidden; grid-template-columns: 32px 1fr; column-gap: 14px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.94); box-shadow: 0 6px 16px rgba(8,40,83,.05); }
+.licensing-pillar::before { display: none; }
+.licensing-pillar__icon { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: var(--blue-100); color: var(--blue-600); font-size: 15px; font-weight: 750; }
+.licensing-pillar h3 { color: var(--blue-900); font-size: 18px; line-height: 1.32; }
+.licensing-pillar > p { grid-column: 2; }
+.licensing-pillar p { margin-top: 10px; color: var(--muted); font-size: 13.5px; line-height: 1.68; text-align: justify; text-align-last: left; hyphens: auto; }
+.licensing-pillar .licensing-pillar__base { margin-top: 16px; padding: 13px 0 0; border-top: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--muted); font-size: 12px; line-height: 1.55; text-align: left; hyphens: none; }
+
+.licensing-authority { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.licensing-authority article { padding: 24px 22px; border: 1px solid var(--line); border-radius: 15px; background: #fff; box-shadow: var(--shadow-sm); }
+.licensing-authority__scope { color: var(--blue-600); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.licensing-authority h3 { margin-top: 6px; color: var(--blue-900); font-size: 20px; }
+.licensing-authority p { margin-top: 10px; color: var(--muted); font-size: 13.5px; line-height: 1.67; text-align: justify; text-align-last: left; }
+.licensing-authority__rule { margin-top: 18px !important; padding-top: 14px; border-top: 1px solid var(--line); color: var(--blue-900) !important; font-size: 12.5px !important; font-weight: 650; }
+.licensing-authority-note { margin: 18px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+
+.licensing-technologies { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.licensing-technology { padding: 23px 21px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.92); box-shadow: 0 6px 16px rgba(8,40,83,.055); }
+.licensing-technology h3 { color: var(--blue-900); font-size: 16px; }
+.licensing-technology p { margin-top: 11px; color: var(--muted); font-size: 13.25px; line-height: 1.67; text-align: justify; text-align-last: left; hyphens: auto; }
+
+.licensing-table table { min-width: 720px; }
+.licensing-table td:nth-child(3),
+.licensing-table td:nth-child(4) {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.licensing-table .theme-law-relation {
+  margin: 13px 0 0;
+  padding: 11px 12px;
+  border-left: 3px solid var(--blue-300);
+  border-radius: 0 8px 8px 0;
+  background: var(--blue-050);
+  color: var(--ink);
+  font-size: 12.5px;
+  line-height: 1.55;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.licensing-table .theme-law-relation strong { color: var(--blue-900); }
+
+#tecnologias-titulo { max-width: none; white-space: nowrap; }
+
+/* O canal oficial encerra a narrativa institucional sem introduzir um novo painel visual. */
+.licensing-official-section { padding-block: 0 54px; background: #fff; }
+.licensing-official {
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr);
+  padding: 25px 0 0;
+  border: 0;
+  border-top: 1px solid rgba(207, 221, 235, .72);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.licensing-official .tema-official__content { padding: 0 40px 0 0; }
+.licensing-official .tema-official__content h2 { font-size: clamp(20px, 1.7vw, 25px); }
+.licensing-official .tema-official__content > p:last-child {
+  max-width: 62ch;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.licensing-official .tema-official__action { min-height: 86px; padding-left: 32px; border-left-color: rgba(207, 221, 235, .82); }
+.licensing-official .tema-official__link { width: min(100%, 330px); min-height: 78px; padding: 13px 42px 13px 18px; border-color: var(--line); border-radius: 12px; box-shadow: 0 4px 12px rgba(8,40,83,.035); }
+.licensing-official .tema-official__link img { width: 100%; max-height: 58px; object-fit: contain; object-position: center; }
+.licensing-official .tema-official__external { right: 12px; bottom: 50%; font-size: 19px; transform: translateY(50%); }
+.licensing-official .tema-official__link:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(8,40,83,.09); }
+.licensing-official .tema-official__link:hover .tema-official__external { transform: translate(1px, calc(50% - 1px)); }
+
+.licensing-reveal { opacity: 0; transform: translateY(16px); transition: opacity 520ms ease, transform 520ms cubic-bezier(.22,.61,.36,1); }
+.licensing-reveal.is-visible { opacity: 1; transform: none; }
+
+@media (max-width: 980px) {
+  .licensing-flow__track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .licensing-flow__track::before { display: none; }
+  .licensing-step { min-height: 150px; }
+  .licensing-step__number { margin-bottom: 20px; }
+  .licensing-authority { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .licensing-technologies { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .licensing-official { grid-template-columns: 1fr; gap: 18px; }
+  .licensing-official .tema-official__content { padding-right: 0; }
+  .licensing-official .tema-official__action { min-height: 0; justify-content: flex-start; padding: 18px 0 0; border-top: 1px solid rgba(207, 221, 235, .72); border-left: 0; }
+  .licensing-official .tema-official__link { width: 100%; }
+}
+@media (max-width: 640px) {
+  .licensing-flow__track, .licensing-pillars, .licensing-authority, .licensing-technologies { grid-template-columns: 1fr; }
+  .licensing-glossary { grid-template-columns: 1fr; }
+  .licensing-flow__detail { min-height: 0; padding: 22px 18px; }
+  .licensing-intro p, .licensing-heading--journey > p, .licensing-flow__detail p, .licensing-pillar p, .licensing-authority p, .licensing-technology p { text-align: left; hyphens: none; }
+  #tecnologias-titulo { white-space: normal; }
+  .licensing-pillar { grid-template-columns: 30px 1fr; padding: 21px 18px; column-gap: 11px; }
+  .licensing-official-section { padding-bottom: 40px; }
+  .licensing-official { padding-top: 23px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .licensing-step, .licensing-reveal { transition: none; }
+  .licensing-reveal { opacity: 1; transform: none; }
+}

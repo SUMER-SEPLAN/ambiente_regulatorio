@@ -1,0 +1,58 @@
+/* Camada responsiva final: ajustes transversais para telefones. */
+@media (max-width: 640px) {
+  html { scroll-padding-top: 82px; }
+  body { overflow-x: hidden; font-size: 15px; }
+  .container,.prose { width: min(calc(100% - 28px), 1200px); }
+  .section { padding: 44px 0; }
+  .section-heading { margin-bottom: 24px; }
+  .section-heading h2 { font-size: 27px; line-height: 1.16; text-wrap: balance; }
+  .section-heading p { font-size: 14px; line-height: 1.65; }
+  .eyebrow { font-size: 10.5px; line-height: 1.45; letter-spacing: .11em; }
+  .home-section-reveal,.macrotema-reveal,.commerce-reveal,.licensing-reveal,.taxation-reveal,.inclusion-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hero .regulatory-brain { min-height: 0; grid-template-rows: auto auto; }
+  .hero .regulatory-brain__stage { min-height: 0; height: auto; overflow: visible; }
+  .hero .regulatory-brain__canvas,.hero .regulatory-brain__legend,.hero .regulatory-brain__heading { display: none; }
+  .hero .regulatory-brain-mobile { display: grid; }
+
+  .tema-hero { padding: 35px 0 38px; }
+  .tema-hero h1 { max-width: none; font-size: 31px; line-height: 1.1; text-wrap: balance; }
+  .tema-hero__lead { margin-top: 13px; font-size: 14.5px; line-height: 1.65; }
+  body[data-macrotema] main section:not(.tema-hero) .eyebrow { margin-bottom: 12px; }
+  body[data-macrotema] main section:not(.tema-hero) h2 { font-size: 27px; line-height: 1.18; text-wrap: balance; }
+  body[data-macrotema] main section:not(.tema-hero) h3 { text-wrap: balance; }
+
+  .tema-cards,.participacao-cards,.licensing-glossary,.licensing-flow__track,.licensing-pillars,.licensing-authority,.licensing-technologies,.inclusion-card-grid,.inclusion-pathways__grid,.inclusion-channels__grid,.taxation-reading-guide,.commerce-concepts,.commerce-environment-cards,.commerce-roles,.commerce-decision-balance { grid-template-columns: 1fr !important; gap: 14px !important; }
+  .tema-card,.participacao-card,.licensing-step,.licensing-pillar,.licensing-authority article,.licensing-technology,.inclusion-pathways__grid article,.inclusion-channels__grid a,.commerce-concepts article,.commerce-environment-card,.commerce-roles article { min-height: 0 !important; padding: 20px 18px !important; border-radius: 14px !important; }
+  .inclusion-card__summary { min-height: 0 !important; padding: 20px 17px !important; }
+  .inclusion-card__detail { padding: 0 17px 19px !important; }
+  .participacao-card { gap: 12px; }
+
+  .tema-official,.licensing-official,.taxation-official,.commerce-shared-network,.commerce-discussion,.commerce-opening-next,.inclusion-definition,.connection-process__closing,.connection-route { grid-template-columns: 1fr !important; gap: 16px !important; padding: 21px 18px !important; border-radius: 15px !important; }
+  .tema-official__content,.licensing-official .tema-official__content { padding: 0 !important; }
+  .tema-official__action,.licensing-official .tema-official__action,.taxation-official .tema-official__action { min-height: 0 !important; justify-content: flex-start !important; padding: 17px 0 0 !important; border-top: 1px solid rgba(207,221,235,.72) !important; border-left: 0 !important; }
+  .quick-card { grid-template-columns: 40px 1fr; gap: 14px; padding: 19px 18px; border-radius: 13px; }
+  .quick-card.is-nav-emphasized,.quick-card.is-nav-emphasized:hover { transform: none; }
+
+  .table-wrap,.participacao-comparison,.commerce-comparison-wrap { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; -webkit-overflow-scrolling: touch; }
+  .table-wrap table { min-width: 760px; }
+  .catalog-scrollbar-hint { font-size: 11px; }
+
+  .commerce-migration-flow li>div:last-child { grid-template-columns: 1fr !important; gap: 9px !important; }
+  .commerce-return-flow { grid-template-columns: 1fr !important; padding: 22px 18px !important; }
+  .commerce-opening-past,.commerce-opening-next__milestones { grid-template-columns: 1fr !important; }
+  .commerce-opening-regulation { grid-template-columns: 1fr !important; gap: 10px !important; }
+
+  .connection-route { margin-inline: 0 !important; }
+  .connection-route__steps { grid-template-columns: 1fr !important; }
+  .connection-route__steps li { grid-template-columns: 34px minmax(0,1fr) !important; padding: 18px 16px !important; }
+  .connection-process__actions { grid-template-columns: 1fr !important; }
+
+  .reference-footer__main { gap: 28px; }
+}
+
+@media (max-width: 420px) {
+  .container,.prose { width: min(calc(100% - 24px), 1200px); }
+  .section { padding: 40px 0; }
+  .tema-hero h1 { font-size: 29px; }
+  body[data-macrotema] main section:not(.tema-hero) h2 { font-size: 25px; }
+}

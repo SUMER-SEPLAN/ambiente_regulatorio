@@ -1,322 +1,291 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portal público para consulta do ambiente regulatório de energia no Piauí e no Brasil.">
+    <meta name="theme-color" content="#0b4a92">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; base-uri 'self'; form-action 'self'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230b4a92'/%3E%3Cpath d='M15 44V24l17-9 17 9v20H15Zm7-7h20V28L32 23l-10 5v9Z' fill='%23fff'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css?v=20261015-3">
+    <link rel="stylesheet" href="catalog.css?v=20261015-8">
+    <link rel="stylesheet" href="reference-shell.css?v=20260918-1">
+    <link rel="stylesheet" href="metric-icons.css?v=20260920-2">
+    <link rel="stylesheet" href="theme-icons.css?v=20261015-9">
+    <link rel="stylesheet" href="stats-interactions.css?v=20261106-22">
+    <link rel="stylesheet" href="brain-graph.css?v=20261029-6">
     <title>Ambiente Regulatório de Energia</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="mobile-overrides.css?v=20261021-1">
 </head>
-<body>
+  <body>
+    <a class="skip-link" href="#catalogo">Ir para a consulta de legislação</a>
 
-    <!-- BARRA SUPERIOR -->
-    <header class="topbar">
-        <div class="topbar-left">
-            <div id="animated-menu" class="animated-menu">
-                <div class="navicon" id="toggle-menu"><div></div></div>
-                <div class="menu-content" id="menu-content">
-                    <!-- Botões gerados via JS -->
-                </div>
-            </div>
-
-            <a href="https://dados.pi.gov.br/observatorio/energias-renovaveis/" class="seplan-apps-bar__site-button">
-                <span class="button-text">Voltar</span>
-                <span class="button-icon">⭠</span>
-            </a>
+    <header class="reference-header">
+      <div class="reference-header__bar">
+        <div class="reference-header__inner">
+          <button class="nav-toggle reference-header__toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+            <span class="sr-only">Abrir navegação</span><span></span><span></span><span></span>
+          </button>
+          <nav id="site-navigation" class="reference-header__nav" aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <button type="button" class="reference-header__dropdown-trigger" data-macrotemas-toggle>Temas</button>
+            <a href="#catalogo">Acervo de Normas</a>
+            <a href="#instituicoes">Instituições</a>
+            <a href="#atendimento">Canais de Atendimento</a>
+          </nav>
+          <div class="reference-header__identity">
+            <span class="reference-header__secretariat">SECRETARIA DO<br>PLANEJAMENTO - SEPLAN</span>
+            <img class="reference-header__logo" src="assets/brand/logo-governo-piaui.png" alt="Governo do Piauí — Aqui tem trabalho. Aqui tem futuro." width="600" height="357">
+          </div>
         </div>
-
-        <div class="topbar-center">
-            <span id="project-title">AMBIENTE REGULATÓRIO DE ENERGIA</span>
-        </div>
-
-        <div class="topbar-right">
-            <img src="logo/logo-sumer-white.svg" alt="Logo SUMER" class="logo" onerror="this.style.display='none'">
-            <img src="logo/logo-seplan-white.svg" alt="Logo SEPLAN" class="logo" onerror="this.style.display='none'">
-        </div>
+      </div>
+      <div class="reference-header__spacer" aria-hidden="true"></div>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <div class="main-content">
-        
-        <!-- PÁGINA INTRODUTÓRIA (Aparece ao carregar) -->
-        <div class="intro-section" id="intro-section">
-            <div class="intro-top-row">
-                <!-- Lado Esquerdo: Mensagem -->
-                <div class="intro-left">
-                    <div class="intro-hero">
-                        <h2>Bem-vindo ao Ambiente Regulatório</h2>
-                        <p>O Ambiente Regulatório foi desenvolvido com objetivo de tornar mais acessível a consulta às normas do setor energético.</p>
-                        <p>Para facilitar a navegação, o conteúdo está organizado em 10 macrotemas, que funcionam como eixos de consulta da plataforma. Ao selecionar um deles, você terá acesso ao fluxograma da respectiva estrutura regulatória e às normas vinculadas, visualizando de forma clara como os diferentes atos e instrumentos se relacionam em cada matéria.</p>
-                        <p>A página inicial também reúne o Repositório de Normas Direcionadoras, que concentra, em um único espaço, todas as normas associadas aos macrotemas apresentados.</p>
-                        <p>Além disso, os filtros de pesquisa permitem consultar especificamente a legislação do Estado do Piauí aplicável ao setor energético, reunindo e organizando os atos normativos estaduais relacionados a cada tema.</p>
-                        <button type="button" class="intro-action" id="open-theme-menu-btn">Explorar macrotemas</button>
-                    </div>
+    <main>
+      <section id="inicio" class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow"><span></span>Ambiente Regulatório de Energia</p>
+            <h1>Entenda as regras que organizam o setor de energia</h1>
+            <p class="hero__lead">Conheça como instituições, normas e procedimentos estruturam o setor elétrico. Explore os temas, consulte nosso acervo e encontre canais oficiais para compreender seus direitos e participar da regulação.</p>
+          </div>
+          <div id="regulatory-brain" class="regulatory-brain" aria-labelledby="brain-title" aria-describedby="brain-help">
+            <div class="regulatory-brain__stage">
+              <div class="regulatory-brain__heading">
+                <span id="brain-title" class="sr-only">Mapa vivo do acervo regulatório</span>
+                <div class="regulatory-brain__tools" aria-label="Controles do mapa">
+                  <button type="button" data-brain-action="reset" data-tooltip="Reorganizar o mapa" aria-label="Reorganizar o mapa">↻</button>
                 </div>
-                
-                <!-- Lado Direito: Card Principal e Gráfico -->
-                <div class="intro-right">
-                    <div id="stat-normativas-container" style="width: 100%;">
-                        <!-- O Card "Normativas Mapeadas" será injetado aqui via JS -->
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="tipoChart"></canvas>
-                    </div>
-                    <div id="chart-reset-container" style="display:none; text-align:center; margin-top:10px;">
-                        <button id="reset-tipo-btn" class="seplan-apps-bar__site-button" style="margin:0 auto; cursor: pointer;">Limpar Filtro do Gráfico</button>
-                    </div>
+              </div>
+              <canvas id="brain-canvas" class="regulatory-brain__canvas" tabindex="0" aria-label="Rede interativa dos temas e das normas do ambiente regulatório"></canvas>
+              <nav class="regulatory-brain-mobile" aria-label="Mapa dos temas">
+                <div class="regulatory-brain-mobile__core"><strong>Ambiente regulatório</strong><span>Escolha um tema para explorar</span></div>
+                <div class="regulatory-brain-mobile__themes">
+                  <a href="macrotemas/arquitetura-institucional.html">Arquitetura institucional</a>
+                  <a href="macrotemas/direito-do-consumidor.html">Direito do consumidor</a>
+                  <a href="macrotemas/inclusao-energetica.html">Inclusão energética</a>
+                  <a href="macrotemas/tributacao-estadual.html?v=620">Tributação estadual</a>
+                  <a href="macrotemas/conexao-e-acesso-a-rede.html?v=655">Conexão e acesso</a>
+                  <a href="macrotemas/geracao-distribuida.html?v=684">Geração distribuída</a>
+                  <a href="macrotemas/comercializacao-de-energia.html?v=625">Comercialização</a>
+                  <a href="macrotemas/planejamento-energetico.html">Planejamento</a>
+                  <a href="macrotemas/transicao-energetica.html">Transição energética</a>
+                  <a href="macrotemas/licenciamento-ambiental.html">Licenciamento ambiental</a>
+                  <a href="macrotemas/participacao-publica.html">Participação pública</a>
                 </div>
-                <!-- Cards laterais que serão preenchidos pelo JS -->
-                <div class="intro-stats" id="intro-stats">
-                    <div class="stat-card">
-                        <span class="stat-number">...</span>
-                        <span class="stat-label">Carregando Dados</span>
-                    </div>
-                </div>
+              </nav>
+              <div class="regulatory-brain__legend" aria-label="Legenda da rede">
+                <span><i class="regulatory-brain__key regulatory-brain__key--theme" aria-hidden="true"></i>Tema</span>
+                <span><i class="regulatory-brain__key regulatory-brain__key--law" aria-hidden="true"></i>Norma</span>
+                <span><i class="regulatory-brain__key regulatory-brain__key--shared" aria-hidden="true"></i>Ato compartilhado</span>
+              </div>
+              <p id="brain-help" class="sr-only">Clique uma vez em um tema para abrir ou recolher suas normas diretas. Arraste para posicioná-lo. Clique duas vezes para mostrar ou recolher conexões compartilhadas. Repouse o cursor para destacar conexões temporariamente. Use o botão Reorganizar para retornar à visualização inicial.</p>
             </div>
-        </div>
-
-        <!-- Seção de Introdução do Tema -->
-        <div class="theme-intro-section" id="theme-intro-section" style="display: none;">
-            <h3 id="theme-intro-title"></h3>
-            <p id="theme-intro-text"></p>
-        </div>
-
-        <!-- Seção de Cards Interativos para múltiplos temas (Substitui os diagramas) -->
-        <div class="planejamento-cards-section" id="theme-cards-section" style="display: none;">
-            <div class="plan-cards-grid" id="theme-cards-grid">
-                <!-- Os cards serão desenhados dinamicamente via JS -->
+            <div class="regulatory-brain__footer">
+              <div id="brain-tooltip" class="regulatory-brain__tooltip" role="status" aria-live="polite"></div>
+              <a class="hero__brain-link" href="mapa-regulatorio.html" aria-label="Expandir o Brain regulatório em tela ampla">
+                <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                  <path d="M9 4H4v5M4 4l6 6M15 4h5v5M20 4l-6 6M9 20H4v-5M4 20l6-6M15 20h5v-5M20 20l-6-6"/>
+                </svg>
+                <small role="tooltip">Expandir gráfico para organizar livremente as conexões.</small>
+              </a>
             </div>
+          </div>
         </div>
+      </section>
 
-        <!-- Mapa Mental Interativo -->
-        <div class="mindmap-section" id="mindmap-section" style="display: none; width: 100%;">
-            <div id="mindmap-container"></div>
-        </div>
-
-        <!-- Seção: Canais de Reclamação -->
-        <div class="reclamacao-section" id="reclamacao-section">
-            <div class="reclamacao-card">
-                <div class="reclamacao-header">Canais de Reclamação</div>
-                <div class="reclamacao-body">
-                    <a href="https://pi.equatorialenergia.com.br/ouvidoria/" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>EQTL - OUVIDORIA</strong>
-                            <p>Canal de atendimento da distribuidora Equatorial Piauí. Telefone: 0800-721-0164</p>
-                        </div>
-                    </a>
-                    <a href="https://consumidor.gov.br/" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>CONSUMIDOR.GOV</strong>
-                            <p>Serviço público e gratuito para solução alternativa de conflitos de consumo.</p>
-                        </div>
-                    </a>
-                    <a href="https://www.gov.br/aneel/pt-br/canais_atendimento/reclame-da-distribuidora" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>ANEEL</strong>
-                            <p>Agência Nacional de Energia Elétrica. Registre sua reclamação diretamente na agência federal.</p>
-                        </div>
-                    </a>
-                    <a href="https://agrespi.pi.gov.br/" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>AGRESPI</strong>
-                            <p>Agência Reguladora dos Serviços Públicos Delegados do Estado do Piauí.</p>
-                        </div>
-                    </a>
-                </div>
+      <section id="macrotemas" class="section section--soft">
+        <div class="container">
+          <div class="section-heading macrothemes-heading">
+            <div><p class="eyebrow"><span></span>Navegue por assunto</p><h2>Explore os temas</h2><p>Escolha o tema que mais se relaciona com a sua dúvida e veja as normas vinculadas.</p></div>
+          </div>
+          <div class="theme-carousel">
+            <div class="macrothemes-controls" aria-label="Navegação pelos temas">
+              <button class="macrothemes-control macrothemes-control--previous" type="button" data-themes-prev aria-label="Ver temas anteriores" hidden>‹</button>
+              <button class="macrothemes-control macrothemes-control--next" type="button" data-themes-next aria-label="Ver próximos temas">›</button>
             </div>
+            <div id="theme-grid" class="theme-grid" aria-live="polite" tabindex="0" aria-label="Faixa horizontal de temas. Use as setas ou deslize para navegar."></div>
+          </div>
         </div>
-        <!-- Seção: Links Institucionais (Setor Elétrico) -->
-        <div class="reclamacao-section" id="institucional-links-section" style="display: none; margin-top: 20px;">
-            <div class="reclamacao-card">
-                <div class="reclamacao-header">Links Oficiais das Instituições</div>
-                <div class="reclamacao-body">
-                    <a href="https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>CNPE</strong>
-                            <p>Conselho Nacional de Política Energética</p>
-                        </div>
-                    </a>
-                    <a href="https://www.gov.br/mme/pt-br" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>MME</strong>
-                            <p>Ministério de Minas e Energia</p>
-                        </div>
-                    </a>
-                    <a href="https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cmse" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>CMSE</strong>
-                            <p>Comitê de Monitoramento do Setor Elétrico</p>
-                        </div>
-                    </a>
-                    <a href="https://www.gov.br/aneel/pt-br" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>ANEEL</strong>
-                            <p>Agência Nacional de Energia Elétrica</p>
-                        </div>
-                    </a>
-                    <a href="https://www.epe.gov.br/pt" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>EPE</strong>
-                            <p>Empresa de Pesquisa Energética</p>
-                        </div>
-                    </a>
-                    <a href="https://www.ons.org.br/" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>ONS</strong>
-                            <p>Operador Nacional do Sistema Elétrico</p>
-                        </div>
-                    </a>
-                    <a href="https://www.ccee.org.br/" target="_blank" class="reclamacao-item">
-                        <span class="reclamacao-icon">›</span>
-                        <div class="reclamacao-text">
-                            <strong>CCEE</strong>
-                            <p>Câmara de Comercialização de Energia Elétrica</p>
-                        </div>
-                    </a>
-                </div>
+      </section>
+
+      <section id="numeros" class="section stats-section" aria-labelledby="numeros-titulo">
+        <div class="container">
+          <div class="stats-layout">
+            <div>
+              <div class="section-heading section-heading--stacked"><div><p class="eyebrow"><span></span>Panorama do acervo</p><h2 id="numeros-titulo">Ambiente regulatório em números</h2><p>Conheça a composição do acervo reunido na plataforma.</p></div></div>
+              <div class="stat-cards">
+                <button class="stat-card stat-card--filter" type="button" data-catalog-mode="unique-all" aria-label="Mostrar todas as normas únicas no catálogo"><span class="stat-card__icon metric-icon metric-icon--document" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M13 5.5h15l7 7V42.5H13z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M28 5.5v8h7M18 20h12M18 26h12M18 32h9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span><p id="total-normas" class="stat-card__number">–</p><p>normas mapeadas</p></button>
+                <button class="stat-card stat-card--filter" type="button" data-catalog-mode="unique-federal" aria-label="Mostrar as normas federais únicas no catálogo"><span class="stat-card__icon metric-icon metric-icon--brazil" aria-hidden="true"><img src="assets/maps/brazil.svg?v=20260919-1" alt=""></span><p id="total-federais" class="stat-card__number">–</p><p>normas federais</p></button>
+                <button class="stat-card stat-card--filter" type="button" data-catalog-mode="unique-state" aria-label="Mostrar as normas estaduais únicas no catálogo"><span class="stat-card__icon metric-icon metric-icon--piaui" aria-hidden="true"><img src="assets/maps/piaui.svg?v=20260919-1" alt=""></span><p id="total-estaduais" class="stat-card__number">–</p><p>normas estaduais</p></button>
+                <button class="stat-card stat-card--filter" type="button" data-catalog-mode="consolidation" aria-label="Mostrar os instrumentos setoriais no catálogo"><span class="stat-card__icon metric-icon metric-icon--consolidation" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M11 14.5 24 8l13 6.5L24 21zM11 23.5 24 30l13-6.5M11 32.5 24 39l13-6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p id="total-instrumentos" class="stat-card__number">–</p><p>instrumentos setoriais</p></button>
+              </div>
+              <p class="stats-note"><strong>Nota:</strong> um mesmo ato pode estar relacionado a mais de um tema. Por isso, a soma dos registros regulatórios apresentados no gráfico por tema pode ser superior ao número de normas únicas mapeadas.</p>
             </div>
+            <div class="stats-visual">
+              <div class="chart-block">
+                <div id="theme-donut" class="donut" role="group" aria-label="Distribuição de registros regulatórios por tema. Passe o mouse ou use o teclado sobre uma faixa para ver o detalhe.">
+                  <svg id="donut-chart" viewBox="0 0 120 120"></svg>
+                  <button id="donut-all-records" class="donut__center" type="button" aria-label="Mostrar todos os registros regulatórios no catálogo"><strong id="donut-total">–</strong><span>registros regulatórios</span></button>
+                  <div id="chart-tooltip" class="chart-tooltip" role="tooltip" hidden></div>
+                </div>
+              </div>
+              <div class="donut-legend-block" aria-labelledby="donut-legend-title">
+                <div class="data-block-heading">
+                  <h3 id="donut-legend-title" class="sr-only">Legenda do anel</h3>
+                  <p>Passe o cursor para comparar. Clique para consultar os registros.</p>
+                </div>
+                <div id="theme-legend" class="donut-legend"></div>
+              </div>
+            </div>
+          </div>
+
+          <section class="timeline-panel" aria-labelledby="timeline-title">
+            <div class="timeline-panel__heading">
+              <div>
+                <p class="timeline-panel__eyebrow"><span></span>Evolução do acervo</p>
+                <h3 id="timeline-title">Linha do tempo do acervo regulatório</h3>
+                <p>Visualize como os registros regulatórios do acervo se distribuem ao longo do tempo, identifique períodos de maior atividade e compreenda os marcos que moldaram o setor de energia.</p>
+              </div>
+              <p id="timeline-summary" class="timeline-summary" aria-live="polite"></p>
+            </div>
+            <div id="timeline-chart" class="timeline-chart">
+              <svg id="timeline-svg" role="img" aria-labelledby="timeline-title timeline-description"></svg>
+              <div id="timeline-tooltip" class="timeline-tooltip" role="tooltip" hidden></div>
+            </div>
+            <p id="timeline-description" class="sr-only"></p>
+          </section>
         </div>
-        <!-- Área da Tabela de Leis -->
-        <div class="table-section" id="table-section">
-            <div class="table-header" id="selected-theme-title">Catálogo de Normas</div>
-            
-            <!-- Tabelas da Página Inicial (Sanfonadas) -->
-            <div id="home-tables-container">
-                
-                <!-- Tabela 1: Específicas -->
-                <div class="collapsible-wrapper">
-                    <button class="collapsible-btn" id="btn-especificas" onclick="toggleTable('especificas')">Normas específicas do setor energético <span class="arrow">▼</span></button>
-                    <div class="collapsible-content" id="content-especificas" style="display: block;">
-                        <p class="table-description">Tabela destinada aos atos normativos diretamente relacionados ao setor energético.</p>
-                        <div class="table-container">
-                            <table class="laws-table">
-                                <thead>
-                                    <tr>
-                                        <th width="14%">Tipo 
-                                            <select class="filter-tipo header-filter">
-                                                <option value="todas">Todos</option>
-                                                <option value="lei">Lei</option>
-                                                <option value="decreto">Decreto</option>
-                                                <option value="resolução">Resolução</option>
-                                                <option value="portaria">Portaria</option>
-                                                <option value="instrução">Instrução Normativa</option>
-                                            </select>
-                                        </th>
-                                        <th width="12%">Nº da Norma</th>
-                                        <th width="20%">Nome/Definição da iniciativa</th>
-                                        <th width="32%">Ementa/Descrição</th>
-                                        <th width="14%">Competência 
-                                            <select class="filter-competencia header-filter">
-                                                <option value="todas">Todas</option>
-                                                <option value="estadual">Estadual</option>
-                                                <option value="federal">Federal</option>
-                                            </select>
-                                        </th>
-                                        <th width="8%">Link</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="laws-body-especificas"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+      </section>
 
-                <!-- Tabela 2: Ambientais -->
-                <div class="collapsible-wrapper">
-                    <button class="collapsible-btn" id="btn-ambientais" onclick="toggleTable('ambientais')">Normas ambientais correlatas ao setor energético <span class="arrow">▼</span></button>
-                    <div class="collapsible-content" id="content-ambientais" style="display: block;">
-                        <p class="table-description">Tabela destinada às normas ambientais que possuem interface com o setor energético.</p>
-                        <div class="table-container">
-                            <table class="laws-table">
-                                <thead>
-                                    <tr>
-                                        <th width="11%">Tipo 
-                                            <select class="filter-tipo header-filter">
-                                                <option value="todas">Todos</option>
-                                                <option value="lei">Lei</option>
-                                                <option value="decreto">Decreto</option>
-                                                <option value="resolução">Resolução</option>
-                                                <option value="portaria">Portaria</option>
-                                                <option value="instrução">Instrução Normativa</option>
-                                            </select>
-                                        </th>
-                                        <th width="10%">Nº da Norma</th>
-                                        <th width="18%">Nome/Definição</th>
-                                        <th width="22%">Ementa/Descrição</th>
-                                        <th width="22%">Relação com o Setor Energético</th>
-                                        <th width="11%">Competência 
-                                            <select class="filter-competencia header-filter">
-                                                <option value="todas">Todas</option>
-                                                <option value="estadual">Estadual</option>
-                                                <option value="federal">Federal</option>
-                                            </select>
-                                        </th>
-                                        <th width="6%">Link</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="laws-body-ambientais"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Tabela dos Macrotemas (Quando algum menu é clicado) -->
-            <div id="theme-table-container" style="display: none;">
-                <div class="table-container">
-                    <table class="laws-table">
-                        <thead>
-                            <tr>
-                                <th width="11%">Tipo 
-                                    <select class="filter-tipo header-filter">
-                                        <option value="todas">Todos</option>
-                                        <option value="lei">Lei</option>
-                                        <option value="decreto">Decreto</option>
-                                        <option value="resolução">Resolução</option>
-                                        <option value="portaria">Portaria</option>
-                                        <option value="instrução">Instrução Normativa</option>
-                                    </select>
-                                </th>
-                                <th width="10%">Nº da Norma</th>
-                                <th width="18%">Nome/Definição</th>
-                                <th width="22%">Ementa/Descrição</th>
-                                <th id="theme-relacao-header" width="22%" style="display: none;">Relação com o Setor Energético</th>
-                                <th width="11%">Competência 
-                                    <select class="filter-competencia header-filter">
-                                        <option value="todas">Todas</option>
-                                        <option value="estadual">Estadual</option>
-                                        <option value="federal">Federal</option>
-                                    </select>
-                                </th>
-                                <th width="6%">Link</th>
-                            </tr>
-                        </thead>
-                        <tbody id="laws-body-theme"></tbody>
-                    </table>
-                </div>
-            </div>
+      <section id="catalogo" class="section section--soft" aria-labelledby="catalogo-titulo">
+        <div class="container">
+          <div class="section-heading section-heading--stacked"><div><h2 id="catalogo-titulo">Consulte nosso acervo</h2><p>Pesquise diretamente no acervo por assunto, número da norma ou palavra-chave.</p></div></div>
+          <form id="filters" class="filter-panel" novalidate>
+            <label class="search-field"><span class="sr-only">Buscar normas</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Busque por assunto, número da norma ou palavra-chave"></label>
+            <div class="filter-field"><span class="filter-field__label" id="label-theme">Tema</span><select id="theme-filter"><option value="">Selecionar</option></select></div>
+            <div class="filter-field"><span class="filter-field__label" id="label-type">Tipo de ato</span><select id="type-filter"><option value="">Selecionar</option></select></div>
+            <div class="filter-field"><span class="filter-field__label" id="label-scope">Competência</span><select id="scope-filter"><option value="">Selecionar</option><option value="Federal">Federal</option><option value="Estadual">Estadual</option></select></div>
+            <div class="filter-field"><span class="filter-field__label" id="label-year">Ano</span><select id="year-filter"><option value="">Selecionar</option></select></div>
+          </form>
+          <div class="results-meta"><p id="results-count" aria-live="polite">Carregando o acervo…</p><button id="clear-filters" class="button button--quiet" type="button">Limpar filtros</button></div>
+          <div class="catalog-table-shell">
+            <div id="results-table" class="table-wrap" tabindex="0" aria-describedby="catalog-scroll-instructions"><table><caption class="sr-only">Resultado da consulta de normas</caption><thead><tr><th>Tipo</th><th>Nº da norma</th><th>Nome ou definição</th><th>Ementa ou descrição</th><th>Competência</th><th>Link</th></tr></thead><tbody id="laws-body"></tbody></table></div>
+            <div id="catalog-scrollbar" class="catalog-scrollbar" role="scrollbar" aria-label="Rolar os registros do acervo" aria-controls="results-table" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><span id="catalog-scrollbar-thumb" class="catalog-scrollbar__thumb"></span></div>
+            <p id="catalog-scroll-instructions" class="sr-only">Clique em uma linha para ativar a rolagem interna do acervo. Clique novamente para voltar a rolar a página.</p>
+            <p id="catalog-scroll-status" class="sr-only" aria-live="polite"></p>
+          </div>
         </div>
+      </section>
 
-    <!-- Div para o balão flutuante (Tooltip dos hexágonos) -->
-    <div id="custom-tooltip"></div>
+      <section id="materiais" class="section materials-section" aria-labelledby="materiais-titulo">
+        <div class="container">
+          <div class="section-heading materials-heading">
+            <div>
+              <p class="eyebrow"><span></span>Conhecimento produzido no Piauí</p>
+              <h2 id="materiais-titulo">Fique por dentro do que acontece no setor</h2>
+              <p>Consulte publicações, estudos e painéis sobre energia desenvolvidos pela Secretaria do Planejamento do Estado do Piauí.</p>
+            </div>
+          </div>
 
-    <!-- Biblioteca para desenhar as setas do mapa mental -->
-    <script src="https://cdn.jsdelivr.net/npm/leader-line-new@1.1.9/leader-line.min.js"></script>
-    <!-- Bibliotecas para o Gráfico de Pizza -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    <script src="js/script.js"></script>
-</body>
+          <div class="materials-shelf" aria-label="Materiais sobre energia no Piauí">
+            <a class="publication-card publication-card--bulletin" href="materiais.html" aria-label="Consultar o Boletim de Energia">
+              <span class="publication-cover" aria-hidden="true">
+                <small>Publicação periódica</small>
+                <strong>Boletim<br>de Energia</strong>
+                <span class="publication-cover__graphic"><i></i><i></i><i></i><i></i></span>
+                <em>SEPLAN · PIAUÍ</em>
+              </span>
+              <span class="publication-card__meta"><strong>Boletim de Energia</strong><small>Indicadores e informações recentes do setor energético estadual.</small><b>Consultar material <span aria-hidden="true">→</span></b></span>
+            </a>
+
+            <a class="publication-card publication-card--balance" href="materiais.html" aria-label="Consultar o Balanço Energético do Estado do Piauí">
+              <span class="publication-cover" aria-hidden="true">
+                <small>Panorama estadual</small>
+                <strong>Balanço<br>Energético</strong>
+                <span class="publication-cover__orbit"></span>
+                <em>SEPLAN · PIAUÍ</em>
+              </span>
+              <span class="publication-card__meta"><strong>Balanço Energético do Piauí</strong><small>Oferta, transformação e consumo de energia reunidos em uma visão estadual.</small><b>Consultar material <span aria-hidden="true">→</span></b></span>
+            </a>
+
+            <a class="publication-card publication-card--bi" href="materiais.html" aria-label="Consultar Energia em dados">
+              <span class="publication-cover" aria-hidden="true">
+                <small>Dados interativos</small>
+                <strong>Energia<br>em dados</strong>
+                <span class="publication-cover__dashboard"><i></i><i></i><i></i><i></i></span>
+                <em>SEPLAN · PIAUÍ</em>
+              </span>
+              <span class="publication-card__meta"><strong>Energia em dados</strong><small>Visualizações interativas para acompanhar indicadores e projetos.</small><b>Acessar painéis <span aria-hidden="true">→</span></b></span>
+            </a>
+
+            <a class="publication-card publication-card--planning" href="materiais.html" aria-label="Consultar estudos de planejamento energético">
+              <span class="publication-cover" aria-hidden="true">
+                <small>Estudos estratégicos</small>
+                <strong>Planejamento<br>Eletroenergético</strong>
+                <span class="publication-cover__sun"></span>
+                <em>SEPLAN · PIAUÍ</em>
+              </span>
+              <span class="publication-card__meta"><strong>Planejamento Eletroenergético</strong><small>Estudos e diretrizes para orientar o desenvolvimento energético do estado.</small><b>Consultar estudos <span aria-hidden="true">→</span></b></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quick-links quick-links--footer">
+        <div class="container quick-links__grid">
+          <button id="instituicoes" class="quick-card" type="button" data-dialog-target="instituicoes-dialog" aria-haspopup="dialog"><span class="icon icon--building" aria-hidden="true"></span><span><strong>Conheça as instituições do setor</strong><small>Acesse os principais órgãos que atuam na regulação e operação.</small></span></button>
+          <button id="atendimento" class="quick-card quick-card--green" type="button" data-dialog-target="atendimento-dialog" aria-haspopup="dialog"><span class="icon icon--headset" aria-hidden="true"></span><span><strong>Canais de atendimento ao consumidor</strong><small>Consulte as fontes oficiais para solicitar suporte ou registrar uma reclamação.</small></span></button>
+        </div>
+      </section>
+
+    </main>
+
+    <dialog id="atendimento-dialog" class="quick-dialog quick-dialog--service" aria-labelledby="atendimento-dialog-title">
+      <div class="quick-dialog__header"><p id="atendimento-dialog-title" class="quick-dialog__eyebrow">Canais de atendimento</p><button class="quick-dialog__close" type="button" data-dialog-close aria-label="Fechar janela">×</button></div>
+      <p class="quick-dialog__intro">Se você teve algum direito relacionado ao fornecimento de energia violado, procure os canais oficiais para solicitar atendimento ou registrar uma reclamação. Use os links abaixo para acessar as páginas oficiais das instituições responsáveis.</p>
+      <ul class="institution-list service-list">
+        <li><a href="https://pi.equatorialenergia.com.br/siteantigo/informacoes-gerais/ouvidoria-eqtl/" target="_blank" rel="noopener noreferrer"><span><span class="service-list__heading service-list__heading--logo-only"><img class="service-list__logo service-list__logo--equatorial" src="assets/atendimento/equatorial.svg" alt="Equatorial Energia Piauí"></span><small>Consulte a ouvidoria da Distribuidora Equatorial Piauí para demandas não resolvidas nos canais iniciais. Tenha o protocolo anterior em mãos. Telefone: 0800 721 0164.</small></span><b aria-hidden="true">↗</b></a></li>
+        <li><a href="https://portal.pi.gov.br/agrespi/conheca-a-ouvidoria/" target="_blank" rel="noopener noreferrer"><span><span class="service-list__heading"><img class="service-list__logo service-list__logo--agrespi" src="assets/atendimento/agrespi.png" alt=""><strong>AGRESPI</strong></span><small>Consulte as orientações da Ouvidoria da agência, os requisitos e os canais disponíveis para encaminhar sua reclamação.</small></span><b aria-hidden="true">↗</b></a></li>
+        <li><a href="https://www.gov.br/aneel/pt-br/canais_atendimento/reclame-da-distribuidora" target="_blank" rel="noopener noreferrer"><span><span class="service-list__heading service-list__heading--logo-only"><img class="service-list__logo service-list__logo--aneel" src="assets/atendimento/aneel.png" alt="ANEEL"></span><small>Agência Nacional de Energia Elétrica. Registre sua reclamação diretamente na agência federal.</small></span><b aria-hidden="true">↗</b></a></li>
+        <li><a href="https://consumidor.gov.br/" target="_blank" rel="noopener noreferrer"><span><span class="service-list__heading service-list__heading--consumer"><img class="service-list__logo service-list__logo--consumidor" src="assets/atendimento/consumidor-gov.png" alt=""><strong>CONSUMIDOR.GOV</strong></span><small>Serviço público e gratuito para solução alternativa de conflitos de consumo.</small></span><b aria-hidden="true">↗</b></a></li>
+      </ul>
+    </dialog>
+
+    <dialog id="instituicoes-dialog" class="quick-dialog quick-dialog--institutions" aria-labelledby="instituicoes-dialog-title">
+      <div class="quick-dialog__header"><p id="instituicoes-dialog-title" class="quick-dialog__eyebrow">Instituições do setor</p><button class="quick-dialog__close" type="button" data-dialog-close aria-label="Fechar janela">×</button></div>
+      <p class="quick-dialog__intro">Consulte os canais oficiais dos principais órgãos e entidades do setor elétrico. Use os links abaixo para acessar diretamente as páginas institucionais.</p>
+      <ul class="institution-list">
+        <li><a href="https://www.gov.br/mme/pt-br" target="_blank" rel="noopener noreferrer"><span><span class="institution-list__brand institution-list__brand--mme"><img src="assets/instituicoes/mme-sigla.png" alt="Ministério de Minas e Energia"></span><small>Ministério de Minas e Energia</small></span><b aria-hidden="true">↗</b></a></li>
+        <li><a href="https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe" target="_blank" rel="noopener noreferrer"><span><span class="institution-list__brand institution-list__brand--text"><strong>CNPE</strong></span><small>Conselho Nacional de Política Energética</small></span><b aria-hidden="true">↗</b></a></li>
+        <li><a href="https://www.gov.br/aneel/pt-br" target="_blank" rel="noopener noreferrer"><span><span class="institution-list__brand"><img src="assets/instituicoes/aneel.png" alt="ANEEL"></span><small>Agência Nacional de Energia Elétrica</small></span><b aria-hidden="true">↗</b></a></li>
+        <li><a href="https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cmse" target="_blank" rel="noopener noreferrer"><span><span class="institution-list__brand institution-list__brand--text"><strong>CMSE</strong></span><small>Comitê de Monitoramento do Setor Elétrico</small></span><b aria-hidden="true">↗</b></a></li>
+        <li><a href="https://www.epe.gov.br/pt" target="_blank" rel="noopener noreferrer"><span><span class="institution-list__brand"><img src="assets/instituicoes/epe.png" alt="Empresa de Pesquisa Energética"></span><small>Empresa de Pesquisa Energética</small></span><b aria-hidden="true">↗</b></a></li>
+        <li><a href="https://www.ons.org.br/" target="_blank" rel="noopener noreferrer"><span><span class="institution-list__brand institution-list__brand--ons"><img src="assets/instituicoes/ons-sigla.png" alt="Operador Nacional do Sistema Elétrico"></span><small>Operador Nacional do Sistema Elétrico</small></span><b aria-hidden="true">↗</b></a></li>
+        <li><a href="https://www.ccee.org.br/" target="_blank" rel="noopener noreferrer"><span><span class="institution-list__brand institution-list__brand--ccee"><img src="assets/instituicoes/ccee.png" alt="Câmara de Comercialização de Energia Elétrica"></span><small>Câmara de Comercialização de Energia Elétrica</small></span><b aria-hidden="true">↗</b></a></li>
+      </ul>
+    </dialog>
+
+    <footer class="reference-footer">
+      <div class="reference-footer__main">
+        <div class="reference-footer__identity">
+          <div class="reference-footer__government"><img class="reference-footer__logo" src="assets/brand/logo-governo-piaui.png" alt="Governo do Piauí — Aqui tem trabalho. Aqui tem futuro." width="600" height="357"></div>
+          <div class="reference-footer__agencies"><p><strong>SEPLAN</strong><span>Secretaria de Planejamento do Estado do Piauí</span></p><p><strong>SUMER</strong><span>Superintendência de Monitoramento Estratégico e Gestão de Resultados</span></p></div>
+          <p class="reference-footer__motto">“Planejamento que transforma resultados.”</p>
+        </div>
+        <nav class="reference-footer__links" aria-label="Navegação do rodapé"><strong>NAVEGAÇÃO</strong><a href="#inicio">Início</a><a href="#macrotemas">Temas</a><a href="#catalogo">Acervo de Normas</a><a href="#instituicoes">Instituições</a><a href="#atendimento">Canais de Atendimento</a></nav>
+        <nav class="reference-footer__links" aria-label="Transparência"><strong>TRANSPARÊNCIA</strong><a href="https://dados.pi.gov.br/" target="_blank" rel="noopener noreferrer">Dados abertos</a><a href="#catalogo">Perguntas frequentes</a><a href="#acessibilidade">Acessibilidade</a><a href="#privacidade">Política de privacidade</a><a href="#atendimento">Ouvidoria e LAI</a><a href="creditos.html">Créditos cartográficos</a></nav>
+        <div class="reference-footer__contact"><strong>CONTATO</strong><p>Av. Pedro Freitas, s/n — Bloco D<br>Centro Administrativo<br>Teresina — PI, 64018-900</p><a href="mailto:energia@seplan.pi.gov.br">energia@seplan.pi.gov.br</a><span>+55 (86) 3216–4100</span><small>Atendimento: seg. a sex., 8h às 14h</small><div class="reference-footer__social" aria-label="Redes sociais"><span title="Instagram">◎</span><span title="YouTube">▶</span><span title="LinkedIn">in</span><span title="X">×</span></div></div>
+      </div>
+      <div class="reference-footer__bottom"><span>© 2026 Governo do Estado do Piauí — SEPLAN/SUMER. Todos os direitos reservados.</span><span>Última atualização do acervo: 14/10/2026</span><a href="mailto:energia@seplan.pi.gov.br?subject=Relato%20sobre%20o%20Ambiente%20Regulat%C3%B3rio">Reportar um problema</a></div>
+    </footer>
+    <script src="catalog-data.js?v=20261029-1" defer></script>
+    <script src="brain-graph.js?v=20261104-1" defer></script>
+    <script src="app.js?v=20261104-1" defer></script>
+    <script src="nav-dropdown.js?v=20261104-1" defer></script>
+  </body>
 </html>
